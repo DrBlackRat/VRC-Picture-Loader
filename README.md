@@ -21,6 +21,6 @@ __How to add it:__
 - set the Material Properties you want the Texture to be applied to
 - provide a direct link to the picture you want to download in the Url field
 
-This Asset was made by DrBlackRat
-GitHub: https://github.com/DrBlackRat/VRC-Picture-Loader
-Twitter: https://twitter.com/DrBlackRat
+__This Asset was made by DrBlackRat__
+- GitHub: https://github.com/DrBlackRat/VRC-Picture-Loader
+- Twitter: https://twitter.com/DrBlackRat
