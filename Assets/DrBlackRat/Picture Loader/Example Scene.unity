@@ -208,9 +208,9 @@ MonoBehaviour:
   material: {fileID: 0}
   materialProperties:
   - _MainTex
-  useLoadingTexture: 0
+  useLoadingTexture: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
-  useErrorTexture: 0
+  useErrorTexture: 1
   errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
   manager: {fileID: 0}
 --- !u!23 &175990711
