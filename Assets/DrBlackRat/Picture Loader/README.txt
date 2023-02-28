@@ -1,13 +1,21 @@
 This is a simple way to add an VRChat Image Downloader to your world!
 
 What does it do?
-- provides a user friendly UI to download pictures from the web
-- shows you how many pictures are already downloaded
-- tells you when a picture couldn't be download
-- lets you manually or automatically download images
+- allows you to Automatically or Manually Download Pictures from the Web
+- shows the the Download Progress (how many pictures have been loaded vs how many are there)
+- shows an error when a picture couldn't be loaded
+- let's you set a Loading Texture while the Picture is Loading 
+- let's you set an Error Texture if the Picture couldn't Load
+
+Here is a video showcasing it:
+https://youtu.be/xxTCXYHlpWg
 
 How to add it:
 - I recommend to take a look at the Example Scene first
+
+- you need to have TextMeshPro installed
+- when you add the Prefab or open the Example Scene Unity prompts you with an install window, install every component
+- after that reload the scene
 
 - drag the Picture Loader prefab into your world
 - add the Picture Downloader script to the Mesh you want to apply the downloaded picture to
