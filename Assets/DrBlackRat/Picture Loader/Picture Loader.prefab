@@ -511,9 +511,11 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 125432710694518660}
   loadOnStart: 1
+  manualLoadButton: 0
   status: {fileID: 6208561159777802394}
   indicator: {fileID: 8619851795119345736}
-  reoladButton: {fileID: 7806145310257650877}
+  loadButtonObj: {fileID: 4393567674253806680}
+  uiRect: {fileID: 2086159742319414846}
   downloaders: []
 --- !u!114 &125432710694518660
 MonoBehaviour:

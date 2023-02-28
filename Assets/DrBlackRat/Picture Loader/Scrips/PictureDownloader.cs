@@ -49,7 +49,7 @@ namespace DrBlackRat
             Debug.Log("Picture Loaded Successfully");
         }
         public override void OnImageLoadError(IVRCImageDownload result)
-        {   
+        {
             manager.PictureFailed();
             Debug.Log($"Could not Load Picture {result.Error}");
         }

@@ -17,15 +17,19 @@ namespace DrBlackRat
         [Header("Settings")]
         [Tooltip("Load Pictures when you enter the World")]
         public bool loadOnStart = true;
+        [Tooltip("Adds a button to Manually Load the Pictures")]
+        public bool manualLoadButton = true;
 
         [Header("Internals")]
         public TextMeshProUGUI status;
         public TextMeshProUGUI indicator;
-        public Button reoladButton;
+        public GameObject loadButtonObj;
+        public RectTransform uiRect;
 
         [HideInInspector]
         public PictureDownloader[] downloaders;
 
+        private Button loadButton;
         private int picturesToLoad;
         private int picturesLoaded;
         private int errors;
@@ -33,10 +37,21 @@ namespace DrBlackRat
         
         private void Start()
         {
+            loadButton = loadButtonObj.GetComponent<Button>();
+
             // Inital set of Variables
             picturesLoaded = 0;
             picturesToLoad = downloaders.Length;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
+
+            // Manual Load Button
+           if (manualLoadButton == false)
+            { 
+                loadButtonObj.SetActive(false);
+                uiRect.sizeDelta = new Vector2(105f, 46.25f);
+            }
+            
+            // Picture Loading
             if (picturesToLoad == 0)
             {
                 status.text = "Status: Error, no Pictures found";
@@ -67,7 +82,7 @@ namespace DrBlackRat
             picturesLoaded = 0;
             errors = 0;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
-            reoladButton.interactable = false;
+            loadButton.interactable = false;
             foreach (PictureDownloader downloader in downloaders)
             {
                 downloader.DownloadPicture();
@@ -76,7 +91,7 @@ namespace DrBlackRat
         private void FinishedLoading()
         {
             status.text = "Status: Finished";
-            reoladButton.interactable = true;
+            loadButton.interactable = true;
         }
         private void FinishedLoadingError() 
         {
@@ -88,7 +103,7 @@ namespace DrBlackRat
             {
                 status.text = $"Status: Finished with Errors";
             }
-            reoladButton.interactable = true;
+            loadButton.interactable = true;
         }
         
         // Callbacks from the PictureDonwloaders
