@@ -11,6 +11,7 @@ using System;
 namespace DrBlackRat
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [DefaultExecutionOrder(100)]
     public class PictureLoaderManager : UdonSharpBehaviour
     {
         [Header("Settings")]
@@ -31,16 +32,11 @@ namespace DrBlackRat
         
         
         private void Start()
-        {   
+        {
             // Inital set of Variables
             picturesLoaded = 0;
             picturesToLoad = downloaders.Length;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
-
-            SendCustomEventDelayedSeconds(nameof(PictureStart), 0.5f);
-        }
-        public void PictureStart()
-        {
             if (picturesToLoad == 0)
             {
                 status.text = "Status: Error, no Pictures found";
@@ -54,7 +50,6 @@ namespace DrBlackRat
                 Wait();
             }
         }
-
         public void _ButtonLoad()
         {
             Loadpictures();

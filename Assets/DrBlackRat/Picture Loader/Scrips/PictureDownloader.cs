@@ -8,6 +8,7 @@ using VRC.Udon;
 namespace DrBlackRat
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    [DefaultExecutionOrder(0)]
     public class PictureDownloader : UdonSharpBehaviour
     {
         [Header("Download Link")]        
