@@ -70,6 +70,7 @@ namespace DrBlackRat
         {
             status.text = "Status: Loading";
             picturesLoaded = 0;
+            errors = 0;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
             reoladButton.interactable = false;
             foreach (PictureDownloader downloader in downloaders)
