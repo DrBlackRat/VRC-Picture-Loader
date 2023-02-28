@@ -12,6 +12,10 @@ __What does it do?__
 __How to add it:__
 - I recommend to take a look at the Example Scene first
 
+- you need to have TextMeshPro installed
+- when you add the Prefab or open the Example Scene Unity prompts you with an install window, install every component
+- after that reload the scene
+
 - drag the Picture Loader prefab into your world
 - add the Picture Downloader script to the Mesh you want to apply the downloaded picture to
 - set the Material Properties you want the Texture to be applied to
