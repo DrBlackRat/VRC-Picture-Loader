@@ -84,7 +84,8 @@ namespace DrBlackRat
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
             loadButton.interactable = false;
             foreach (PictureDownloader downloader in downloaders)
-            {
+            {   
+
                 downloader.DownloadPicture();
             }
         }

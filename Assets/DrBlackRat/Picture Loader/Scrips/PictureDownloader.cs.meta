@@ -3,7 +3,12 @@ guid: 9f37bbd8c891cf54ea2036ae57a4840d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _udonSharpBackingUdonBehaviour: {instanceID: 0}
+  - material: {instanceID: 0}
+  - loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
+  - errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  - manager: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

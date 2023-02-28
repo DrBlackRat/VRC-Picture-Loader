@@ -511,7 +511,7 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 125432710694518660}
   loadOnStart: 1
-  manualLoadButton: 0
+  manualLoadButton: 1
   status: {fileID: 6208561159777802394}
   indicator: {fileID: 8619851795119345736}
   loadButtonObj: {fileID: 4393567674253806680}
