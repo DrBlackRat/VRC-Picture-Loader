@@ -10,8 +10,11 @@ __What does it do?__
 - let's you set a Loading Texture while the Picture is Loading 
 - let's you set an Error Texture if the Picture couldn't Load
 
-__Here is a video showcasing it:__  
+__Here is a Video showcasing it:__  
 https://youtu.be/xxTCXYHlpWg
+
+__Here is a Link to the example World:__  
+https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
 
 __How to add it:__
 - I recommend to take a look at the Example Scene first  
