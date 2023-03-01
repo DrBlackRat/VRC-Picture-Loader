@@ -51,7 +51,6 @@ namespace DrBlackRat
                 Debug.LogError("No Picture Loader Manager Found");
             }
         }
-
         public void DownloadPicture()
         {   
             // Disposes old Picture
@@ -59,7 +58,6 @@ namespace DrBlackRat
             { 
                 pictureDL.Dispose();
             }
-
             // Sets Loading Texture
             if (useLoadingTexture == true)
             {
@@ -68,14 +66,12 @@ namespace DrBlackRat
                     material.SetTexture(materialProperty, loadingTexture);
                 }
             }
-
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
             pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), null);
             
             timesRun++;
         }
-
         public override void OnImageLoadSuccess(IVRCImageDownload result)
         {   
             // Sets Downloaded Picture as Texture
@@ -83,7 +79,6 @@ namespace DrBlackRat
             {
                 material.SetTexture(materialProperty, result.Result);
             }
-            
             manager.PictureLoaded();
             Debug.Log("Picture Loaded Successfully");
         }

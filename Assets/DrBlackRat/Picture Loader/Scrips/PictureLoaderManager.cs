@@ -1,12 +1,8 @@
 ﻿
 using UdonSharp;
 using UnityEngine;
-using VRC.SDKBase;
-using VRC.SDK3.Image;
-using VRC.Udon;
 using TMPro;
 using UnityEngine.UI;
-using System;
 
 namespace DrBlackRat
 {
@@ -34,23 +30,19 @@ namespace DrBlackRat
         private int picturesLoaded;
         private int errors;
         
-        
         private void Start()
         {
             loadButton = loadButtonObj.GetComponent<Button>();
-
             // Inital set of Variables
             picturesLoaded = 0;
             picturesToLoad = downloaders.Length;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
-
             // Manual Load Button
            if (manualLoadButton == false)
             { 
                 loadButtonObj.SetActive(false);
                 uiRect.sizeDelta = new Vector2(105f, 46.25f);
             }
-            
             // Picture Loading
             if (picturesToLoad == 0)
             {
@@ -85,7 +77,6 @@ namespace DrBlackRat
             loadButton.interactable = false;
             foreach (PictureDownloader downloader in downloaders)
             {   
-
                 downloader.DownloadPicture();
             }
         }
@@ -130,7 +121,6 @@ namespace DrBlackRat
                 FinishedLoadingError();
             }
         }
-
         public void PictureFailed() 
         {
             errors++;
