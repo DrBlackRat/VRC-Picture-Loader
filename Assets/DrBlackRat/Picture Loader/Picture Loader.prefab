@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3395369911299581842}
   - component: {fileID: 447849696277155306}
   - component: {fileID: 5957606166116152782}
+  - component: {fileID: 1120493324465262690}
   m_Layer: 17
   m_Name: UI
   m_TagString: Untagged
@@ -249,6 +250,19 @@ MonoBehaviour:
   m_Script: {fileID: -1533785930, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1120493324465262690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760187032087926781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 105, y: 65, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4116958832069440490
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,11 +525,14 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 125432710694518660}
   loadOnStart: 1
+  autoReload: 0
+  autoReloadTime: 10
   manualLoadButton: 1
   status: {fileID: 6208561159777802394}
   indicator: {fileID: 8619851795119345736}
   loadButtonObj: {fileID: 4393567674253806680}
   uiRect: {fileID: 2086159742319414846}
+  uiCollider: {fileID: 1120493324465262690}
   downloaders: []
 --- !u!114 &125432710694518660
 MonoBehaviour:

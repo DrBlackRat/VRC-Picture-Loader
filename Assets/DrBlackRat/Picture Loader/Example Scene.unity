@@ -1678,13 +1678,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
         type: 3}
-      propertyPath: loadOnStart
-      value: 1
+      propertyPath: autoReload
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
         type: 3}
-      propertyPath: manualLoadButton
-      value: 1
+      propertyPath: autoReloadTime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
         type: 3}

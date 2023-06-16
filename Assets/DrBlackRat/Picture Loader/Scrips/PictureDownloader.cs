@@ -52,14 +52,14 @@ namespace DrBlackRat
             }
         }
         public void DownloadPicture()
-        {   
-            // Disposes old Picture
+        {
+            // Dispose old Loader
             if (timesRun >= 1)
-            { 
+            {
                 pictureDL.Dispose();
             }
             // Sets Loading Texture
-            if (useLoadingTexture == true)
+            if (useLoadingTexture)
             {
                 foreach (string materialProperty in materialProperties)
                 {
@@ -85,7 +85,7 @@ namespace DrBlackRat
         public override void OnImageLoadError(IVRCImageDownload result)
         {   
             // Sets Error Texture
-            if (useErrorTexture == true)
+            if (useErrorTexture)
             {
                 foreach (string materialProperty in materialProperties)
                 {
