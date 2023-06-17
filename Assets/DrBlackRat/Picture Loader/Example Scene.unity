@@ -174,7 +174,7 @@ MonoBehaviour:
   SynchronizePosition: 0
   AllowCollisionOwnershipTransfer: 0
   Reliable: 0
-  _syncMethod: 1
+  _syncMethod: 0
   serializedProgramAsset: {fileID: 11400000, guid: 89204305e37b50b46a9ced206e745a6b,
     type: 2}
   programSource: {fileID: 11400000, guid: 0d65e158a7a0e284a9449ffb8fb7c5b1, type: 2}
@@ -208,6 +208,7 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  material: {fileID: 0}
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
@@ -357,6 +358,7 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  material: {fileID: 0}
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
@@ -806,6 +808,7 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  material: {fileID: 0}
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
@@ -1435,6 +1438,7 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  material: {fileID: 0}
   materialProperties:
   - _MainTex
   useLoadingTexture: 1

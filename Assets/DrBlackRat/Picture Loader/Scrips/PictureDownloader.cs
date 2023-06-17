@@ -21,6 +21,8 @@ namespace DrBlackRat
         public PFilterMode filterMode = PFilterMode.Bilinear;
 
         [Header("Material Settings")]
+        [Tooltip("The Material the Textures should be applied to, if left empty it use the one it's attached to")]
+        public Material material;
         [Tooltip("List of Material Properties you want to apply the downloaded Picture to")]
         public string[] materialProperties = {"_MainTex"};
 
@@ -35,7 +37,6 @@ namespace DrBlackRat
         [Tooltip("Texture used when the Picture couldn't be Loaded")]
         public Texture2D errorTexture;
 
-        private Material material;
         private VRCImageDownloader pictureDL;
         [HideInInspector]
         public TextureInfo textureInfo;

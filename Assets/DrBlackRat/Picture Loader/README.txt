@@ -5,6 +5,8 @@ What does it do?
 - allows you to Reload Pictures Automatically
 - shows the the Download Progress (how many pictures have been loaded vs how many are there)
 - shows an error when a picture couldn't be loaded
+- let's you change texture settings
+ - Mip Maps, Aniso Level & Filtering
 - let's you set a Loading Texture while the Picture is Loading 
 - let's you set an Error Texture if the Picture couldn't Load
 
