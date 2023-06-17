@@ -9,7 +9,7 @@ __What does it do?__
 - shows the the Download Progress (how many pictures have been loaded vs how many are there)
 - shows an error when a picture couldn't be loaded
 - let's you change Texture Settings for the downloaded Picture
- - Mip Maps, Aniso Level & Filtering
+  - Mip Maps, Aniso Level & Filtering
 - let's you set a Loading Texture while the Picture is Loading 
 - let's you set an Error Texture if the Picture couldn't Load
 
