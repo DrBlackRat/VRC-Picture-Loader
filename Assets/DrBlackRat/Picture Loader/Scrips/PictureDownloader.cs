@@ -3,6 +3,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.SDK3.Image;
 using VRC.Udon;
+using UnityEditor;
 
 namespace DrBlackRat
 {
@@ -14,9 +15,12 @@ namespace DrBlackRat
         [Tooltip("The Link to the Picture you want to download")]
         public VRCUrl url;
 
+        [Header("Texture Settings")]
+        public bool generateMipMaps = true;
+        public int anisoLevel = 9;
+        public PFilterMode filterMode = PFilterMode.Bilinear;
+
         [Header("Material Settings")]
-        [Tooltip("The Material the Textures should be applied to, if left empty it use the one it's attached to")]
-        public Material material;
         [Tooltip("List of Material Properties you want to apply the downloaded Picture to")]
         public string[] materialProperties = {"_MainTex"};
 
@@ -31,7 +35,10 @@ namespace DrBlackRat
         [Tooltip("Texture used when the Picture couldn't be Loaded")]
         public Texture2D errorTexture;
 
+        private Material material;
         private VRCImageDownloader pictureDL;
+        [HideInInspector]
+        public TextureInfo textureInfo;
         private int timesRun;
 
         [HideInInspector]
@@ -49,6 +56,22 @@ namespace DrBlackRat
             if (manager == null)
             {
                 Debug.LogError("No Picture Loader Manager Found");
+            }
+            // Texture Info Setup
+            textureInfo.MaterialProperty = null;
+            textureInfo.GenerateMipMaps = generateMipMaps;
+            textureInfo.AnisoLevel = anisoLevel;
+            switch (filterMode)
+            {
+                case PFilterMode.Point:
+                    textureInfo.FilterMode = FilterMode.Point; 
+                    break;
+                case PFilterMode.Bilinear:
+                    textureInfo.FilterMode = FilterMode.Bilinear;
+                    break;
+                case PFilterMode.Trilinear:
+                    textureInfo.FilterMode = FilterMode.Trilinear;
+                    break;
             }
         }
         public void DownloadPicture()
@@ -68,12 +91,12 @@ namespace DrBlackRat
             }
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
-            pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), null);
+            pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), textureInfo);
             
             timesRun++;
         }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
-        {   
+        {
             // Sets Downloaded Picture as Texture
             foreach (string materialProperty in materialProperties)
             {
@@ -95,5 +118,11 @@ namespace DrBlackRat
             manager.PictureFailed();
             Debug.Log($"Could not Load Picture {result.Error}");
         }
+    }
+    public enum PFilterMode
+    {
+        Point,
+        Bilinear,
+        Trilinear
     }
 }

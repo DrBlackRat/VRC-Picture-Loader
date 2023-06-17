@@ -205,13 +205,23 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 175990709}
   url:
     url: https://i.imgur.com/0gsl5V1.jpg
-  material: {fileID: 0}
+  generateMipMaps: 1
+  anisoLevel: 9
+  filterMode: 1
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
   useErrorTexture: 1
   errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  textureInfo:
+    WrapModeU: 0
+    WrapModeV: 0
+    WrapModeW: 0
+    FilterMode: 1
+    AnisoLevel: 9
+    MaterialProperty: _MainTex
+    GenerateMipMaps: 1
   manager: {fileID: 0}
 --- !u!23 &175990711
 MeshRenderer:
@@ -344,13 +354,23 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 346326897}
   url:
     url: https://cdn.discordapp.com/attachments/466825988509138944/1079892879369044068/Why_they_call_him__Revolver___0-24_screenshot.png
-  material: {fileID: 0}
+  generateMipMaps: 1
+  anisoLevel: 9
+  filterMode: 1
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
   useErrorTexture: 1
   errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  textureInfo:
+    WrapModeU: 0
+    WrapModeV: 0
+    WrapModeW: 0
+    FilterMode: 1
+    AnisoLevel: 9
+    MaterialProperty: _MainTex
+    GenerateMipMaps: 0
   manager: {fileID: 0}
 --- !u!23 &346326899
 MeshRenderer:
@@ -783,13 +803,23 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 818552210}
   url:
     url: https://cdn.discordapp.com/attachments/816617882099384371/1080192423805857792/tupper.png
-  material: {fileID: 0}
+  generateMipMaps: 1
+  anisoLevel: 9
+  filterMode: 1
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
   useErrorTexture: 1
   errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  textureInfo:
+    WrapModeU: 0
+    WrapModeV: 0
+    WrapModeW: 0
+    FilterMode: 1
+    AnisoLevel: 9
+    MaterialProperty: _MainTex
+    GenerateMipMaps: 0
   manager: {fileID: 0}
 --- !u!23 &818552212
 MeshRenderer:
@@ -1402,13 +1432,23 @@ MonoBehaviour:
   _udonSharpBackingUdonBehaviour: {fileID: 2062350425}
   url:
     url: https://i.imgur.com/l3eRxIN.png
-  material: {fileID: 0}
+  generateMipMaps: 1
+  anisoLevel: 9
+  filterMode: 1
   materialProperties:
   - _MainTex
   useLoadingTexture: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
   useErrorTexture: 1
   errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  textureInfo:
+    WrapModeU: 0
+    WrapModeV: 0
+    WrapModeW: 0
+    FilterMode: 1
+    AnisoLevel: 9
+    MaterialProperty: _MainTex
+    GenerateMipMaps: 0
   manager: {fileID: 0}
 --- !u!23 &2062350427
 MeshRenderer:
@@ -1675,16 +1715,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
-        type: 3}
-      propertyPath: autoReload
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
-        type: 3}
-      propertyPath: autoReloadTime
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7224484778990208194, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
         type: 3}
