@@ -534,6 +534,7 @@ MonoBehaviour:
   uiRect: {fileID: 2086159742319414846}
   uiCollider: {fileID: 1120493324465262690}
   downloaders: []
+  state: 0
 --- !u!114 &125432710694518660
 MonoBehaviour:
   m_ObjectHideFlags: 0

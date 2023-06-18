@@ -3,7 +3,8 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.SDK3.Image;
 using VRC.Udon;
-using UnityEditor;
+using Unity;
+using UnityEngine.UI;
 
 namespace DrBlackRat
 {
@@ -20,11 +21,13 @@ namespace DrBlackRat
         public int anisoLevel = 9;
         public PFilterMode filterMode = PFilterMode.Bilinear;
 
-        [Header("Material Settings")]
-        [Tooltip("The Material the Textures should be applied to, if left empty it use the one it's attached to")]
+        [Header("Material & Raw Image Settings")]
+        [Tooltip("The Material the Textures should be applied to, if left empty it tries use the one it's attached to")]
         public Material material;
         [Tooltip("List of Material Properties you want to apply the downloaded Picture to")]
         public string[] materialProperties = {"_MainTex"};
+        [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to")]
+        public RawImage[] uiRawImages;
 
         [Header("Loadig & Error Texture")]
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load")]
@@ -48,9 +51,16 @@ namespace DrBlackRat
         private void Start()
         {
             // Sets Material
-            if (material == null)
+            var renderer = GetComponent<Renderer>();
+            if (material == null && renderer != null)
             {
-                material = GetComponent<Renderer>().material;
+                material = renderer.material;
+            }
+            // Sets Raw Image
+            var rawImage = GetComponent<RawImage>();
+            if (uiRawImages.Length == 0 && rawImage != null)
+            {
+                uiRawImages = new RawImage[1] {rawImage};
             }
 
             // Error when no Manager was found
@@ -85,10 +95,21 @@ namespace DrBlackRat
             // Sets Loading Texture
             if (useLoadingTexture)
             {
-                foreach (string materialProperty in materialProperties)
+                if (material != null)
                 {
-                    material.SetTexture(materialProperty, loadingTexture);
+                    foreach (string materialProperty in materialProperties)
+                    {
+                        material.SetTexture(materialProperty, loadingTexture);
+                    }
                 }
+                if (uiRawImages.Length != 0 && uiRawImages != null)
+                {
+                    foreach (RawImage uiRawImage in uiRawImages)
+                    {
+                        uiRawImage.texture = loadingTexture;
+                    }
+                }
+
             }
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
@@ -99,25 +120,45 @@ namespace DrBlackRat
         public override void OnImageLoadSuccess(IVRCImageDownload result)
         {
             // Sets Downloaded Picture as Texture
-            foreach (string materialProperty in materialProperties)
+            if (material != null)
             {
-                material.SetTexture(materialProperty, result.Result);
+                foreach (string materialProperty in materialProperties)
+                {
+                    material.SetTexture(materialProperty, result.Result);
+                }
             }
+            if (uiRawImages.Length != 0 && uiRawImages != null)
+            {
+                foreach (RawImage uiRawImage in uiRawImages)
+                {
+                    uiRawImage.texture = result.Result;
+                }
+            }
+            Debug.Log("[VRC Picture Loader] Picture Loaded Successfully");
             manager.PictureLoaded();
-            Debug.Log("Picture Loaded Successfully");
         }
         public override void OnImageLoadError(IVRCImageDownload result)
         {   
             // Sets Error Texture
             if (useErrorTexture)
             {
-                foreach (string materialProperty in materialProperties)
+                if (material != null)
                 {
-                    material.SetTexture(materialProperty, errorTexture);
+                    foreach (string materialProperty in materialProperties)
+                    {
+                        material.SetTexture(materialProperty, errorTexture);
+                    }
+                }
+                if (uiRawImages.Length != 0 && uiRawImages != null)
+                {
+                    foreach (RawImage uiRawImage in uiRawImages)
+                    {
+                        uiRawImage.texture = errorTexture;
+                    }
                 }
             }
+            Debug.Log($"[VRC Picture Loader] Could not Load Picture: {result.Error}");
             manager.PictureFailed();
-            Debug.Log($"Could not Load Picture {result.Error}");
         }
     }
     public enum PFilterMode

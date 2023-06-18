@@ -32,6 +32,8 @@ namespace DrBlackRat
 
         [HideInInspector]
         public PictureDownloader[] downloaders;
+        [HideInInspector]
+        public PictureLoaderState state;
 
         private Button loadButton;
         private int picturesToLoad;
@@ -63,13 +65,16 @@ namespace DrBlackRat
             if (picturesToLoad == 0)
             {
                 status.text = "Status: Error, no Pictures found";
+                Debug.Log("[VRC Picture Loader] Error, no Pictures found");
             }
             else if (loadOnStart)
             {
+                Debug.Log($"[VRC Picture Loader] Found {downloaders.Length} Picture Downloader(s)");
                 LoadPictures();
             }
             else
             {
+                Debug.Log($"[VRC Picture Loader] Found {downloaders.Length} Picture Downloader(s)");
                 Wait();
             }
         }
@@ -82,6 +87,7 @@ namespace DrBlackRat
         // What happens in each state
         private void Wait()
         {
+            state = PictureLoaderState.Waiting;
             status.text = "Status: Waiting";
         }
         public void LoadPictures()
@@ -91,6 +97,8 @@ namespace DrBlackRat
             errors = 0;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
             loadButton.interactable = false;
+            state = PictureLoaderState.Loading;
+            Debug.Log($"[VRC Picture Loader] Started Loading {picturesToLoad} Picture(s)");
             foreach (PictureDownloader downloader in downloaders)
             {
                 downloader.DownloadPicture();
@@ -100,7 +108,8 @@ namespace DrBlackRat
         private void FinishedLoading()
         {
             status.text = "Status: Finished";
-            Debug.Log("Finished Loading Pictures");
+            state = PictureLoaderState.Finished;
+            Debug.Log($"[VRC Picture Loader] Finished Loading {picturesLoaded} Picture(s)");
             if (manualLoadButton || !autoReload)
             {
                 loadButton.interactable = true;
@@ -108,22 +117,23 @@ namespace DrBlackRat
             if (autoReload)
             {
                 SendCustomEventDelayedSeconds("LoadPictures", autoReloadTime*60);
-                Debug.Log($"Next Auto Reload in {autoReloadTime} minute(s).");
+                Debug.Log($"[VRC Picture Loader] Next Auto Reload in {autoReloadTime} minute(s)");
                 
             }
         }
 
         private void FinishedLoadingError() 
         {
+            state = PictureLoaderState.FinishedError;
             if (errors == 1)
             {
                 status.text = $"Status: Finished with an Error";
-                Debug.Log($"Finished Loading Pictures with 1 Error.");
+                Debug.Log($"[VRC Picture Loader] Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with 1 Error");
             }
             else
             {
                 status.text = $"Status: Finished with Errors";
-                Debug.Log($"Finished Loading Pictures with { errors } Errors.");
+                Debug.Log($"[VRC Picture Loader] Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with {errors} Errors");
             }
             if (manualLoadButton || !autoReload)
             {
@@ -132,7 +142,7 @@ namespace DrBlackRat
             if (autoReload)
             {
                 SendCustomEventDelayedSeconds("LoadPictures", autoReloadTime * 60);
-                Debug.Log($"Next Auto Reload in {autoReloadTime} minute(s).");
+                Debug.Log($"[VRC Picture Loader] Next Auto Reload in {autoReloadTime} minute(s)");
             }
         }
         
@@ -174,5 +184,12 @@ namespace DrBlackRat
                 FinishedLoadingError();
             }
         }
+    }
+    public enum PictureLoaderState
+    {
+        Waiting,
+        Loading,
+        Finished,
+        FinishedError,
     }
 }
