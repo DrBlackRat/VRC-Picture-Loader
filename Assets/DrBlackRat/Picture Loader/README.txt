@@ -22,7 +22,7 @@ How to add it:
 
 - drag the Picture Loader prefab into your world
 - add the Picture Downloader script to the Mesh you want to apply the downloaded picture to
-- set the Material Properties you want the Texture to be applied to
+- set the Material Properties or Raw Images you want the Texture to be applied to
 - provide a direct link to the picture you want to download in the Url field
 
 This Asset was made by DrBlackRat
