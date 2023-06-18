@@ -26,7 +26,7 @@ __How to add it:__
   - after that reload the scene 
 - drag the Picture Loader prefab into your world
 - add the Picture Downloader script to the Mesh you want to apply the downloaded picture to
-- set the Material Properties you want the Texture to be applied to
+- set the Material Properties and / or Raw Images you want the Texture to be applied to
 - provide a direct link to the picture you want to download in the Url field
   
 __This Asset was made by DrBlackRat__  
