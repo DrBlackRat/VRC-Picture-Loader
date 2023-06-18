@@ -2,6 +2,8 @@
 This is a simple way to add an VRChat Image Downloader to your world!
 
 ![image](https://user-images.githubusercontent.com/46327609/221857848-917b9b95-4071-4667-91db-208a59b4bdeb.png)
+![image](https://github.com/DrBlackRat/VRC-Picture-Loader/assets/46327609/617d514d-f7a5-45cb-bc07-46f9c8f4d8f2)
+![image](https://github.com/DrBlackRat/VRC-Picture-Loader/assets/46327609/5dc317bd-337a-4428-b148-cfb49dc472ce)
 
 __What does it do?__
 - allows you to Automatically or Manually Download Pictures from the Web
