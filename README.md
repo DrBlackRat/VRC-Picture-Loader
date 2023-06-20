@@ -8,6 +8,7 @@ This is a simple way to add an VRChat Image Downloader to your world!
 __What does it do?__
 - allows you to Automatically or Manually Download Pictures from the Web
 - allows you to Automatically Redonwload Pictures after a certain ammount of time
+- allows you to keep the old Picture while redownloading it
 - shows the the Download Progress (how many pictures have been loaded vs how many are there)
 - shows an error when a picture couldn't be loaded
 - let's you change Texture Settings for the downloaded Picture
