@@ -32,6 +32,8 @@ namespace DrBlackRat
         [Header("Loadig & Error Texture")]
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load")]
         public bool useLoadingTexture = true;
+        [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again)")]
+        public bool skipLoadingTextureOnReload = false;
         [Tooltip("Texture used while the Picture is Loading")]
         public Texture2D loadingTexture;
         [Space(10)]
@@ -41,8 +43,11 @@ namespace DrBlackRat
         public Texture2D errorTexture;
 
         private VRCImageDownloader pictureDL;
+        private VRCImageDownloader oldPictureDL;
         [HideInInspector]
         public TextureInfo textureInfo;
+        [HideInInspector]
+        public Texture2D picture;
         private int timesRun;
 
         [HideInInspector]
@@ -87,13 +92,8 @@ namespace DrBlackRat
         }
         public void DownloadPicture()
         {
-            // Dispose old Loader
-            if (timesRun >= 1)
-            {
-                pictureDL.Dispose();
-            }
             // Sets Loading Texture
-            if (useLoadingTexture)
+            if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload)
             {
                 if (material != null)
                 {
@@ -111,34 +111,54 @@ namespace DrBlackRat
                 }
 
             }
+            if (timesRun >= 1)
+            {
+                oldPictureDL = pictureDL;
+            }
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
             pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), textureInfo);
-            
-            timesRun++;
         }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
         {
+            // Set result as Texture
+            picture = result.Result;
+            // Dispose Old Loader
+            if (timesRun >= 1)
+            {
+                oldPictureDL.Dispose();
+            }
+            timesRun++;
+
             // Sets Downloaded Picture as Texture
             if (material != null)
             {
                 foreach (string materialProperty in materialProperties)
                 {
-                    material.SetTexture(materialProperty, result.Result);
+                    material.SetTexture(materialProperty, picture);
                 }
             }
             if (uiRawImages.Length != 0 && uiRawImages != null)
             {
                 foreach (RawImage uiRawImage in uiRawImages)
                 {
-                    uiRawImage.texture = result.Result;
+                    uiRawImage.texture = picture;
                 }
             }
             Debug.Log("[VRC Picture Loader] Picture Loaded Successfully");
             manager.PictureLoaded();
+            timesRun++;
         }
         public override void OnImageLoadError(IVRCImageDownload result)
-        {   
+        {
+            // Dispose Loaders
+            if (timesRun >= 1)
+            {
+                oldPictureDL.Dispose();
+            }
+            pictureDL.Dispose();
+            timesRun++;
+
             // Sets Error Texture
             if (useErrorTexture)
             {
