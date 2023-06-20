@@ -11,10 +11,10 @@ namespace DrBlackRat
     public class PictureLoaderManager : UdonSharpBehaviour
     {
         [Header("Settings")]
-        [Tooltip("Load Pictures when you enter the World (required for Auto Reloading)")]
+        [Tooltip("Load Pictures when you enter the World")]
         public bool loadOnStart = true;
         [Space(10)]
-        [Tooltip("Automaically reload Pictures after a certain ammount of time (requires Load On Start to be enabled & disables Manual Loading)")]
+        [Tooltip("Automaically reload Pictures after a certain ammount of time (Load On Start should be enabled for this & disables Manual Loading)")]
         public bool autoReload = false;
         [Tooltip("Time in minutes after which Pictures should be redownloaded")]
         [Range(1, 60)]
@@ -22,8 +22,11 @@ namespace DrBlackRat
         [Space(10)]
         [Tooltip("Adds a button to Manually Load the Pictures (will be disabled if Auto Reload is enabled)")]
         public bool manualLoadButton = true;
+        [Tooltip("Disables Manager UI in case you don't need / want it")]
+        public bool disableUI = false;
 
         [Header("Internals")]
+        public GameObject UI;
         public TextMeshProUGUI status;
         public TextMeshProUGUI indicator;
         public GameObject loadButtonObj;
@@ -56,11 +59,8 @@ namespace DrBlackRat
                 uiRect.sizeDelta = new Vector2(105f, 46.25f);
                 uiCollider.enabled = false;
             }
-           // Enables Auto Loading when Reloading Is enabled
-           if (autoReload)
-            {
-                loadOnStart = true;
-            }
+            // Disables UI
+            UI.SetActive(!disableUI);
             // Picture Loading
             if (picturesToLoad == 0)
             {

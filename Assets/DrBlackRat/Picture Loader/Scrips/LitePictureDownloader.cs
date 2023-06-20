@@ -10,11 +10,19 @@ namespace DrBlackRat
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     [DefaultExecutionOrder(0)]
-    public class PictureDownloader : UdonSharpBehaviour
+    public class LitePictureDownloader : UdonSharpBehaviour
     {
-        [Header("Download Link")]        
+        [Header("Download Link & Settings")]
         [Tooltip("The Link to the Picture you want to download")]
         public VRCUrl url;
+        [Tooltip("Load Pictures when you enter the World")]
+        public bool loadOnStart = true;
+        [Space(10)]
+        [Tooltip("Automaically reload Pictures after a certain ammount of time (Load On Start should be enabled for this)")]
+        public bool autoReload = false;
+        [Tooltip("Time in minutes after which Pictures should be redownloaded")]
+        [Range(1, 60)]
+        public int autoReloadTime = 10;
 
         [Header("Texture Settings")]
         public bool generateMipMaps = true;
@@ -25,7 +33,7 @@ namespace DrBlackRat
         [Tooltip("The Material the Textures should be applied to, if left empty it tries use the one it's attached to")]
         public Material material;
         [Tooltip("List of Material Properties you want to apply the downloaded Picture to")]
-        public string[] materialProperties = {"_MainTex"};
+        public string[] materialProperties = { "_MainTex" };
         [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to")]
         public RawImage[] uiRawImages;
 
@@ -49,6 +57,7 @@ namespace DrBlackRat
         [HideInInspector]
         public Texture2D picture;
         private int timesRun;
+        private bool loading;
 
         [HideInInspector]
         public PictureLoaderManager manager;
@@ -65,13 +74,7 @@ namespace DrBlackRat
             var rawImage = GetComponent<RawImage>();
             if (uiRawImages.Length == 0 && rawImage != null)
             {
-                uiRawImages = new RawImage[1] {rawImage};
-            }
-
-            // Error when no Manager was found
-            if (manager == null)
-            {
-                Debug.LogError("No Picture Loader Manager Found");
+                uiRawImages = new RawImage[1] { rawImage };
             }
             // Texture Info Setup
             textureInfo.MaterialProperty = null;
@@ -80,7 +83,7 @@ namespace DrBlackRat
             switch (filterMode)
             {
                 case PFilterMode.Point:
-                    textureInfo.FilterMode = FilterMode.Point; 
+                    textureInfo.FilterMode = FilterMode.Point;
                     break;
                 case PFilterMode.Bilinear:
                     textureInfo.FilterMode = FilterMode.Bilinear;
@@ -89,35 +92,49 @@ namespace DrBlackRat
                     textureInfo.FilterMode = FilterMode.Trilinear;
                     break;
             }
+            if (loadOnStart)
+            {
+                DownloadPicture();
+            }
         }
         public void DownloadPicture()
         {
-            // Sets Loading Texture
-            if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload)
+            if (!loading)
             {
-                if (material != null)
+                loading = true;
+                // Sets Loading Texture
+                if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload)
                 {
-                    foreach (string materialProperty in materialProperties)
+                    if (material != null)
                     {
-                        material.SetTexture(materialProperty, loadingTexture);
+                        foreach (string materialProperty in materialProperties)
+                        {
+                            material.SetTexture(materialProperty, loadingTexture);
+                        }
                     }
-                }
-                if (uiRawImages.Length != 0 && uiRawImages != null)
-                {
-                    foreach (RawImage uiRawImage in uiRawImages)
+                    if (uiRawImages.Length != 0 && uiRawImages != null)
                     {
-                        uiRawImage.texture = loadingTexture;
+                        foreach (RawImage uiRawImage in uiRawImages)
+                        {
+                            uiRawImage.texture = loadingTexture;
+                        }
                     }
-                }
 
+                }
+                if (timesRun >= 1)
+                {
+                    oldPictureDL = pictureDL;
+                }
+                // Loads new Picture
+                pictureDL = new VRCImageDownloader();
+                pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), textureInfo);
+                Debug.Log("[VRC Picture Loader Lite] Started Loading Picture");
             }
-            if (timesRun >= 1)
+            else
             {
-                oldPictureDL = pictureDL;
+                Debug.LogWarning("[VRC Picture Loader Lite] Picture is currently being downloaded, wait for it to be done before trying again!");
             }
-            // Loads new Picture
-            pictureDL = new VRCImageDownloader();
-            pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), textureInfo);
+      
         }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
         {
@@ -138,15 +155,19 @@ namespace DrBlackRat
                     uiRawImage.texture = picture;
                 }
             }
-            Debug.Log("[VRC Picture Loader] Picture Loaded Successfully");
+            Debug.Log("[VRC Picture Loader Lite] Picture Loaded Successfully");
             // Dispose Old Loader
             if (timesRun >= 1)
             {
                 oldPictureDL.Dispose();
             }
+            loading = false;
             timesRun++;
-            // Tell Manager that Picture was loaded
-            manager.PictureLoaded();
+            if (autoReload)
+            {
+                SendCustomEventDelayedSeconds("DownloadPicture", autoReloadTime * 60);
+                Debug.Log($"[VRC Picture Loader Lite] Next Auto Reload in {autoReloadTime} minute(s)");
+            }
         }
         public override void OnImageLoadError(IVRCImageDownload result)
         {
@@ -168,22 +189,20 @@ namespace DrBlackRat
                     }
                 }
             }
-            Debug.Log($"[VRC Picture Loader] Could not Load Picture: {result.Error}");
+            Debug.Log($"[VRC Picture Loader Lite] Could not Load Picture: {result.Error}");
             // Dispose Loaders
             if (timesRun >= 1)
             {
                 oldPictureDL.Dispose();
             }
             pictureDL.Dispose();
+            loading = false;
             timesRun++;
-            // Tell Manager that Picture was loaded
-            manager.PictureFailed();
+            if (autoReload)
+            {
+                SendCustomEventDelayedSeconds("DownloadPicture", autoReloadTime * 60);
+                Debug.Log($"[VRC Picture Loader Lite] Next Auto Reload in {autoReloadTime} minute(s)");
+            }
         }
-    }
-    public enum PFilterMode
-    {
-        Point,
-        Bilinear,
-        Trilinear
     }
 }
