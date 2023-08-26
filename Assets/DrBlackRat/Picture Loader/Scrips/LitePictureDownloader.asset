@@ -164,7 +164,7 @@ MonoBehaviour:
       Data: 10|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Load Pictures when you enter the World
+      Data: Load Picture when you enter the World
     - Name: 
       Entry: 8
       Data: 
@@ -230,7 +230,7 @@ MonoBehaviour:
       Data: 14|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Automaically reload Pictures after a certain ammount of time (Load On
+      Data: Automaically reload Picture after a certain ammount of time (Load On
         Start should be enabled for this)
     - Name: 
       Entry: 8
@@ -294,7 +294,7 @@ MonoBehaviour:
       Data: 18|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Time in minutes after which Pictures should be redownloaded
+      Data: Time in minutes after which the Picture should be redownloaded
     - Name: 
       Entry: 8
       Data: 

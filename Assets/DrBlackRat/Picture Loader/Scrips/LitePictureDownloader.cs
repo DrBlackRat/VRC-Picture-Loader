@@ -15,12 +15,12 @@ namespace DrBlackRat
         [Header("Download Link & Settings")]
         [Tooltip("The Link to the Picture you want to download")]
         public VRCUrl url;
-        [Tooltip("Load Pictures when you enter the World")]
+        [Tooltip("Load Picture when you enter the World")]
         public bool loadOnStart = true;
         [Space(10)]
-        [Tooltip("Automaically reload Pictures after a certain ammount of time (Load On Start should be enabled for this)")]
+        [Tooltip("Automaically reload Picture after a certain ammount of time (Load On Start should be enabled for this)")]
         public bool autoReload = false;
-        [Tooltip("Time in minutes after which Pictures should be redownloaded")]
+        [Tooltip("Time in minutes after which the Picture should be redownloaded")]
         [Range(1, 60)]
         public int autoReloadTime = 10;
 
@@ -148,7 +148,7 @@ namespace DrBlackRat
                     material.SetTexture(materialProperty, picture);
                 }
             }
-            if (uiRawImages.Length != 0 && uiRawImages != null)
+            if (uiRawImages != null && uiRawImages.Length != 0)
             {
                 foreach (RawImage uiRawImage in uiRawImages)
                 {
@@ -181,7 +181,7 @@ namespace DrBlackRat
                         material.SetTexture(materialProperty, errorTexture);
                     }
                 }
-                if (uiRawImages.Length != 0 && uiRawImages != null)
+                if (uiRawImages != null && uiRawImages.Length != 0)
                 {
                     foreach (RawImage uiRawImage in uiRawImages)
                     {

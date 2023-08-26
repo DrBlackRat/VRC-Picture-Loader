@@ -72,9 +72,11 @@ MonoBehaviour:
   useAssignedLayers: 0
   DynamicPrefabs: []
   DynamicMaterials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
+  - {fileID: 2100000, guid: b14b84f9f6f41f84fa69663b7e01acfe, type: 2}
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
+  - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
+  - {fileID: 2100000, guid: 5c201c4378b6cae4390df67acb5518a8, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   LightMapsNear: []
   LightMapsFar: []
   LightMode: 0
@@ -129,8 +131,6 @@ MonoBehaviour:
   RenderSkybox: {fileID: 0}
   NetworkIDs:
   - gameObject: {fileID: 0}
-    ID: 10
-  - gameObject: {fileID: 0}
     ID: 11
   - gameObject: {fileID: 0}
     ID: 12
@@ -140,6 +140,10 @@ MonoBehaviour:
     ID: 14
   - gameObject: {fileID: 836321042223372365}
     ID: 15
+  - gameObject: {fileID: 0}
+    ID: 16
+  - gameObject: {fileID: 0}
+    ID: 17
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
 --- !u!114 &836321042223372363

@@ -71,7 +71,7 @@ namespace DrBlackRat
             // Error when no Manager was found
             if (manager == null)
             {
-                Debug.LogError("No Picture Loader Manager Found");
+                Debug.LogError("[VRC Picture Loader] No Picture Loader Manager Found");
             }
             // Texture Info Setup
             textureInfo.MaterialProperty = null;
@@ -102,7 +102,7 @@ namespace DrBlackRat
                         material.SetTexture(materialProperty, loadingTexture);
                     }
                 }
-                if (uiRawImages.Length != 0 && uiRawImages != null)
+                if (uiRawImages != null && uiRawImages.Length != 0)
                 {
                     foreach (RawImage uiRawImage in uiRawImages)
                     {
@@ -131,7 +131,7 @@ namespace DrBlackRat
                     material.SetTexture(materialProperty, picture);
                 }
             }
-            if (uiRawImages.Length != 0 && uiRawImages != null)
+            if (uiRawImages != null && uiRawImages.Length != 0)
             {
                 foreach (RawImage uiRawImage in uiRawImages)
                 {
