@@ -528,7 +528,7 @@ MonoBehaviour:
   autoReload: 0
   autoReloadTime: 10
   manualLoadButton: 1
-  disableUI: 0
+  disableUI: 1
   UI: {fileID: 3760187032087926781}
   status: {fileID: 6208561159777802394}
   indicator: {fileID: 8619851795119345736}
