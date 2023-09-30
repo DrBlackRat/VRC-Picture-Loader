@@ -67,6 +67,7 @@ namespace DrBlackRat
             {
                 status.text = "Status: Error, no Pictures found";
                 PLDebug.LogError($"Error, no Picture Downloaders found");
+                loadButton.interactable = false;
             }
             else if (loadOnStart)
             {
@@ -93,23 +94,26 @@ namespace DrBlackRat
         }
         public void _LoadPictures()
         {
-            if (state != PictureLoaderState.Loading)
+            if (picturesToLoad == 0)
             {
-                state = PictureLoaderState.Loading;
-                status.text = "Status: Loading";
-                picturesLoaded = 0;
-                errors = 0;
-                indicator.text = $"{picturesLoaded} / {picturesToLoad}";
-                loadButton.interactable = false;
-                PLDebug.Log($"Started Loading {picturesToLoad} Picture(s)");
-                foreach (PictureDownloader downloader in downloaders)
-                {
-                    downloader._DownloadPicture();
-                }
+                PLDebug.LogError("Can't start download, no Picture Downloaders found!");
+                return;
             }
-            else
+            if (state == PictureLoaderState.Loading)
             {
                 PLDebug.LogWarning($"Pictures are currently being downloaded, wait for it to be done before trying again!");
+                return;
+            }
+            state = PictureLoaderState.Loading;
+            status.text = "Status: Loading";
+            picturesLoaded = 0;
+            errors = 0;
+            indicator.text = $"{picturesLoaded} / {picturesToLoad}";
+            loadButton.interactable = false;
+            PLDebug.Log($"Started Loading {picturesToLoad} Picture(s)");
+            foreach (PictureDownloader downloader in downloaders)
+            {
+                downloader._DownloadPicture();
             }
 
         }
