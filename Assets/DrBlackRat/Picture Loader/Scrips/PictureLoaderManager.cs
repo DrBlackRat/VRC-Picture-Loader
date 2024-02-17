@@ -65,7 +65,7 @@ namespace DrBlackRat
             // Picture Loading
             if (picturesToLoad == 0)
             {
-                status.text = "Status: Error, no Pictures found";
+                status.text = "Error, no Pictures found";
                 PLDebug.LogError($"Error, no Picture Downloaders found");
                 loadButton.interactable = false;
             }
@@ -90,7 +90,7 @@ namespace DrBlackRat
         private void Wait()
         {
             state = PictureLoaderState.Waiting;
-            status.text = "Status: Waiting";
+            status.text = "Waiting";
         }
         public void _LoadPictures()
         {
@@ -105,7 +105,7 @@ namespace DrBlackRat
                 return;
             }
             state = PictureLoaderState.Loading;
-            status.text = "Status: Loading";
+            status.text = "Loading";
             picturesLoaded = 0;
             errors = 0;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
@@ -121,7 +121,7 @@ namespace DrBlackRat
         {
             timesRun++;
             state = PictureLoaderState.Finished;
-            status.text = "Status: Finished";
+            status.text = "Finished";
             PLDebug.Log($"Finished Loading {picturesLoaded} Picture(s)");
             if (manualLoadButton || !autoReload) loadButton.interactable = true;
             if (autoReload)
@@ -136,16 +136,10 @@ namespace DrBlackRat
         {
             timesRun++;
             state = PictureLoaderState.FinishedError;
-            if (errors == 1)
-            {
-                status.text = $"Status: Finished with an Error";
-                PLDebug.LogWarning($"Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with 1 Error");
-            }
-            else
-            {
-                status.text = $"Status: Finished with Errors";
-                PLDebug.LogWarning($"Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with {errors} Errors");
-            }
+
+            status.text = $"Finished with Errors";
+            PLDebug.LogWarning($"Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with {errors} Error(s)");
+
             if (manualLoadButton || !autoReload) loadButton.interactable = true;
             if (autoReload)
             {
