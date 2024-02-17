@@ -45,6 +45,9 @@ __Lite Setup:__
 - add the Lite Picture Downloader script to the Mesh / Raw Image you want to apply the downloaded picture to
 - set the Material Properties or Raw Images you want the Texture to be applied to
 - provide a direct link to the picture you want to download in the Url field
+
+__Tipp:__
+If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.
   
 __This Asset was made by DrBlackRat__  
 GitHub: https://github.com/DrBlackRat/VRC-Picture-Loader  
