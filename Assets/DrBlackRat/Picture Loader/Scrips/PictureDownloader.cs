@@ -19,7 +19,14 @@ namespace DrBlackRat
         [Header("Texture Settings")]
         [SerializeField] private bool generateMipMaps = true;
         [SerializeField] private int anisoLevel = 9;
-        [SerializeField] private PFilterMode filterMode = PFilterMode.Bilinear;
+        [SerializeField] private FilterMode filterMode = FilterMode.Bilinear;
+        [Space(10)]
+        [Tooltip("Texture Wrap Mode along the Horziontal Axis")]
+        [SerializeField] private TextureWrapMode wrapModeU = TextureWrapMode.Repeat;
+        [Tooltip("Texture Wrap Mode along the Vertial Axis")]
+        [SerializeField] private TextureWrapMode wrapModeV = TextureWrapMode.Repeat;
+        [Tooltip("Texture Wrap Mode for depth (only relevant for Texture3D)")]
+        [SerializeField] private TextureWrapMode wrapModeW = TextureWrapMode.Repeat;
 
         [Header("Material & Raw Image Settings")]
         [Tooltip("The Material the Textures should be applied to, if left empty it tries use the one it's attached to")]
@@ -66,18 +73,10 @@ namespace DrBlackRat
             textureInfo.MaterialProperty = null;
             textureInfo.GenerateMipMaps = generateMipMaps;
             textureInfo.AnisoLevel = anisoLevel;
-            switch (filterMode)
-            {
-                case PFilterMode.Point:
-                    textureInfo.FilterMode = FilterMode.Point; 
-                    break;
-                case PFilterMode.Bilinear:
-                    textureInfo.FilterMode = FilterMode.Bilinear;
-                    break;
-                case PFilterMode.Trilinear:
-                    textureInfo.FilterMode = FilterMode.Trilinear;
-                    break;
-            }
+            textureInfo.WrapModeU = wrapModeU;
+            textureInfo.WrapModeV = wrapModeV;
+            textureInfo.WrapModeW = wrapModeW;
+            textureInfo.FilterMode = filterMode;
         }
         public void _DownloadPicture()
         {
@@ -123,11 +122,5 @@ namespace DrBlackRat
             // Tell Manager that Picture was loaded
             manager.PictureFailed();
         }
-    }
-    public enum PFilterMode
-    {
-        Point,
-        Bilinear,
-        Trilinear
     }
 }

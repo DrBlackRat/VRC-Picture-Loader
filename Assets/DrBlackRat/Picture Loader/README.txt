@@ -1,4 +1,4 @@
-VRC Picture Loader V1.4.0
+VRC Picture Loader V1.6.0
 
 This is a simple way to add an VRChat Image Downloader to your world!
 

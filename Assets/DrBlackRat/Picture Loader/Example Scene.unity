@@ -211,6 +211,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
   material: {fileID: 0}
   materialProperties:
   - _MainTex
@@ -646,6 +649,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
   material: {fileID: 0}
   materialProperties:
   - _MainTex
@@ -809,6 +815,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
   material: {fileID: 0}
   materialProperties:
   - _MainTex
@@ -1269,7 +1278,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1545442689
 Canvas:
   m_ObjectHideFlags: 0
@@ -1717,6 +1726,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
   material: {fileID: 0}
   materialProperties: []
   uiRawImages: []
@@ -1869,6 +1881,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
   material: {fileID: 0}
   materialProperties:
   - _MainTex
@@ -1979,6 +1994,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: unityVersion
+      value: 2022.3.6f1
+      objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: ReferenceCamera
