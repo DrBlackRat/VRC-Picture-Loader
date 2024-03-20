@@ -236,7 +236,7 @@ MonoBehaviour:
       Data: 15|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Automaically reload Picture after a certain ammount of time (Load On
+      Data: Automatically reload Picture after a certain amount of time (Load On
         Start should be enabled for this)
     - Name: 
       Entry: 8
@@ -306,7 +306,7 @@ MonoBehaviour:
       Data: 20|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Time in minutes after which the Picture should be redownloaded
+      Data: Time in minutes after which the Picture should be downloaded again
     - Name: 
       Entry: 8
       Data: 
@@ -573,7 +573,7 @@ MonoBehaviour:
       Data: 38|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Texture Wrap Mode along the Horziontal Axis
+      Data: Texture Wrap Mode along the Horizontal Axis
     - Name: 
       Entry: 8
       Data: 
@@ -636,7 +636,7 @@ MonoBehaviour:
       Data: 42|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Texture Wrap Mode along the Vertial Axis
+      Data: Texture Wrap Mode along the Vertical Axis
     - Name: 
       Entry: 8
       Data: 
@@ -981,7 +981,7 @@ MonoBehaviour:
       Data: 66|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
     - Name: header
       Entry: 1
-      Data: Loadig & Error Texture
+      Data: Loading & Error Texture
     - Name: 
       Entry: 8
       Data: 

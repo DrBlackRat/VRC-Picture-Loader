@@ -14,9 +14,9 @@ namespace DrBlackRat
         [Tooltip("Load Pictures when you enter the World")]
         [SerializeField] private bool loadOnStart = true;
         [Space(10)]
-        [Tooltip("Automaically reload Pictures after a certain ammount of time (Load On Start should be enabled for this & disables Manual Loading)")]
+        [Tooltip("Automatically reload Pictures after a certain amount of time (Load On Start should be enabled for this & disables Manual Loading)")]
         [SerializeField] private bool autoReload = false;
-        [Tooltip("Time in minutes after which Pictures should be redownloaded")]
+        [Tooltip("Time in minutes after which Pictures should be downloaded again")]
         [Range(1, 60)]
         [SerializeField] private int autoReloadTime = 10;
         [Space(10)]
@@ -46,9 +46,9 @@ namespace DrBlackRat
         
         private void Start()
         {
-            // Grabbing comonents
+            // Grabbing components
             loadButton = loadButtonObj.GetComponent<Button>();
-            // Inital set of Variables
+            // Initial set of Variables
             picturesLoaded = 0;
             picturesToLoad = downloaders.Length;
             indicator.text = $"{picturesLoaded} / {picturesToLoad}";
@@ -124,12 +124,9 @@ namespace DrBlackRat
             status.text = "Finished";
             PLDebug.Log($"Finished Loading {picturesLoaded} Picture(s)");
             if (manualLoadButton || !autoReload) loadButton.interactable = true;
-            if (autoReload)
-            {
-                SendCustomEventDelayedSeconds("_LoadPictures", autoReloadTime*60);
-                PLDebug.Log($"Next Auto Reload in {autoReloadTime} minute(s)");
-                
-            }
+            if (!autoReload) return;
+            SendCustomEventDelayedSeconds("_LoadPictures", autoReloadTime*60);
+            PLDebug.Log($"Next Auto Reload in {autoReloadTime} minute(s)");
         }
 
         private void FinishedLoadingError() 
@@ -141,11 +138,9 @@ namespace DrBlackRat
             PLDebug.LogWarning($"Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with {errors} Error(s)");
 
             if (manualLoadButton || !autoReload) loadButton.interactable = true;
-            if (autoReload)
-            {
-                SendCustomEventDelayedSeconds("_LoadPictures", autoReloadTime * 60);
-                PLDebug.Log($"Next Auto Reload in {autoReloadTime} minute(s)");
-            }
+            if (!autoReload) return;
+            SendCustomEventDelayedSeconds("_LoadPictures", autoReloadTime * 60);
+            PLDebug.Log($"Next Auto Reload in {autoReloadTime} minute(s)");
         }
         
         // Callbacks from the PictureDonwloaders

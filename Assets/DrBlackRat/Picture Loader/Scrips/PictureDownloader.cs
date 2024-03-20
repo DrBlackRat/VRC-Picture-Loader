@@ -3,7 +3,6 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.SDK3.Image;
 using VRC.Udon;
-using Unity;
 using UnityEngine.UI;
 
 namespace DrBlackRat
@@ -21,9 +20,9 @@ namespace DrBlackRat
         [SerializeField] private int anisoLevel = 9;
         [SerializeField] private FilterMode filterMode = FilterMode.Bilinear;
         [Space(10)]
-        [Tooltip("Texture Wrap Mode along the Horziontal Axis")]
+        [Tooltip("Texture Wrap Mode along the Horizontal Axis")]
         [SerializeField] private TextureWrapMode wrapModeU = TextureWrapMode.Repeat;
-        [Tooltip("Texture Wrap Mode along the Vertial Axis")]
+        [Tooltip("Texture Wrap Mode along the Vertical Axis")]
         [SerializeField] private TextureWrapMode wrapModeV = TextureWrapMode.Repeat;
         [Tooltip("Texture Wrap Mode for depth (only relevant for Texture3D)")]
         [SerializeField] private TextureWrapMode wrapModeW = TextureWrapMode.Repeat;
@@ -36,7 +35,7 @@ namespace DrBlackRat
         [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to")]
         [SerializeField] private RawImage[] uiRawImages;
 
-        [Header("Loadig & Error Texture")]
+        [Header("Loading & Error Texture")]
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load")]
         [SerializeField] private bool useLoadingTexture = true;
         [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again)")]
@@ -66,7 +65,7 @@ namespace DrBlackRat
             if (material == null && renderer != null) material = renderer.material;
             // Sets Raw Image
             var rawImage = GetComponent<RawImage>();
-            if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new RawImage[1] { rawImage };
+            if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new[] { rawImage };
             // Error when no Manager was found
             if (manager == null) PLDebug.LogError($"No Picture Loader Manager Found!");
             // Texture Info Setup

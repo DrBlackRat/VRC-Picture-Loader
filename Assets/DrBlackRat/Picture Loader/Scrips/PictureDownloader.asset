@@ -362,7 +362,7 @@ MonoBehaviour:
       Data: 24|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Texture Wrap Mode along the Horziontal Axis
+      Data: Texture Wrap Mode along the Horizontal Axis
     - Name: 
       Entry: 8
       Data: 
@@ -425,7 +425,7 @@ MonoBehaviour:
       Data: 28|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: Texture Wrap Mode along the Vertial Axis
+      Data: Texture Wrap Mode along the Vertical Axis
     - Name: 
       Entry: 8
       Data: 
@@ -770,7 +770,7 @@ MonoBehaviour:
       Data: 52|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
     - Name: header
       Entry: 1
-      Data: Loadig & Error Texture
+      Data: Loading & Error Texture
     - Name: 
       Entry: 8
       Data: 

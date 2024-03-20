@@ -3,7 +3,6 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.SDK3.Image;
 using VRC.Udon;
-using Unity;
 using UnityEngine.UI;
 
 namespace DrBlackRat
@@ -18,9 +17,9 @@ namespace DrBlackRat
         [Tooltip("Load Picture when you enter the World")]
         [SerializeField] private bool loadOnStart = true;
         [Space(10)]
-        [Tooltip("Automaically reload Picture after a certain ammount of time (Load On Start should be enabled for this)")]
+        [Tooltip("Automatically reload Picture after a certain amount of time (Load On Start should be enabled for this)")]
         [SerializeField] private bool autoReload = false;
-        [Tooltip("Time in minutes after which the Picture should be redownloaded")]
+        [Tooltip("Time in minutes after which the Picture should be downloaded again")]
         [Range(1, 60)]
         [SerializeField] private int autoReloadTime = 10;
 
@@ -29,9 +28,9 @@ namespace DrBlackRat
         [SerializeField] private int anisoLevel = 9;
         [SerializeField] private FilterMode filterMode = FilterMode.Bilinear;
         [Space(10)]
-        [Tooltip("Texture Wrap Mode along the Horziontal Axis")]
+        [Tooltip("Texture Wrap Mode along the Horizontal Axis")]
         [SerializeField] private TextureWrapMode wrapModeU = TextureWrapMode.Repeat;
-        [Tooltip("Texture Wrap Mode along the Vertial Axis")]
+        [Tooltip("Texture Wrap Mode along the Vertical Axis")]
         [SerializeField] private TextureWrapMode wrapModeV = TextureWrapMode.Repeat;
         [Tooltip("Texture Wrap Mode for depth (only relevant for Texture3D)")]
         [SerializeField] private TextureWrapMode wrapModeW = TextureWrapMode.Repeat;
@@ -44,7 +43,7 @@ namespace DrBlackRat
         [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to")]
         [SerializeField] private RawImage[] uiRawImages;
 
-        [Header("Loadig & Error Texture")]
+        [Header("Loading & Error Texture")]
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load")]
         [SerializeField] private bool useLoadingTexture = true;
         [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again)")]
@@ -75,7 +74,7 @@ namespace DrBlackRat
             if (material == null && renderer != null) material = renderer.material;
             // Sets Raw Image
             var rawImage = GetComponent<RawImage>();
-            if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new RawImage[1] { rawImage };
+            if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new[] { rawImage };
             // Texture Info Setup
             textureInfo.MaterialProperty = null;
             textureInfo.GenerateMipMaps = generateMipMaps;
@@ -119,6 +118,13 @@ namespace DrBlackRat
                 foreach (RawImage uiRawImage in uiRawImages) uiRawImage.texture = newTexture;
             }
         }
+
+        private void AutoReload()
+        {
+            if (!autoReload) return;
+            SendCustomEventDelayedSeconds("_DownloadPicture", autoReloadTime * 60);
+            PLDebug.LiteLog($"Next Auto Reload for [{url}] in {autoReloadTime} minute(s)");
+        }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
         {
             loading = false;
@@ -129,11 +135,7 @@ namespace DrBlackRat
             // Dispose Old Loader
             if (timesRun >= 1) oldPictureDL.Dispose();
             timesRun++;
-            if (autoReload)
-            {
-                SendCustomEventDelayedSeconds("_DownloadPicture", autoReloadTime * 60);
-                PLDebug.LiteLog($"Next Auto Reload for [{url}] in {autoReloadTime} minute(s)");
-            }
+            AutoReload();
         }
         public override void OnImageLoadError(IVRCImageDownload result)
         {
@@ -145,11 +147,7 @@ namespace DrBlackRat
             if (timesRun >= 1) oldPictureDL.Dispose();
             pictureDL.Dispose();
             timesRun++;
-            if (autoReload)
-            {
-                SendCustomEventDelayedSeconds("_DownloadPicture", autoReloadTime * 60);
-                PLDebug.LiteLog($"Next Auto Reload in {autoReloadTime} minute(s)");
-            }
+            AutoReload();
         }
     }
 }
