@@ -112,6 +112,7 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     }
     public override void OnDeserialization()
     {
+        UpdateUI();
         if (netUrl.Equals(url)) return;
         url = netUrl;
         // Load Image
