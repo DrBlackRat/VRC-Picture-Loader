@@ -36,7 +36,7 @@ namespace DrBlackRat
         [HideInInspector]
         public PictureDownloader[] downloaders;
         [HideInInspector]
-        public PictureLoaderState state;
+        public PLState state;
 
         private Button loadButton;
         private int picturesToLoad;
@@ -57,7 +57,7 @@ namespace DrBlackRat
             {
                 manualLoadButton = false;
                 loadButtonObj.SetActive(false);
-                uiRect.sizeDelta = new Vector2(105f, 46.25f);
+                uiRect.sizeDelta = new Vector2(105f, 51f);
                 uiCollider.enabled = false;
             }
             // Disable UI
@@ -89,7 +89,7 @@ namespace DrBlackRat
         // What happens in each state
         private void Wait()
         {
-            state = PictureLoaderState.Waiting;
+            state = PLState.Waiting;
             status.text = "Waiting";
         }
         public void _LoadPictures()
@@ -99,12 +99,12 @@ namespace DrBlackRat
                 PLDebug.LogError("Can't start download, no Picture Downloaders found!");
                 return;
             }
-            if (state == PictureLoaderState.Loading)
+            if (state == PLState.Loading)
             {
                 PLDebug.LogWarning($"Pictures are currently being downloaded, wait for it to be done before trying again!");
                 return;
             }
-            state = PictureLoaderState.Loading;
+            state = PLState.Loading;
             status.text = "Loading";
             picturesLoaded = 0;
             errors = 0;
@@ -120,7 +120,7 @@ namespace DrBlackRat
         private void FinishedLoading()
         {
             timesRun++;
-            state = PictureLoaderState.Finished;
+            state = PLState.Finished;
             status.text = "Finished";
             PLDebug.Log($"Finished Loading {picturesLoaded} Picture(s)");
             if (manualLoadButton || !autoReload) loadButton.interactable = true;
@@ -132,7 +132,7 @@ namespace DrBlackRat
         private void FinishedLoadingError() 
         {
             timesRun++;
-            state = PictureLoaderState.FinishedError;
+            state = PLState.Error;
 
             status.text = $"Finished with Errors";
             PLDebug.LogWarning($"Finished Loading {picturesLoaded} out of {picturesToLoad} Picture(s) with {errors} Error(s)");
@@ -181,12 +181,5 @@ namespace DrBlackRat
                 FinishedLoadingError();
             }
         }
-    }
-    public enum PictureLoaderState
-    {
-        Waiting,
-        Loading,
-        Finished,
-        FinishedError,
     }
 }

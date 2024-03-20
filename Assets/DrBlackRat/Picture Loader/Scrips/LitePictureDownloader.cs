@@ -8,7 +8,7 @@ using UnityEngine.UI;
 namespace DrBlackRat
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
-    [DefaultExecutionOrder(0)]
+    [DefaultExecutionOrder(100)]
     public class LitePictureDownloader : UdonSharpBehaviour
     {
         [Header("Download Link & Settings")]
@@ -17,8 +17,8 @@ namespace DrBlackRat
         [Tooltip("Load Picture when you enter the World")]
         [SerializeField] private bool loadOnStart = true;
         [Space(10)]
-        [Tooltip("Automatically reload Picture after a certain amount of time (Load On Start should be enabled for this)")]
-        [SerializeField] private bool autoReload = false;
+        [Tooltip("Automatically reload Picture after a certain amount of time. Will be auto disabled if using a URL Input (Load On Start should be enabled for this)")]
+        public bool autoReload = false;
         [Tooltip("Time in minutes after which the Picture should be downloaded again")]
         [Range(1, 60)]
         [SerializeField] private int autoReloadTime = 10;
@@ -66,6 +66,8 @@ namespace DrBlackRat
 
         [HideInInspector]
         public PictureLoaderManager manager;
+        [HideInInspector] 
+        public PictureLoaderURLInput urlInput;
 
         private void Start()
         {
@@ -86,13 +88,19 @@ namespace DrBlackRat
             if (loadOnStart)
             {
                 _DownloadPicture();
+                return;
             }
+            // Talk to URL Input if available
+            if (urlInput != null) urlInput._Wait();
+
         }
         public void _DownloadPicture()
         {
             if (!loading)
             {
                 loading = true;
+                // Talk to URL Input if available
+                if (urlInput != null) urlInput._Loading();
                 // Sets Loading Texture
                 if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload) ApplyTexture(loadingTexture);
                 if (timesRun >= 1) oldPictureDL = pictureDL;
@@ -105,7 +113,6 @@ namespace DrBlackRat
             {
                 PLDebug.LiteLogWarning($"Picture from [{url}] is currently being downloaded, wait for it to be done before trying again!");
             }
-      
         }
         private void ApplyTexture(Texture2D newTexture)
         {
@@ -118,7 +125,6 @@ namespace DrBlackRat
                 foreach (RawImage uiRawImage in uiRawImages) uiRawImage.texture = newTexture;
             }
         }
-
         private void AutoReload()
         {
             if (!autoReload) return;
@@ -136,6 +142,8 @@ namespace DrBlackRat
             if (timesRun >= 1) oldPictureDL.Dispose();
             timesRun++;
             AutoReload();
+            // Talk to URL Input if available
+            if (urlInput != null) urlInput._Finished();
         }
         public override void OnImageLoadError(IVRCImageDownload result)
         {
@@ -148,6 +156,8 @@ namespace DrBlackRat
             pictureDL.Dispose();
             timesRun++;
             AutoReload();
+            // Talk to URL Input if available
+            if (urlInput != null) urlInput._Error();
         }
     }
 }
