@@ -40,7 +40,7 @@ This highly depends on what you want to use them for, but here are a few example
 - If you only want to load a single picture or don't need the Manager you can just use the Lite Downloader.
   - You can have as many Lite Downloaders in a World as you want as they don't interfere with each other.
 - If you want to be able to enter a new URL while being in the World you can use the Picture Loader URL Input as it provides you an Input Field and is network synced.
-  - You can always only pair one URL Input and one Lite Downloader, you can hover have as many parings as you want to.
+  - You can always only pair one URL Input and one Lite Downloader, you can however have as many parings as you want to.
 
 You can mix an match them as much as you want though. So you could have a Manager taking care of 5 Downloaders, have 3 other Lite Downloaders and 4 Lite Downloaders with URL Input Fields.
 
