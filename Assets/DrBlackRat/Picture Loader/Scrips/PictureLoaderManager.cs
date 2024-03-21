@@ -57,7 +57,7 @@ namespace DrBlackRat
             {
                 manualLoadButton = false;
                 loadButtonObj.SetActive(false);
-                uiRect.sizeDelta = new Vector2(105f, 51f);
+                uiRect.sizeDelta = new Vector2(105f, 52.8f);
                 uiCollider.enabled = false;
             }
             // Disable UI
