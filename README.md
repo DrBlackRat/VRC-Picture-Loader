@@ -47,7 +47,7 @@ You can mix an match them as much as you want though. So you could have a Manage
 ### Here is my VRChat World showcasing them:
 https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
 ### Here is a video showcasing it:
-Pending
+https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
 
 ## Setup:
 Take a look at the example scene!
