@@ -1,6 +1,4 @@
-﻿
-using System;
-using DrBlackRat;
+﻿using DrBlackRat;
 using TMPro;
 using UdonSharp;
 using UnityEngine;
@@ -43,6 +41,7 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
         downloader.urlInput = this;
         downloader.autoReload = false;
         CheckOwner();
+        PLDebug.UrlLog("Connected to Lite Picture Downloader");
     }
     #region UI
     // UI Events
@@ -144,6 +143,7 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
             downloader._DownloadPicture();
         }
     }
+    // Lite Picture Loader Interface
     public void _Wait()
     {
         state = PLState.Waiting;
