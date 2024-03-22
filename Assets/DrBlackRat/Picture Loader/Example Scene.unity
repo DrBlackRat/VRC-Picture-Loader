@@ -302,6 +302,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1324343810}
     m_Modifications:
+    - target: {fileID: 137916038107891276, guid: 50974b7e2b9c419498bcec54a9a23134,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3539016661070284493, guid: 50974b7e2b9c419498bcec54a9a23134,
         type: 3}
       propertyPath: downloader
