@@ -335,11 +335,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 178797329}
     m_Modifications:
-    - target: {fileID: 137916038107891276, guid: 50974b7e2b9c419498bcec54a9a23134,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3539016661070284493, guid: 50974b7e2b9c419498bcec54a9a23134,
         type: 3}
       propertyPath: downloader
@@ -1327,10 +1322,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 622080469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 90}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1324574877
 GameObject:

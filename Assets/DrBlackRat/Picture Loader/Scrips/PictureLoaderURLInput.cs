@@ -25,19 +25,22 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     
     private PLState state;
     private bool isOwner;
-    private bool startedLoading;
     
     private VRCUrl url = new VRCUrl("");
     [UdonSynced] private VRCUrl netUrl = new VRCUrl("");
+    
     private readonly VRCUrl emptyUrl = new VRCUrl("");
     private void Start()
     {
-        // Initial Setup
         if (downloader == null)
         {
             PLDebug.UrlLogError("No Lite Picture Downloader provided!");
+            bgText.text = "Error! No Downloader Provided!";
+            inputField.interactable = false;
+            lockButton.interactable = false;
             return;
         }
+        _Wait();
         downloader.urlInput = this;
         downloader.autoReload = false;
         CheckOwner();
@@ -56,18 +59,15 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     public void _UrlEntered()
     {
         if (!AllowInput()) return;
-        url = inputField.GetUrl();
-        netUrl = url;
-        // Empty Input Field
+        var newUrl = inputField.GetUrl();
+        url = newUrl;
+        netUrl = newUrl;
         inputField.SetUrl(emptyUrl);
-        // Load Image
-        startedLoading = false;
         _TryLoadingImage();
         // Networking
         if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
         RequestSerialization();
     }
-    // Update UI
     private void UpdateUI()
     {
         // Update Lock Button
@@ -112,10 +112,10 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     public override void OnDeserialization()
     {
         UpdateUI();
+        // Check if new url is different from previous URL
         if (netUrl.Equals(url)) return;
         url = netUrl;
         // Load Image
-        startedLoading = false;
         _TryLoadingImage();
     }
     private void CheckOwner()
@@ -127,18 +127,13 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     #region Image Loading
     public void _TryLoadingImage()
     {
-        if (state == PLState.Loading && !startedLoading)
+        if (state == PLState.Loading)
         {
             PLDebug.UrlLog("An Image is currently being loaded, will try again in 5s");
             SendCustomEventDelayedSeconds("_TryLoadingImage", 5f);
         }
-        else if (state == PLState.Loading && startedLoading)
-        {
-            return;
-        }
         else
         {
-            startedLoading = true;
             downloader.url = url;
             downloader._DownloadPicture();
         }

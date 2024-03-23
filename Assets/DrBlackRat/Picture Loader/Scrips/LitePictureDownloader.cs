@@ -85,14 +85,8 @@ namespace DrBlackRat
             textureInfo.WrapModeV = wrapModeV;
             textureInfo.WrapModeW = wrapModeW;
             textureInfo.FilterMode = filterMode;
-            if (loadOnStart)
-            {
-                _DownloadPicture();
-                return;
-            }
-            // Talk to URL Input if available
-            if (urlInput != null) urlInput._Wait();
-
+            if (urlInput != null) autoReload = false;
+            if (loadOnStart) _DownloadPicture();
         }
         public void _DownloadPicture()
         {
