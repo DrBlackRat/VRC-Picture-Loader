@@ -144,7 +144,7 @@ namespace DrBlackRat
         }
         
         // Callbacks from the PictureDonwloaders
-        public void PictureLoaded()
+        public void _PictureLoaded()
         {
             picturesLoaded++;
             if (errors == 0)
@@ -166,7 +166,7 @@ namespace DrBlackRat
                 FinishedLoadingError();
             }
         }
-        public void PictureFailed() 
+        public void _PictureFailed() 
         {
             errors++;
             indicator.text = $"{picturesLoaded} / {picturesToLoad} | Errors: {errors}";

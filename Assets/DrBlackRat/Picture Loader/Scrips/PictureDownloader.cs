@@ -107,7 +107,7 @@ namespace DrBlackRat
             if (timesRun >= 1) oldPictureDL.Dispose();
             timesRun++;
             // Tell Manager that Picture was loaded
-            manager.PictureLoaded();
+            manager._PictureLoaded();
         }
         public override void OnImageLoadError(IVRCImageDownload result)
         {
@@ -119,7 +119,7 @@ namespace DrBlackRat
             pictureDL.Dispose();
             timesRun++;
             // Tell Manager that Picture was loaded
-            manager.PictureFailed();
+            manager._PictureFailed();
         }
     }
 }
