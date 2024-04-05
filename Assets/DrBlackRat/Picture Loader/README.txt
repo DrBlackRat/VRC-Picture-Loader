@@ -1,8 +1,10 @@
-VRC Picture Loader V2.0.1
+VRC Picture Loader V2.1.0
 
 This is a simple way to add an VRChat Image Downloader to your world!
 
 Here are the core features:
+- UI to control Image Downloader
+  - Light & Dark Mode
 - Download Images from the Web
 - Load them automatically on start & re download them after a specific amount of time
 - Adjust texture settings:
