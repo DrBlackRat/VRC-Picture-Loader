@@ -1230,6 +1230,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818552208}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &959105474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6133799888444185862, guid: 45dfbd0aaebd4b0448b722cebad9a7ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3212467426988060725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &991337675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,58 +2816,58 @@ PrefabInstance:
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[3].ID
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
-        type: 3}
-      propertyPath: NetworkIDs.Array.data[4].ID
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
-      propertyPath: NetworkIDs.Array.data[5].ID
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
-        type: 3}
-      propertyPath: NetworkIDs.Array.data[6].ID
+      propertyPath: NetworkIDs.Array.data[4].ID
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
+      propertyPath: NetworkIDs.Array.data[5].ID
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[6].ID
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
       propertyPath: NetworkIDs.Array.data[7].ID
-      value: 19
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[8].ID
-      value: 20
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[0]
       value: 
-      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: b14b84f9f6f41f84fa69663b7e01acfe, type: 2}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: b14b84f9f6f41f84fa69663b7e01acfe, type: 2}
+      objectReference: {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
+      objectReference: {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
+      objectReference: {fileID: 2100000, guid: 5c201c4378b6cae4390df67acb5518a8, type: 2}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[4]
       value: 
-      objectReference: {fileID: 2100000, guid: 5c201c4378b6cae4390df67acb5518a8, type: 2}
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: DynamicMaterials.Array.data[5]
@@ -2886,32 +2892,42 @@ PrefabInstance:
         type: 3}
       propertyPath: NetworkIDs.Array.data[3].gameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1935363560}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[4].gameObject
       value: 
-      objectReference: {fileID: 1935363560}
+      objectReference: {fileID: 1195206090}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[5].gameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 100836197}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[6].gameObject
       value: 
-      objectReference: {fileID: 1195206090}
+      objectReference: {fileID: 1709271289}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[7].gameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2124480621}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[8].gameObject
       value: 
-      objectReference: {fileID: 100836197}
+      objectReference: {fileID: 959105474}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[4].SerializedTypeNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[5].SerializedTypeNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
       propertyPath: NetworkIDs.Array.data[6].SerializedTypeNames.Array.size
@@ -2926,6 +2942,16 @@ PrefabInstance:
         type: 3}
       propertyPath: NetworkIDs.Array.data[8].SerializedTypeNames.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[4].SerializedTypeNames.Array.data[0]
+      value: VRC.Udon.UdonBehaviour
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: NetworkIDs.Array.data[5].SerializedTypeNames.Array.data[0]
+      value: VRC.Udon.UdonBehaviour
       objectReference: {fileID: 0}
     - target: {fileID: 836321042223372360, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
         type: 3}
@@ -3001,6 +3027,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VRCWorld
+      objectReference: {fileID: 0}
+    - target: {fileID: 836321043108291275, guid: 5e0c7d4098dd00246a6ad9b67dc49c15,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
