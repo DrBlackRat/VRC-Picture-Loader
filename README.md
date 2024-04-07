@@ -3,6 +3,8 @@
 
 ## Here are the core features:
 - Download Images from the Web
+- Provides a UI for VRChat's Image Downloader
+  - Light & Dark Mode
 - Load them automatically on start & re download them after a specific amount of time
 - Adjust texture settings:
   - Generate Mip Maps
@@ -55,13 +57,13 @@ It showcases how all 3 ways can / need to be setup and makes it quite easy to un
 If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
 
 1. Manager Setup
-- Add the Picture Loader Prefab to your World
+- Add the Picture Loader Prefab to your World (Choose between Light & Dark Mode)
 - Add the Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for
 - Provide a download URL for each Picture Downloader
 - Adjust the Settings depending on what you need
 
 2. Lite Setup
-- Add the Lite Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for
+- Add the Lite Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for 
 - Provide a download URL for the Lite Picture Downloaders
 - Adjust the Settings depending on what you need
 
@@ -69,7 +71,7 @@ If you don't know what a setting does / needs just hover over it's name and a to
 - Setup a Lite Picture Downloader as described above
   - You don't need to provide a URl but you can if you want an image to be downloaded by default
   - Auto Reload wont work / will be disabled when using the URL Input
-- Add the Picture Loader URL Input Prefab to your World
+- Add the Picture Loader URL Input Prefab to your World (Choose between Light & Dark Mode)
 - Assign the Lite Downloader that you want to use for it
 
 **Tip: If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.**
