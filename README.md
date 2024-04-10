@@ -1,6 +1,10 @@
 ![BBBBBBBB+](https://github.com/DrBlackRat/VRC-Picture-Loader/assets/46327609/d407dab4-d36e-4723-8cd6-e41e9bcc6698)
 
 
+## Download
+The VRC Picture Loader is available via the [Creator Companion](https://vcc.docs.vrchat.com/) as a VPM package!
+###  [⬇️ My VPM / Creator Companion Listing](https://drblackrat.github.io/vpm-listing/)
+
 ## Here are the core features:
 - Download Images from the Web
 - Provides a UI for VRChat's Image Downloader
@@ -52,12 +56,13 @@ https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
 https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
 
 ## Setup:
-Take a look at the example scene!
-It showcases how all 3 ways can / need to be setup and makes it quite easy to understand.
-If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
+Take a look at the example scene! You can find it at the top of the Unity Window under `Tools > Picture Loader`.
+
+It showcases how all 3 ways can / need to be setup and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
 
 1. Manager Setup
 - Add the Picture Loader Prefab to your World (Choose between Light & Dark Mode)
+  - you can find these at the top of the Unity Window under `Tools > Picture Loader` 
 - Add the Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for
 - Provide a download URL for each Picture Downloader
 - Adjust the Settings depending on what you need
@@ -72,6 +77,7 @@ If you don't know what a setting does / needs just hover over it's name and a to
   - You don't need to provide a URl but you can if you want an image to be downloaded by default
   - Auto Reload wont work / will be disabled when using the URL Input
 - Add the Picture Loader URL Input Prefab to your World (Choose between Light & Dark Mode)
+  - you can find these at the top of the Unity Window under `Tools > Picture Loader` 
 - Assign the Lite Downloader that you want to use for it
 
 **Tip: If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.**
