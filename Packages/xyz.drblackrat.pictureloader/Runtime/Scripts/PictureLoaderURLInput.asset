@@ -62,7 +62,7 @@ MonoBehaviour:
       Data: 3|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: DrBlackRat.LitePictureDownloader, Assembly-CSharp
+      Data: DrBlackRat.LitePictureDownloader, xyz.drblackrat.pictureloader
     - Name: 
       Entry: 8
       Data: 
@@ -528,7 +528,7 @@ MonoBehaviour:
       Data: 36|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: DrBlackRat.PLState, Assembly-CSharp
+      Data: DrBlackRat.PLState, xyz.drblackrat.pictureloader
     - Name: 
       Entry: 8
       Data: 

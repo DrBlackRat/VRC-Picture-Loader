@@ -1,0 +1,21 @@
+{
+  "name": "xyz.drblackrat.pictureloader",
+  "displayName": "Picture Loader",
+  "version": "2.2.0",
+  "unity" : "2022.3",
+  "description": "Tools & Prefabs to easily download images using VRChat's Image Downloader",
+  "dependencies": {},
+  "gitDependencies": {},
+  "vpmDependencies": {
+    "com.vrchat.worlds": "3.x.x"
+  },
+  "author": {
+    "name": "DrBlackRat",
+    "email": "drblackrat@gmail.com",
+    "url": "https://drblackrat.xyz"
+  },
+  "legacyFolders": {
+    "Assets\\DrBlackRat\\Picture Loader": ""
+  },
+  "legacyFiles": {}
+}
