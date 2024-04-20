@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 144
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 145
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -743,9 +743,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.04582727, y: 0.27396172, z: 8.632095}
+    m_Target: {x: -14.115058, y: 0.01834043, z: -3.9144542}
     speed: 2
-    m_Value: {x: -0.04582727, y: 0.27396172, z: 8.632095}
+    m_Value: {x: -14.115058, y: 0.01834043, z: -3.9144542}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -791,13 +791,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.040488917, y: 0.0020912199, z: -0.00008399514, w: -0.9991793}
+    m_Target: {x: -0.04116841, y: 0.70885426, z: -0.04151588, w: -0.7029331}
     speed: 2
-    m_Value: {x: -0.04198758, y: 0.0020910886, z: -0.00008713177, w: -0.999116}
+    m_Value: {x: -0.042222597, y: 0.7087885, z: -0.042578958, w: -0.70286787}
   m_Size:
-    m_Target: 4.452891
+    m_Target: 6.2813206
     speed: 2
-    m_Value: 4.452891
+    m_Value: 6.2813206
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -843,8 +843,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -32000
-    y: -31970
+    x: 0
+    y: 73
     width: 525
     height: 828
   m_SerializedDataModeController:
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20f8ffff
-      m_LastClickedID: -2016
-      m_ExpandedIDs: 20f8ffffd2faffff
+      m_SelectedIDs: 56630000
+      m_LastClickedID: 0
+      m_ExpandedIDs: d2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1235,7 +1235,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/xyz.drblackrat.pictureloader
+    - Packages/xyz.drblackrat.pictureloader/Runtime/Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1243,16 +1243,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/xyz.drblackrat.pictureloader
+  - Packages/xyz.drblackrat.pictureloader/Runtime/Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\VRC-Picture-Loader
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 123}
-    m_SelectedIDs: 3a660000
-    m_LastClickedID: 26170
-    m_ExpandedIDs: 000000000e66000010660000126600001466000016660000186600001a66000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 68660000
+    m_LastClickedID: 26216
+    m_ExpandedIDs: 000000000e66000010660000126600001466000016660000186600001a6600003a66000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000cc5f0100d05f0100d45f0100c45f0100d85f010008230200c85f0100ea5f0100125f01005a350100485f01000a61010046570000826001003a350100a85f0100043901007c220200b8670000c2370100ce380100ba67000066be0000000000005e6300007a660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
