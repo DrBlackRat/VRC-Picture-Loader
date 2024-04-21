@@ -28,8 +28,11 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     
     private VRCUrl url = new VRCUrl("");
     [UdonSynced] private VRCUrl netUrl = new VRCUrl("");
-    
     private readonly VRCUrl emptyUrl = new VRCUrl("");
+
+    private PictureLoaderPersistence persistence;
+    private int persistenceID;
+    [UdonSynced] private bool savedImageLoaded;
     private void Start()
     {
         if (downloader == null)
@@ -62,6 +65,7 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
         var newUrl = inputField.GetUrl();
         url = newUrl;
         netUrl = newUrl;
+        SavePersistenceUrl(newUrl);
         inputField.SetUrl(emptyUrl);
         _TryLoadingImage();
         // Networking
@@ -123,6 +127,32 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
         isOwner = Networking.LocalPlayer == Networking.GetOwner(this.gameObject);
         UpdateUI();
     }
+    #endregion
+    #region Persistence
+    public void _SetPersistenceReference(int id, PictureLoaderPersistence persistenceRef)
+    {
+        persistenceID = id;
+        persistence = persistenceRef;
+        PLDebug.UrlLog("Connected to Picture Loader Persistence!");
+    }
+    public void _LoadSavedImage(VRCUrl persistenceUrl)
+    {
+        if (savedImageLoaded) return;
+        PLDebug.UrlLog("Persistence: Loading saved Url");
+        savedImageLoaded = true;
+        url = persistenceUrl;
+        netUrl = persistenceUrl;
+        _TryLoadingImage();
+        // Networking
+        if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+        RequestSerialization();
+    }
+    private void SavePersistenceUrl(VRCUrl newUrl)
+    {
+        if (persistence == null) return;
+        persistence._SaveUrl(persistenceID, newUrl);
+    }
+
     #endregion
     #region Image Loading
     public void _TryLoadingImage()
