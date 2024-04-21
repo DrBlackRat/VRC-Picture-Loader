@@ -74,14 +74,13 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     }
     private void UpdateUI()
     {
+        bool allowInput = AllowInput();
         // Update Lock Button
         lockButton.interactable = isOwner;
         unlockedIcon.SetActive(!locked);
         lockedIcon.SetActive(locked);
         // Update Input Field
-        inputField.interactable = AllowInput();
-        // Change Input Field Text
-        bool allowInput = AllowInput();
+        inputField.interactable = allowInput;
         switch (state) 
         {
             case PLState.Waiting:
@@ -133,10 +132,11 @@ public class PictureLoaderURLInput : UdonSharpBehaviour
     {
         persistenceID = id;
         persistence = persistenceRef;
-        PLDebug.UrlLog("Connected to Picture Loader Persistence!");
+        PLDebug.UrlLog($"Connected to Picture Loader Persistence with ID {id}");
     }
     public void _LoadSavedImage(VRCUrl persistenceUrl)
     {
+        if (downloader == null) return;
         if (savedImageLoaded) return;
         PLDebug.UrlLog("Persistence: Loading saved Url");
         savedImageLoaded = true;

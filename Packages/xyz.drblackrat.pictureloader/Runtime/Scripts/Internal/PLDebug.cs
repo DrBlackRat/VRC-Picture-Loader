@@ -6,7 +6,7 @@ namespace DrBlackRat
     {
         private const string logPrefix = "[<color=#8063cf>Picture Loader</color>]";
         private const string liteLogPrefix = "[<color=#637ecf>Picture Loader Lite</color>]";
-        private const string urlLogPrefix = "[<color=#49509c>Picture Loader URL Input</color>]";
+        private const string urlLogPrefix = "[<color=#63bfcf>Picture Loader URL Input</color>]";
 
         // Normal
         public static void Log(object message)

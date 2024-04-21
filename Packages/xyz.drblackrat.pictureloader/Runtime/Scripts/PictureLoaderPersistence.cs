@@ -14,21 +14,43 @@ namespace DrBlackRat
 
         private readonly VRCUrl emptyUrl = new VRCUrl("");
 
-        private bool isMasterOwner;
-        public void Start()
+        private bool isLocalOwner;
+        private bool setupCorrect;
+        private void Start()
         {
+            isLocalOwner = Networking.LocalPlayer.isInstanceOwner && Networking.GetOwner(gameObject).isLocal;
+            if (!isLocalOwner) return;
+            setupCorrect = CheckSetup();
+            if (!setupCorrect) return;
             // Initial Setup
-            isMasterOwner = Networking.LocalPlayer.isInstanceOwner && Networking.GetOwner(gameObject).isLocal;
-            if (!isMasterOwner) return;
             for (int i = 0; i < urlInputs.Length; i++)
             {
                 urlInputs[i]._SetPersistenceReference(i, this);
             }
         }
+        private bool CheckSetup()
+        {
+            if (urlInputs.Length == 0)
+            {
+                PLDebug.UrlLogError("Persistence: No URL Inputs provided!");
+                return false;
+            }
+            foreach (var urlInput in urlInputs)
+            {
+                if (urlInput == null)
+                {
+                    PLDebug.UrlLogError("Persistence: URL Input slot is empty!");
+                    return false;
+                }
+            }
+            return true;
+        }
+        
         public override void OnDeserialization()
         {
-            if (!isMasterOwner) return;
-            // Check for old data
+            if (!isLocalOwner) return;
+            if (!setupCorrect) return;
+            // Check for old / wrong data
             if (urlInputs.Length != urls.Length)
             {
                 PLDebug.UrlLogError("Persistence: Incompatible data found! Resetting saved data.");
@@ -53,8 +75,8 @@ namespace DrBlackRat
         }
         public void _SaveUrl(int id, VRCUrl url)
         {
-            if (!isMasterOwner) return;
-            if (urlInputs.Length != urls.Length) ResetUrls();
+            if (!isLocalOwner) return;
+            if (urls == null || urlInputs.Length != urls.Length) ResetUrls();
             urls[id] = url;
             RequestSerialization();
             PLDebug.UrlLog("Persistence: Saved Url");
