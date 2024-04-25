@@ -76,6 +76,7 @@ namespace DrBlackRat
         public void _SaveUrl(int id, VRCUrl url)
         {
             if (!isLocalOwner) return;
+            if (!setupCorrect) return;
             if (urls == null || urlInputs.Length != urls.Length) ResetUrls();
             urls[id] = url;
             RequestSerialization();

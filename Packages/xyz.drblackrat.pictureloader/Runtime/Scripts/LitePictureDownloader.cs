@@ -63,9 +63,7 @@ namespace DrBlackRat
         private Texture2D picture;
         private int timesRun;
         private bool loading;
-
-        [HideInInspector]
-        public PictureLoaderManager manager;
+        
         [HideInInspector] 
         public PictureLoaderURLInput urlInput;
 
