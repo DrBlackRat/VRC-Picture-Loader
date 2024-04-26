@@ -51,7 +51,7 @@ namespace DrBlackRat
             if (!isLocalOwner) return;
             if (!setupCorrect) return;
             // Check for old / wrong data
-            if (urlInputs.Length != urls.Length)
+            if (urls == null || urlInputs.Length != urls.Length)
             {
                 PLDebug.UrlLogError("Persistence: Incompatible data found! Resetting saved data.");
                 ResetUrls();
