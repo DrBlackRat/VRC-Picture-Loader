@@ -35,7 +35,7 @@ namespace DrBlackRat
         [Space(10)]
         [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to.")]
         [SerializeField] private RawImage[] uiRawImages;
-        [Tooltip("List of Aspect Ratio Filters for UI Ram Images, can be used automatically Adjust the Aspect Ratio. If left empty it tires to use the one it's attached to.")]
+        [Tooltip("List of Aspect Ratio Filters for UI Raw Images, can be used automatically adjust the aspect ratio. If left empty it tires to use the one it's attached to.")]
         [SerializeField] private AspectRatioFitter[] aspectRatioFilters;
 
         [Header("Loading & Error Texture")]

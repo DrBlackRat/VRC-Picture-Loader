@@ -990,8 +990,8 @@ MonoBehaviour:
       Data: 67|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: List of Aspect Ratio Filters for UI Ram Images, can be used automatically
-        Adjust the Aspect Ratio. If left empty it tires to use the one it's attached
+      Data: List of Aspect Ratio Filters for UI Raw Images, can be used automatically
+        adjust the aspect ratio. If left empty it tires to use the one it's attached
         to.
     - Name: 
       Entry: 8
