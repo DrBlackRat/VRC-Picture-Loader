@@ -78,8 +78,8 @@ namespace DrBlackRat
             var rawImage = GetComponent<RawImage>();
             if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new[] { rawImage };
             // Set Aspect Ratio Filter
-            var aspectFilter = GetComponent<AspectRatioFitter>();
-            if (aspectRatioFilters.Length == 0 && aspectFilter != null) aspectRatioFilters = new[] { aspectFilter };
+            var aspectRatioFilter = GetComponent<AspectRatioFitter>();
+            if (aspectRatioFilters.Length == 0 && aspectRatioFilter != null) aspectRatioFilters = new[] { aspectRatioFilter };
             // Texture Info Setup
             textureInfo.MaterialProperty = null;
             textureInfo.GenerateMipMaps = generateMipMaps;
@@ -124,9 +124,9 @@ namespace DrBlackRat
             // Change Aspect Ratio for Raw Images
             if (aspectRatioFilters == null || aspectRatioFilters.Length == 0) return;
             var aspectRatio = newTexture.width / (float)newTexture.height;
-            foreach (var aspectFilter in aspectRatioFilters)
+            foreach (var aspectRatioFilter in aspectRatioFilters)
             {
-                aspectFilter.aspectRatio = aspectRatio;
+                aspectRatioFilter.aspectRatio = aspectRatio;
             }
         }
         

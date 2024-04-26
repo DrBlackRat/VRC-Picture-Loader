@@ -69,8 +69,8 @@ namespace DrBlackRat
             var rawImage = GetComponent<RawImage>();
             if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new[] { rawImage };
             // Set Aspect Ratio Filter
-            var aspectFilter = GetComponent<AspectRatioFitter>();
-            if (aspectRatioFilters.Length == 0 && aspectFilter != null) aspectRatioFilters = new[] { aspectFilter };
+            var aspectRatioFilter = GetComponent<AspectRatioFitter>();
+            if (aspectRatioFilters.Length == 0 && aspectRatioFilter != null) aspectRatioFilters = new[] { aspectRatioFilter };
             // Error when no Manager was found
             if (manager == null) PLDebug.LogError($"No Picture Loader Manager Found!");
             // Texture Info Setup
@@ -104,9 +104,9 @@ namespace DrBlackRat
             // Change Aspect Ratio for Raw Images
             if (aspectRatioFilters == null || aspectRatioFilters.Length == 0) return;
             var aspectRatio = newTexture.width / (float)newTexture.height;
-            foreach (var aspectFilter in aspectRatioFilters)
+            foreach (var aspectRatioFilter in aspectRatioFilters)
             {
-                aspectFilter.aspectRatio = aspectRatio;
+                aspectRatioFilter.aspectRatio = aspectRatio;
             }
         }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
