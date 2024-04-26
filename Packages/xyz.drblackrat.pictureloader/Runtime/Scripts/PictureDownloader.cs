@@ -12,7 +12,7 @@ namespace DrBlackRat
     public class PictureDownloader : UdonSharpBehaviour
     {
         [Header("Download Link")]        
-        [Tooltip("The Link to the Picture you want to download")]
+        [Tooltip("The Link to the Picture you want to download.")]
         public VRCUrl url;
 
         [Header("Texture Settings")]
@@ -20,34 +20,36 @@ namespace DrBlackRat
         [SerializeField] private int anisoLevel = 9;
         [SerializeField] private FilterMode filterMode = FilterMode.Bilinear;
         [Space(10)]
-        [Tooltip("Texture Wrap Mode along the Horizontal Axis")]
+        [Tooltip("Texture Wrap Mode along the Horizontal Axis.")]
         [SerializeField] private TextureWrapMode wrapModeU = TextureWrapMode.Repeat;
-        [Tooltip("Texture Wrap Mode along the Vertical Axis")]
+        [Tooltip("Texture Wrap Mode along the Vertical Axis.")]
         [SerializeField] private TextureWrapMode wrapModeV = TextureWrapMode.Repeat;
-        [Tooltip("Texture Wrap Mode for depth (only relevant for Texture3D)")]
+        [Tooltip("Texture Wrap Mode for depth (only relevant for Texture3D).")]
         [SerializeField] private TextureWrapMode wrapModeW = TextureWrapMode.Repeat;
 
         [Header("Material & Raw Image Settings")]
-        [Tooltip("The Material the Textures should be applied to, if left empty it tries use the one it's attached to")]
+        [Tooltip("The Material the Textures should be applied to, if left empty it tries use the one it's attached to.")]
         [SerializeField] private Material material;
-        [Tooltip("List of Material Properties you want to apply the downloaded Picture to")]
-        [SerializeField] private string[] materialProperties = {"_MainTex"};
-        [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to")]
+        [Tooltip("List of Material Properties you want to apply the downloaded Picture to.")]
+        [SerializeField] private string[] materialProperties = { "_MainTex" };
+        [Space(10)]
+        [Tooltip("List of UI Raw Images the texture should be applied to, if left empty it tires to use the one it's attached to.")]
         [SerializeField] private RawImage[] uiRawImages;
+        [Tooltip("List of Aspect Ratio Filters for UI Ram Images, can be used automatically Adjust the Aspect Ratio. If left empty it tires to use the one it's attached to.")]
+        [SerializeField] private AspectRatioFitter[] aspectRatioFilters;
 
         [Header("Loading & Error Texture")]
-        [Tooltip("Use the Loading Texture while it waits for the Picture to Load")]
+        [Tooltip("Use the Loading Texture while it waits for the Picture to Load.")]
         [SerializeField] private bool useLoadingTexture = true;
-        [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again)")]
+        [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again).")]
         [SerializeField] private bool skipLoadingTextureOnReload = false;
-        [Tooltip("Texture used while the Picture is Loading")]
+        [Tooltip("Texture used while the Picture is Loading.")]
         [SerializeField] private Texture2D loadingTexture;
         [Space(10)]
-        [Tooltip("Use the Error Texture when the Picture couldn't be Loaded")]
+        [Tooltip("Use the Error Texture when the Picture couldn't be Loaded.")]
         [SerializeField] private bool useErrorTexture = true;
-        [Tooltip("Texture used when the Picture couldn't be Loaded")]
+        [Tooltip("Texture used when the Picture couldn't be Loaded.")]
         [SerializeField] private Texture2D errorTexture;
-
         private VRCImageDownloader pictureDL;
         private VRCImageDownloader oldPictureDL;
         [HideInInspector]
@@ -66,6 +68,9 @@ namespace DrBlackRat
             // Sets Raw Image
             var rawImage = GetComponent<RawImage>();
             if (uiRawImages.Length == 0 && rawImage != null) uiRawImages = new[] { rawImage };
+            // Set Aspect Ratio Filter
+            var aspectFilter = GetComponent<AspectRatioFitter>();
+            if (aspectRatioFilters.Length == 0 && aspectFilter != null) aspectRatioFilters = new[] { aspectFilter };
             // Error when no Manager was found
             if (manager == null) PLDebug.LogError($"No Picture Loader Manager Found!");
             // Texture Info Setup
@@ -95,6 +100,13 @@ namespace DrBlackRat
             if (uiRawImages != null && uiRawImages.Length != 0)
             {
                 foreach (RawImage uiRawImage in uiRawImages) uiRawImage.texture = newTexture;
+            }
+            // Change Aspect Ratio for Raw Images
+            if (aspectRatioFilters == null || aspectRatioFilters.Length == 0) return;
+            var aspectRatio = newTexture.width / (float)newTexture.height;
+            foreach (var aspectFilter in aspectRatioFilters)
+            {
+                aspectFilter.aspectRatio = aspectRatio;
             }
         }
         public override void OnImageLoadSuccess(IVRCImageDownload result)
