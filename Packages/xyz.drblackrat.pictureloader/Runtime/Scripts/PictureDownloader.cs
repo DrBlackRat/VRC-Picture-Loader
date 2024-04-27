@@ -42,7 +42,7 @@ namespace DrBlackRat
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load.")]
         [SerializeField] private bool useLoadingTexture = true;
         [Tooltip("Skips the Loading Texture when reloading the Picture (e.g. Auto Reload or Manually Loading it again).")]
-        [SerializeField] private bool skipLoadingTextureOnReload = false;
+        [SerializeField] private bool skipLoadingTextureOnReload = true;
         [Tooltip("Texture used while the Picture is Loading.")]
         [SerializeField] private Texture2D loadingTexture;
         [Space(10)]
