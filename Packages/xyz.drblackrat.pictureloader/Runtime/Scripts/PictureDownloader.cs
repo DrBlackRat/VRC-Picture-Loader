@@ -5,7 +5,7 @@ using VRC.SDK3.Image;
 using VRC.Udon;
 using UnityEngine.UI;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     [DefaultExecutionOrder(0)]

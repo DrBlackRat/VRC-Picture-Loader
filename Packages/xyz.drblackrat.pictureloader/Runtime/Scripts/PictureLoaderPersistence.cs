@@ -2,7 +2,7 @@
 using UnityEngine;
 using VRC.SDKBase;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
     public class PictureLoaderPersistence : UdonSharpBehaviour

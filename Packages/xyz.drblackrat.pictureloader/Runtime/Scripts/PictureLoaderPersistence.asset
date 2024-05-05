@@ -21,7 +21,7 @@ MonoBehaviour:
   compiledVersion: 2
   behaviourSyncMode: 4
   hasInteractEvent: 0
-  scriptID: 1472458066522582521
+  scriptID: -2604943758678509249
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -62,7 +62,7 @@ MonoBehaviour:
       Data: 3|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: PictureLoaderURLInput[], xyz.drblackrat.pictureloader
+      Data: DrBlackRat.VRC.PictureLoader.PictureLoaderURLInput[], xyz.drblackrat.pictureloader
     - Name: 
       Entry: 8
       Data: 

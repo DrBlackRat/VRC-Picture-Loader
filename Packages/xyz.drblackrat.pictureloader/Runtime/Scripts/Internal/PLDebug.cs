@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     public static class PLDebug
     {
