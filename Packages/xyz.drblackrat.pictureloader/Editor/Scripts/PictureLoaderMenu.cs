@@ -5,7 +5,7 @@ using UnityEditor.Experimental.SceneManagement;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     public class Menu : MonoBehaviour
     {
