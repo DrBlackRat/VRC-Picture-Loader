@@ -2275,7 +2275,7 @@ PrefabInstance:
     - target: {fileID: 639642349176990764, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: Peristence
+      value: Persistence
       objectReference: {fileID: 0}
     - target: {fileID: 4759786615234383468, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
