@@ -82,6 +82,11 @@ namespace DrBlackRat.VRC.PictureLoader
             textureInfo.WrapModeW = wrapModeW;
             textureInfo.FilterMode = filterMode;
         }
+        private void OnDestroy()
+        {
+            if (pictureDL != null) pictureDL.Dispose();
+            if (oldPictureDL != null) oldPictureDL.Dispose();
+        }
         public void _DownloadPicture()
         {
             // Sets Loading Texture
@@ -95,17 +100,26 @@ namespace DrBlackRat.VRC.PictureLoader
         {
             if (material != null)
             {
-                foreach (string materialProperty in materialProperties) material.SetTexture(materialProperty, newTexture);
+                foreach (string materialProperty in materialProperties)
+                {
+                    if (material == null) continue;
+                    material.SetTexture(materialProperty, newTexture);
+                }
             }
             if (uiRawImages != null && uiRawImages.Length != 0)
             {
-                foreach (RawImage uiRawImage in uiRawImages) uiRawImage.texture = newTexture;
+                foreach (RawImage uiRawImage in uiRawImages)
+                {
+                    if (uiRawImage == null) continue;
+                    uiRawImage.texture = newTexture;
+                }
             }
             // Change Aspect Ratio for Raw Images
             if (aspectRatioFilters == null || aspectRatioFilters.Length == 0) return;
             var aspectRatio = newTexture.width / (float)newTexture.height;
             foreach (var aspectRatioFilter in aspectRatioFilters)
             {
+                if (aspectRatioFilter == null) continue;
                 aspectRatioFilter.aspectRatio = aspectRatio;
             }
         }

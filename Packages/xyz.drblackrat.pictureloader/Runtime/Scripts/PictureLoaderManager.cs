@@ -156,7 +156,7 @@ namespace DrBlackRat.VRC.PictureLoader
                 indicator.text = $"{picturesLoaded} / {picturesToLoad} | Errors: {errors}";
             }
 
-            // What do do once it's done
+            // What to do once it's done
             if (picturesLoaded == picturesToLoad)
             { 
                 FinishedLoading();
