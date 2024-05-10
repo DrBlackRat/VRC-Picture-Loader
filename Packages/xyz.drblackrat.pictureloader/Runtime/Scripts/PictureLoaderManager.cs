@@ -65,8 +65,8 @@ namespace DrBlackRat.VRC.PictureLoader
             // Picture Loading
             if (picturesToLoad == 0)
             {
-                status.text = "Error, no Pictures found";
-                PLDebug.LogError($"Error, no Picture Downloaders found");
+                status.text = "Error: No Pictures";
+                PLDebug.LogError($"No Picture Downloaders found!");
                 loadButton.interactable = false;
             }
             else if (loadOnStart)
@@ -171,7 +171,7 @@ namespace DrBlackRat.VRC.PictureLoader
             errors++;
             indicator.text = $"{picturesLoaded} / {picturesToLoad} | Errors: {errors}";
 
-            // What do do once it's done
+            // What to do once it's done
             if (picturesLoaded == picturesToLoad)
             {
                 FinishedLoading();
