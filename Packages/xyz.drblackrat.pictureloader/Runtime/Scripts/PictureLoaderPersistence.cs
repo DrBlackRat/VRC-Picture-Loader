@@ -12,8 +12,6 @@ namespace DrBlackRat.VRC.PictureLoader
         [SerializeField] private PictureLoaderURLInput[] urlInputs;
         [UdonSynced] private VRCUrl[] urls;
 
-        private readonly VRCUrl emptyUrl = new VRCUrl("");
-
         private bool isLocalOwner;
         private bool setupCorrect;
         private void Start()
@@ -60,7 +58,7 @@ namespace DrBlackRat.VRC.PictureLoader
             // Load Images
             for (int i = 0; i < urlInputs.Length; i++)
             {
-                if (urls[i].Equals(emptyUrl)) continue;
+                if (urls[i].Equals(VRCUrl.Empty)) continue;
                 urlInputs[i]._LoadSavedImage(urls[i]);
             }
         }
@@ -69,7 +67,7 @@ namespace DrBlackRat.VRC.PictureLoader
             urls = new VRCUrl[urlInputs.Length];
             for (int i = 0; i < urls.Length; i++)
             {
-                urls[i] = emptyUrl;
+                urls[i] = VRCUrl.Empty;
             }
             RequestSerialization();
         }

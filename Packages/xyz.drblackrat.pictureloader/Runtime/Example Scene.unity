@@ -8088,6 +8088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Downloader Frame 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6153206300751675781, guid: 72ef7e208469a7f43b4aec676afbc832,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7124942065743727867, guid: 72ef7e208469a7f43b4aec676afbc832,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
