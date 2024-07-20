@@ -893,6 +893,7 @@ MonoBehaviour:
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
   - {fileID: 1022876332}
+  NavigationAreas: []
 --- !u!4 &85230279
 Transform:
   m_ObjectHideFlags: 0
@@ -6102,13 +6103,14 @@ GameObject:
   - component: {fileID: 1022876332}
   - component: {fileID: 1022876331}
   - component: {fileID: 1022876330}
+  - component: {fileID: 1022876334}
   m_Layer: 0
   m_Name: Picture Loader Persistence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1022876330
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6190,6 +6192,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1877823270}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022876334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022876329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1864912870, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043828138
 GameObject:
   m_ObjectHideFlags: 0

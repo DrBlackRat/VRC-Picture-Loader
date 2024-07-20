@@ -53,6 +53,7 @@ namespace DrBlackRat.VRC.PictureLoader
             {
                 PLDebug.UrlLogError("Persistence: Incompatible data found! Resetting saved data.");
                 ResetUrls();
+                RequestSerialization();
                 return;
             }
             // Load Images
@@ -69,7 +70,6 @@ namespace DrBlackRat.VRC.PictureLoader
             {
                 urls[i] = VRCUrl.Empty;
             }
-            RequestSerialization();
         }
         public void _SaveUrl(int id, VRCUrl url)
         {

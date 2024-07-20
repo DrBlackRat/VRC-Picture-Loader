@@ -30,7 +30,6 @@ namespace DrBlackRat.VRC.PictureLoader
         
         private VRCUrl url = new VRCUrl("");
         [UdonSynced] private VRCUrl netUrl = new VRCUrl("");
-        private readonly VRCUrl emptyUrl = new VRCUrl("");
     
         private PictureLoaderPersistence persistence;
         private int persistenceID;
@@ -68,7 +67,7 @@ namespace DrBlackRat.VRC.PictureLoader
             url = newUrl;
             netUrl = newUrl;
             SavePersistenceUrl(newUrl);
-            inputField.SetUrl(emptyUrl);
+            inputField.SetUrl(VRCUrl.Empty);
             _TryLoadingImage();
             // Networking
             if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
