@@ -19,12 +19,13 @@ For Standalone Unity I still provide a Unity Package with every release.
 - Apply the Texture to a Material
 - Set multiple Material Properties it should be applied to
 - Apply the Texture to UI Raw Images
+   - Automatically Adjust the Aspect Ratio of UI Raw Images using an Aspect Ratio Filter 
 - Set a texture that should be used while loading the image
 - Set a texture that should be used if an Error occurs while trying to load the image
 
-## There are 3 ways you can use the Picture Downloader, all of them support the core features, but also add new ones
+## There are 4 ways you can use the Picture Downloader, all of them support the core features, but also add new ones
 1. Using the Manager:
-- You can have as many Picture Donwloaders as you want and use the Manager to well... manage them :D
+- You can have as many Picture Downloaders as you want and use the Manager to well... manage them :D
   - gives you a UI that shows how many Pictures have already been downloaded, how many are still left to download etc.
   - allows to re download all pictures with a button press
   - manager takes control of when to download and to re download them
@@ -41,6 +42,14 @@ For Standalone Unity I still provide a Unity Package with every release.
     - having a default URL to Load On Start also still works
     - *disables Auto Reload on the attached Lite Downloader though
 
+4. Using Persistence with the Picture Loader URL Input
+- Allows you to save the URLs you entered using the Picture Loader URL Input. Allows people to decorate their home world with private images. 
+  - Any URL the Instance Owner enters will be saved to their Player Object.
+  - Once the Instance Owner joins, their images will start to load.
+   - This only happens the first time they join.
+   - It will overwrite images that other people may have loaded before they 
+     joined.
+
 ## Which one should I use?
 This highly depends on what you want to use them for, but here are a few examples:
 - If you want to load a big Gallery of Images / Pictures the Manager would be the best fit, as it takes care of everything at once.
@@ -49,12 +58,14 @@ This highly depends on what you want to use them for, but here are a few example
   - You can have as many Lite Downloaders in a World as you want as they don't interfere with each other.
 - If you want to be able to enter a new URL while being in the World you can use the Picture Loader URL Input as it provides you an Input Field and is network synced.
   - You can always only pair one URL Input and one Lite Downloader, you can however have as many parings as you want to.
+- If you want to be able to save & load pictures in something like a home world, you can use the Picture Loader Persistence as it easily allows you to save & load URLs entered through an Picture Loader URL Input.
+  - You can only have one Picture Loader Persistence Prefab per scene, but you can add as many URL Inputs to be saved as you want to.
 
-You can mix an match them as much as you want though. So you could have a Manager taking care of 5 Downloaders, have 3 other Lite Downloaders and 4 Lite Downloaders with URL Input Fields.
+You can mix an match them as much as you want though. So you could have a Manager taking care of 5 Downloaders, have 3 other Lite Downloaders, 4 Lite Downloaders with URL Input Fields and 6 URL Input Fields with Persistence.
 
 ### Here is my VRChat World showcasing them:
 https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
-### Here is a video showcasing it:
+### Here is a video showcasing it: (this one is a bit outdated and doesn't showcase persistence)
 https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
 
 ## Setup:
@@ -81,6 +92,12 @@ It showcases how all 3 ways can / need to be setup and makes it quite easy to un
 - Add the Picture Loader URL Input Prefab to your World (Choose between Light & Dark Mode)
   - you can find these at the top of the Unity Window under `Tools > Picture Loader` 
 - Assign the Lite Downloader that you want to use for it
+
+4. Persistence Setup
+- Setup at least one URL Input as described above
+- Add the Persistence Prefab to your Scene
+  - you can find it at the top of the Unity Window under `Tools > Picture Loader` 
+- Add the URL Inputs you want to be saved to the Url Inputs list on the Picture Loader Persistence Prefab
 
 **Tip: If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.**
 

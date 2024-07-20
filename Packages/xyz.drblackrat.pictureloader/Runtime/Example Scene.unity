@@ -2321,24 +2321,22 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "This area showcases Persistence in combination with URL Inputs!\n\nMy
-        idea behind adding Persistence was to basically allow people to set images
-        to be used in their home world, which would be loaded again once they return.\n\nHow
-        does it work?\n- Any URL the Instance Owner enters will be saved to their
-        Player Object.\n- Once the Instance Owner joins, their images will start
-        to load.\n   - This only happens the first time they join.\n   - It will
-        overwrite images that other people may have loaded before they \n     joined.\n\nWhy
-        have I done it this way?\nI want this system to make it feel more like you've
-        joined the instance owner's home/world. To achieve this, they are the only
-        one doing any kind of data loading or saving. \nIf you want to save your
-        own images, you would have to create your own Instance and then enter the
-        URL there. \nThis also prevents you from accidentally overwriting your saved
-        images in case you join a friend.\nAnother benefit that this provides is
-        that public instances won't load anything unless the world creator joins.
-        This results in better privacy and ensures that public instances won't load
-        images that you wouldn't want to be loaded in public.\n\nWhere can I get
-        this / when will it be available?\n- Persistence Support will be published
-        as soon as it goes into Open Beta."
+      value: "This area showcases Persistence in combination with URL Inputs!\n\nPersistence
+        works as an addition to a URL Input and allows you to save and load URLs
+        in client. \nMy idea behind adding Persistence was to basically allow people
+        to set images to be used in their home world, which would be loaded again
+        once they return.\n- You have one Picture Loader Persistence Prefab in your
+        scene in which you add every URL Input that you want to use Persistence for.\n-
+        Any URL the Instance Owner enters will be saved to their Player Object.\n-
+        Once the Instance Owner joins, their images will start to load.\n   - This
+        only happens the first time they join.\n   - It will overwrite images that
+        other people may have loaded before they \n     joined.\n\nWhen should I
+        use this?\n- If you want to be able to enter a new URL while being in the
+        World you can \n  use the Picture Loader URL Input as it provides you an
+        Input Field and is \n  network synced.\n\nSetup:\n- Setup at least one URL
+        Input with a Lite Picture Downloaded\n- Add the Persistence Prefab to your
+        Scene by going to Tools > Picture Loader\n- Add the URL Inputs you want to
+        be save to the Url Inputs list on the Picture Loader Persistence Prefab"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2463,7 +2461,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00029081356
+      value: -0.0007725477
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2612,7 +2610,7 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "Version 2.2.1\n\nThis world showcases my VRChat Picture Loader which
+      value: "Version 3.0.0\n\nThis world showcases my VRChat Picture Loader which
         provides Prefabs to easily download images using VRChat's Image Downloader
         with a lot of addtional features!\n\nHere are the core features:\n- Download
         Images from the Web\n- Provides a UI for VRChat's Image Downloader\n  - Light
@@ -3162,16 +3160,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "This area showcases the Lite Downloader!\n\nThe Lite Downloader works
-        on it's own and doesn't require a Manager to work, you can still have as
-        many of them as you want though.\n- You can have as many Lite Downloaders
-        in your World as you want.\n- Simpler to setup as no Manager is required.\n-
-        Still supports all the core features.\n- Can be paried up with an URL Input.\n-
-        Can be paired up with Persistence.\n\nWhen should I use this?\n- If you only
-        want to load a single picture or don't need the Manager you can \n  just
-        use the Lite Downloader.\n\nSetup:\n- Add the Lite Picture Donwloader script
-        to all the Meshes or Raw Images you \n  want to download pictures for \n-
-        Provide a download URL for the Lite Picture Downloaders\n- Adjust the Settings
-        depending on what you need"
+        on it's own and doesn't require a Manager to work.\n- You can have as many
+        Lite Downloaders in your World as you want.\n- Simpler to setup as no Manager
+        is required.\n- Still supports all the core features.\n- Can be paried up
+        with an URL Input.\n- Can be paired up with Persistence.\n\nWhen should I
+        use this?\n- If you only want to load a single picture or don't need the
+        Manager you can \n  just use the Lite Downloader.\n\nSetup:\n- Add the Lite
+        Picture Donwloader script to all the Meshes or Raw Images you \n  want to
+        download pictures for \n- Provide a download URL for the Lite Picture Downloaders\n-
+        Adjust the Settings depending on what you need"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -10127,7 +10124,7 @@ PrefabInstance:
         up with Persistence.\n\nWhen should I use this?\n- If you want to be able
         to enter a new URL while being in the World you can \n  use the Picture Loader
         URL Input as it provides you an Input Field and is \n  network synced.\n\nSetup:\n-
-        Setup a Lite Picture Downloader\n  - You don't need to provide a URl but
+        Setup a Lite Picture Downloader\n  - You don't need to provide a URL but
         you can if you want an image to be \n    downloaded by default\n  - Auto
         Reload wont work / will be disabled when using the URL Input\n- Add the Picture
         Loader URL Input Prefab to your World (Choose between \n  Light & Dark Mode)\n 
