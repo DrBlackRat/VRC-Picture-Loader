@@ -728,8 +728,8 @@ MonoBehaviour:
   DynamicPrefabs: []
   DynamicMaterials:
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
-  - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
+  - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: bd5e801bd287a7a408ffb86b6b7061db, type: 2}
   LightMapsNear: []
@@ -795,11 +795,6 @@ MonoBehaviour:
   - gameObject: {fileID: 100836197}
     ID: 20
     SerializedTypeNames:
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
-    ID: 24
-    SerializedTypeNames:
-    - VRC.SDK3.Components.VRCPlayerObject
     - VRC.Udon.UdonBehaviour
   - gameObject: {fileID: 969616529}
     ID: 25
@@ -889,10 +884,15 @@ MonoBehaviour:
     ID: 46
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 2025079099}
+    ID: 47
+    SerializedTypeNames:
+    - VRC.SDK3.Components.VRCPlayerObject
+    - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
-  - {fileID: 0}
+  - {fileID: 2025079100}
   NavigationAreas: []
 --- !u!4 &85230279
 Transform:
@@ -1179,14 +1179,14 @@ PrefabInstance:
         UI that shows how many Pictures have already been \n  downloaded, how many
         are still left to download etc.\n- Allows to re download all pictures with
         a button press.\n- Manager takes control of when to download and to re download
-        them.\n\nWhen should I use this?\n- If you want to load a big Gallery of
-        Images / Pictures the Manager would \n  be the best fit, as it takes care
-        of everything at once.\n\nSetup:\n- Add the Picture Loader Prefab to your
-        World (Choose between Light & \n  Dark Mode)\n  - you can find these at the
-        top of the Unity Window under Tools > Picture \n    Loader\n- Add the Picture
-        Donwloader script to all the Meshes or Raw Images you \n  want to download
-        pictures for\n- Provide a download URL for each Picture Downloader\n- Adjust
-        the Settings depending on what you need"
+        them.\n\nWhen should I use this?\nIf you want to load a big Gallery of Images
+        / Pictures the Manager would be the best fit, as it takes care of everything
+        at once.\n\nSetup:\n- Add the Picture Loader Prefab to your World (Choose
+        between Light & \n  Dark Mode)\n  - you can find these at the top of the
+        Unity Window under Tools > Picture \n    Loader\n- Add the Picture Downloader
+        script to all the Meshes or Raw Images you \n  want to download pictures
+        for\n- Provide a download URL for each Picture Downloader\n- Adjust the Settings
+        depending on what you need"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2308,6 +2308,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5498045079710074039, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498045079710074039, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Size
@@ -2331,12 +2341,15 @@ PrefabInstance:
         Once the Instance Owner joins, their images will start to load.\n   - This
         only happens the first time they join.\n   - It will overwrite images that
         other people may have loaded before they \n     joined.\n\nWhen should I
-        use this?\n- If you want to be able to enter a new URL while being in the
-        World you can \n  use the Picture Loader URL Input as it provides you an
-        Input Field and is \n  network synced.\n\nSetup:\n- Setup at least one URL
-        Input with a Lite Picture Downloaded\n- Add the Persistence Prefab to your
-        Scene by going to Tools > Picture Loader\n- Add the URL Inputs you want to
-        be save to the Url Inputs list on the Picture Loader Persistence Prefab"
+        use this?\nIf you want to be able to save & load pictures in something like
+        a home world, you can use the Picture Loader Persistence as it easily allows
+        you to save & load URLs entered through an Picture Loader URL Input.\r\n 
+        - You can only have one Picture Loader Persistence Prefab per scene, but
+        \n     you can add as many URL Inputs to be saved as you want to.\n\nSetup:\n-
+        Setup at least one URL Input\n- Add the Persistence Prefab to your Scene\r\n 
+        - you can find it at the top of the Unity Window under Tools > Picture Loader\n-
+        Add the URL Inputs you want to be saved to the Url Inputs list on the Picture
+        \n  Loader Persistence Prefab"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2461,7 +2474,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0007725477
+      value: -0.0001543104
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2624,9 +2637,9 @@ PrefabInstance:
         if an Error occurs while trying to load the image\n\nThere are 4 ways you
         can use the Picture Downloader, all of them support the core features, but
         also add new ones:\n1. Using the Manager\n2. Using the Lite Downloader\n3.
-        Using the URL Input + Lite Downloader\n4. Using Persistence + URL Input +
-        Lite Downloader\nAll of these are showcased in the World!\n\nWhere can I
-        get this?\nYou can find it on my GitHub! It's called the VRC Picture Loader.\n"
+        Using the URL Input with a Lite Downloader\n4. Using Persistence with URL
+        Inputs\nAll of these are showcased in the World!\n\nWhere can I get this?\nYou
+        can find it on my GitHub! It's called the VRC Picture Loader.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -10142,7 +10155,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000010256606
+      value: -0.00004656276
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10872,6 +10885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Picture Loader Persistence
       objectReference: {fileID: 0}
+    - target: {fileID: 8865408222396200884, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10883,6 +10901,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2025079097}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2025079099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8865408222396200884, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025079097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2025079100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7505577512621923677, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025079097}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025079099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1658641376, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029821695
 GameObject:
   m_ObjectHideFlags: 0

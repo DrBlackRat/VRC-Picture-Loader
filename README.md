@@ -43,7 +43,7 @@ For Standalone Unity I still provide a Unity Package with every release.
     - *disables Auto Reload on the attached Lite Downloader though
 
 4. Using Persistence with the Picture Loader URL Input
-- Allows you to save the URLs you entered using the Picture Loader URL Input. Allows people to decorate their home world with private images. 
+- Allows you to save the URLs you entered using the Picture Loader URL Input. This allows people to for example decorate their home world with private images. 
   - Any URL the Instance Owner enters will be saved to their Player Object.
   - Once the Instance Owner joins, their images will start to load.
    - This only happens the first time they join.
@@ -71,17 +71,17 @@ https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
 ## Setup:
 Take a look at the example scene! You can find it at the top of the Unity Window under `Tools > Picture Loader`.
 
-It showcases how all 3 ways can / need to be setup and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
+It showcases how all 4 ways can / need to be setup and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
 
 1. Manager Setup
 - Add the Picture Loader Prefab to your World (Choose between Light & Dark Mode)
   - you can find these at the top of the Unity Window under `Tools > Picture Loader` 
-- Add the Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for
+- Add the Picture Downloader script to all the Meshes or Raw Images you want to download pictures for
 - Provide a download URL for each Picture Downloader
 - Adjust the Settings depending on what you need
 
 2. Lite Setup
-- Add the Lite Picture Donwloader script to all the Meshes or Raw Images you want to download pictures for 
+- Add the Lite Picture Downloader script to all the Meshes or Raw Images you want to download pictures for 
 - Provide a download URL for the Lite Picture Downloaders
 - Adjust the Settings depending on what you need
 
