@@ -717,7 +717,7 @@ MonoBehaviour:
   contentGore: 0
   contentOther: 0
   releasePublic: 0
-  unityVersion: 2022.3.6f1
+  unityVersion: 2022.3.22f1
   udonProducts: []
   Name: 
   NSFW: 0
@@ -728,8 +728,8 @@ MonoBehaviour:
   DynamicPrefabs: []
   DynamicMaterials:
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
-  - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
+  - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: bd5e801bd287a7a408ffb86b6b7061db, type: 2}
   LightMapsNear: []
@@ -796,7 +796,7 @@ MonoBehaviour:
     ID: 20
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 1022876329}
+  - gameObject: {fileID: 0}
     ID: 24
     SerializedTypeNames:
     - VRC.SDK3.Components.VRCPlayerObject
@@ -892,7 +892,7 @@ MonoBehaviour:
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
-  - {fileID: 1022876332}
+  - {fileID: 0}
   NavigationAreas: []
 --- !u!4 &85230279
 Transform:
@@ -2618,14 +2618,15 @@ PrefabInstance:
         a specific amount of time\n- Adjust texture settings:\n  - Generate Mip Maps\n 
         - Set Aniso Level & Filter Mode\n  - Change the Wrap Mode \n- Apply the Texture
         to a Material\n- Set multiple Material Properties it should be applied to\n-
-        Apply the Texture to UI Raw Images\n- Set a texture that should be used while
-        loading the image\n- Set a texture that should be used if an Error occurs
-        while trying to load the image\n\nThere are 4 ways you can use the Picture
-        Downloader, all of them support the core features, but also add new ones:\n1.
-        Using the Manager\n2. Using the Lite Downloader\n3. Using the URL Input +
-        Lite Downloader\n4. Using Persistence + URL Input + Lite Downloader\nAll
-        of these are showcased in the World!\n\nWhere can I get this?\nYou can find
-        it on my GitHub! It's called the VRC Picture Loader.\n"
+        Apply the Texture to UI Raw Images\n   - Automatically Adjust the Aspect
+        Ratio of UI Raw Images using an Aspect Ratio Filter \n- Set a texture that
+        should be used while loading the image\n- Set a texture that should be used
+        if an Error occurs while trying to load the image\n\nThere are 4 ways you
+        can use the Picture Downloader, all of them support the core features, but
+        also add new ones:\n1. Using the Manager\n2. Using the Lite Downloader\n3.
+        Using the URL Input + Lite Downloader\n4. Using Persistence + URL Input +
+        Lite Downloader\nAll of these are showcased in the World!\n\nWhere can I
+        get this?\nYou can find it on my GitHub! It's called the VRC Picture Loader.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2735,7 +2736,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000026907652
+      value: -0.00093302806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6088,119 +6089,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1022876329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1022876333}
-  - component: {fileID: 1022876332}
-  - component: {fileID: 1022876331}
-  - component: {fileID: 1022876330}
-  - component: {fileID: 1022876334}
-  m_Layer: 0
-  m_Name: Picture Loader Persistence
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1022876330
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022876329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactTextPlacement: {fileID: 0}
-  interactText: Use
-  interactTextGO: {fileID: 0}
-  proximity: 2
-  SynchronizePosition: 0
-  AllowCollisionOwnershipTransfer: 0
-  Reliable: 0
-  _syncMethod: 3
-  serializedProgramAsset: {fileID: 11400000, guid: e9a43903d7383394a9cd7af2c4750dd9,
-    type: 2}
-  programSource: {fileID: 11400000, guid: cca7aaff4f3803147baca7f09d32cfa4, type: 2}
-  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
-  publicVariablesUnityEngineObjects: []
-  publicVariablesSerializationDataFormat: 0
---- !u!114 &1022876331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022876329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 809c09a30c794da42ae6ed32f8cac8ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  _udonSharpBackingUdonBehaviour: {fileID: 1022876330}
-  urlInputs:
-  - {fileID: 100836199}
-  - {fileID: 1506930664}
-  - {fileID: 1869177415}
-  - {fileID: 1550826647}
-  - {fileID: 654400086}
---- !u!114 &1022876332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022876329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1658641376, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1022876333
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022876329}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1877823270}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1022876334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022876329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1864912870, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1043828138
 GameObject:
   m_ObjectHideFlags: 0
@@ -9829,7 +9717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1022876333}
+  - {fileID: 2025079098}
   - {fileID: 178797329}
   - {fileID: 1467163271}
   - {fileID: 178107584}
@@ -10885,6 +10773,116 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018822797}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2025079097
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1877823270}
+    m_Modifications:
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.data[0]
+      value: 
+      objectReference: {fileID: 100836199}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1506930664}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1869177415}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1550826647}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: urlInputs.Array.data[4]
+      value: 
+      objectReference: {fileID: 654400086}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+    - target: {fileID: 8865408222396200884, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: m_Name
+      value: Picture Loader Persistence
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22ea8d6e549af4d419aefe1a6c061d6b, type: 3}
+--- !u!4 &2025079098 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2434163102084106022, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025079097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029821695
 GameObject:
   m_ObjectHideFlags: 0
