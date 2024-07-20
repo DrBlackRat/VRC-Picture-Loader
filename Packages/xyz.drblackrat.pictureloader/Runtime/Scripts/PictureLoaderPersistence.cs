@@ -60,7 +60,6 @@ namespace DrBlackRat.VRC.PictureLoader
             for (int i = 0; i < urlInputs.Length; i++)
             {
                 if (urls[i].Equals(VRCUrl.Empty)) continue;
-                if (urlInputs[i] == null) continue;
                 urlInputs[i]._LoadSavedImage(urls[i]);
             }
         }
