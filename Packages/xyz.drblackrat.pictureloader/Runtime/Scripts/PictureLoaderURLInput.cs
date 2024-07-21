@@ -27,9 +27,9 @@ namespace DrBlackRat.VRC.PictureLoader
         
         private PLState state;
         private bool isOwner;
-        
-        private VRCUrl url = new VRCUrl("");
-        [UdonSynced] private VRCUrl netUrl = new VRCUrl("");
+
+        private VRCUrl url = VRCUrl.Empty;
+        [UdonSynced] private VRCUrl netUrl = VRCUrl.Empty;
     
         private PictureLoaderPersistence persistence;
         private int persistenceID;
