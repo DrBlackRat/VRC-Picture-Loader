@@ -24,6 +24,9 @@ namespace DrBlackRat.VRC.PictureLoader
         [SerializeField] private Button lockButton;
         [SerializeField] private GameObject lockedIcon;
         [SerializeField] private GameObject unlockedIcon;
+        [Space(10)]
+        [SerializeField] private GameObject persistenceInfo;
+        [SerializeField] private TextMeshProUGUI persistenceText;
         
         private PLState state;
         private bool isOwner;
@@ -33,6 +36,7 @@ namespace DrBlackRat.VRC.PictureLoader
     
         private PictureLoaderPersistence persistence;
         private int persistenceID;
+        private bool newImageSaved;
         [UdonSynced] private bool savedImageLoaded;
         private void Start()
         {
@@ -97,6 +101,22 @@ namespace DrBlackRat.VRC.PictureLoader
                     bgText.text = allowInput ? "Error! Enter New URL" : "Error! Input Locked";
                     break;
             }
+            // Update Persistence Info
+            if (isOwner && persistence != null && savedImageLoaded && !newImageSaved)
+            {
+                persistenceInfo.SetActive(true);
+                persistenceText.text = "Saved URL Loaded";
+            }
+            else if(isOwner && persistence != null && newImageSaved)
+            {
+                persistenceInfo.SetActive(true);
+                persistenceText.text = "New URL Saved";
+            }
+            else
+            {
+                persistenceInfo.SetActive(false);
+                persistenceText.text = "Persistence Error";
+            }
         }
         // Check if you can enter a URL
         private bool AllowInput()
@@ -151,6 +171,7 @@ namespace DrBlackRat.VRC.PictureLoader
         private void SavePersistenceUrl(VRCUrl newUrl)
         {
             if (persistence == null) return;
+            newImageSaved = true;
             persistence._SaveUrl(persistenceID, newUrl);
         }
     

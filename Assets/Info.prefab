@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: -1533785930, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllowFocusView: 1
 --- !u!1 &670902637941209228
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 12
+  m_PixelsPerUnitMultiplier: 20
 --- !u!114 &266731518715202572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +783,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 12
+  m_PixelsPerUnitMultiplier: 20
 --- !u!1 &4970256028870841069
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +860,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 12
+  m_PixelsPerUnitMultiplier: 20
 --- !u!114 &1092329445404306565
 MonoBehaviour:
   m_ObjectHideFlags: 0
