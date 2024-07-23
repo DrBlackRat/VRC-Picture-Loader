@@ -728,8 +728,8 @@ MonoBehaviour:
   DynamicPrefabs: []
   DynamicMaterials:
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
-  - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
+  - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: bd5e801bd287a7a408ffb86b6b7061db, type: 2}
   LightMapsNear: []
@@ -8336,6 +8336,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5816538622262387551, guid: 50974b7e2b9c419498bcec54a9a23134,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8821433050575843704, guid: 50974b7e2b9c419498bcec54a9a23134,
         type: 3}
       propertyPath: m_Name
@@ -9701,6 +9706,11 @@ PrefabInstance:
     - target: {fileID: 4009722569239277549, guid: 50974b7e2b9c419498bcec54a9a23134,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816538622262387551, guid: 50974b7e2b9c419498bcec54a9a23134,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8821433050575843704, guid: 50974b7e2b9c419498bcec54a9a23134,
