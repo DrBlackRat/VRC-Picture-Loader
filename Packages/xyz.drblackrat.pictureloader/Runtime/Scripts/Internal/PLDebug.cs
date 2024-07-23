@@ -7,6 +7,7 @@ namespace DrBlackRat.VRC.PictureLoader
         private const string logPrefix = "[<color=#8063cf>Picture Loader</color>]";
         private const string liteLogPrefix = "[<color=#637ecf>Picture Loader Lite</color>]";
         private const string urlLogPrefix = "[<color=#63bfcf>Picture Loader URL Input</color>]";
+        private const string persistenceLogPrefix = "[<color=#63cf9d>Picture Loader Persistence</color>]";
 
         // Normal
         public static void Log(object message)
@@ -46,6 +47,19 @@ namespace DrBlackRat.VRC.PictureLoader
         public static void UrlLogError(object message)
         {
             Debug.LogError($"{urlLogPrefix} {message}");
+        }
+        // Persistence
+        public static void PersistenceLog(object message)
+        {
+            Debug.Log($"{persistenceLogPrefix} {message}");
+        }
+        public static void PersistenceLogWarning(object message)
+        {
+            Debug.LogWarning($"{persistenceLogPrefix} {message}");
+        }
+        public static void PersistenceLogError(object message)
+        {
+            Debug.LogError($"{persistenceLogPrefix} {message}");
         }
     }
     // Enums

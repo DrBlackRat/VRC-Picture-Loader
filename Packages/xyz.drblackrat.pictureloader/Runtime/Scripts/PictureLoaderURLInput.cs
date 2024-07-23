@@ -158,8 +158,12 @@ namespace DrBlackRat.VRC.PictureLoader
         public void _LoadSavedImage(VRCUrl persistenceUrl)
         {
             if (downloader == null) return;
-            if (savedImageLoaded) return;
-            PLDebug.UrlLog("Persistence: Loading saved Url");
+            if (savedImageLoaded)
+            {
+                PLDebug.PersistenceLog("Already loaded saved URL once, skipping this time.");
+                return;
+            }
+            PLDebug.PersistenceLog("Loading saved URL");
             savedImageLoaded = true;
             url = persistenceUrl;
             netUrl = persistenceUrl;

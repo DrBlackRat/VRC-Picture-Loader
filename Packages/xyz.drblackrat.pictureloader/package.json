@@ -7,7 +7,7 @@
   "dependencies": {},
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.worlds": "3.x.x"
+    "com.vrchat.worlds": ">= 3.6.0 <4.0.0"
   },
   "author": {
     "name": "DrBlackRat",
