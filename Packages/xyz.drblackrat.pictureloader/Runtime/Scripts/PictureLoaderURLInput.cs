@@ -17,7 +17,7 @@ namespace DrBlackRat.VRC.PictureLoader
         public LitePictureDownloader downloader;
         [Tooltip("Set if the Input Field should be locked or unlocked by default")]
         [SerializeField] [UdonSynced] private bool locked = true;
-         [Header("Internals")]
+        [Header("Internals")]
         [SerializeField] private VRCUrlInputField inputField;
         [SerializeField] private TextMeshProUGUI bgText;
         [Space(10)]
@@ -38,6 +38,8 @@ namespace DrBlackRat.VRC.PictureLoader
         private int persistenceID;
         private bool newImageSaved;
         [UdonSynced] private bool savedImageLoaded;
+
+        [HideInInspector] public TabletMenu tabletMenu;
         private void Start()
         {
             if (downloader == null)
@@ -208,6 +210,7 @@ namespace DrBlackRat.VRC.PictureLoader
         public void _Finished()
         {
             state = PLState.Finished;
+            if(tabletMenu != null) tabletMenu.SetState(false);
             UpdateUI();
         }
         public void _Error()
