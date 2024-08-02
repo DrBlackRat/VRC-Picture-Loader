@@ -11,7 +11,10 @@ namespace DrBlackRat.VRC.PictureLoader
     public class TabletMenu : UdonSharpBehaviour
     {
         [Header("Settings")]
+        [SerializeField] private bool menuShown = true;
+        [Space(10)]
         [SerializeField] private PictureLoaderURLInput urlInput;
+        [SerializeField] private bool hideUiOnFinish = true;
         [Space(10)]
         [SerializeField] private RectTransform inputTransform;
         [SerializeField] private RectTransform bgTransform;
@@ -27,8 +30,6 @@ namespace DrBlackRat.VRC.PictureLoader
         [SerializeField] private AnimationCurve smoothingCurve;
         [SerializeField] private float movementDuration;
         
-        private bool menuShown = true;
-        
         private bool animate;
         private float elapsedTime;
 
@@ -42,6 +43,7 @@ namespace DrBlackRat.VRC.PictureLoader
         private void Start()
         {
             urlInput.tabletMenu = this;
+            ToggleUI();
         }
 
         private void Update()
@@ -52,10 +54,17 @@ namespace DrBlackRat.VRC.PictureLoader
         public void _MenuPressed()
         {
             menuShown = !menuShown;
-            SetState(menuShown);
+            ToggleUI();
         }
 
-        public void SetState(bool shown)
+        public void _HiddeUI()
+        {
+            if (!hideUiOnFinish) return;
+            menuShown = false;
+            ToggleUI();
+        }
+        
+        private void ToggleUI()
         {
             animate = true;
             elapsedTime = 0f;
@@ -63,7 +72,7 @@ namespace DrBlackRat.VRC.PictureLoader
             oldBgPos = bgTransform.anchoredPosition;
             oldPos = inputTransform.anchoredPosition;
             
-            if (shown)
+            if (menuShown)
             {
                 newBgSize = normalBgSize;
                 newBgPos = normalBgPos;

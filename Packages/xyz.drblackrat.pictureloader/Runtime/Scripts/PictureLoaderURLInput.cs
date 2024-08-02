@@ -210,7 +210,7 @@ namespace DrBlackRat.VRC.PictureLoader
         public void _Finished()
         {
             state = PLState.Finished;
-            if(tabletMenu != null) tabletMenu.SetState(false);
+            if(tabletMenu != null) tabletMenu._HiddeUI();
             UpdateUI();
         }
         public void _Error()

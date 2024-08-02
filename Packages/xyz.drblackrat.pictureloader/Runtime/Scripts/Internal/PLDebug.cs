@@ -68,6 +68,14 @@ namespace DrBlackRat.VRC.PictureLoader
         Waiting,
         Loading,
         Finished,
-        Error,
+        Error
+    }
+
+    public enum TabletRotationState
+    {
+        HorizontalUp,
+        HorizontalDown,
+        VerticalUp,
+        VerticalDown
     }
 }
