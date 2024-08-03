@@ -11,9 +11,12 @@ namespace DrBlackRat.VRC.PictureLoader
     public class TabletMenu : UdonSharpBehaviour
     {
         [Header("Settings")]
+        [Tooltip("Default state of the Tablet UI, disable to hide it by default.")]
         [SerializeField] private bool menuShown = true;
         [Space(10)]
+        [Tooltip("URL Input the Menu is connected to, used to hide the Menu once loading has finished.")]
         [SerializeField] private PictureLoaderURLInput urlInput;
+        [Tooltip("Hides the Menu once the Picture has finished loading.")]
         [SerializeField] private bool hideUiOnFinish = true;
         [Space(10)]
         [SerializeField] private RectTransform inputTransform;

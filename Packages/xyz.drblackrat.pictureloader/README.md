@@ -20,6 +20,19 @@ This is a simple way to add an VRChat Image Downloader to your world!
 - Set a texture that should be used while loading the image
 - Set a texture that should be used if an Error occurs while trying to load the image
 
+## Tablet Downloader
+With this Package I also include a Tablet Downloader, it essentially uses a Lite Downloader with a URL Input but on a Tablet that you can carry around!
+
+It's quite nice to use for showcasing images to others in your instance.
+- Supports all URL Input + Lite Downloader Features
+- Supports Persistence
+- Supports Auto Rotate so your images are always the right way around
+
+You can add it to your Scene by going to the top of the Unity Window under `Tools > Picture Loader` and then clicking on `Add Tablet Downloader Prefab to Scene`.
+- There is no limit to how many of these you can have in your World.
+
+To add it to Persistence, just follow the Persistence Setup guide and add the URL Input field to it. You can find it on the Prefab under `Tablet Downloader > Canvas > Mask > UI > Menu > URL Input`.
+
 ## There are 4 ways you can use the Picture Downloader, all of them support the core features, but also add new ones
 1. Using the Manager:
 - You can have as many Picture Downloaders as you want and use the Manager to well... manage them :D
@@ -38,6 +51,7 @@ This is a simple way to add an VRChat Image Downloader to your world!
   - Still supports all core features
     - having a default URL to Load On Start also still works
     - *disables Auto Reload on the attached Lite Downloader though
+  - Is also available as the Tablet Downloader
 
 4. Using Persistence with the Picture Loader URL Input
 - Allows you to save the URLs you entered using the Picture Loader URL Input. This allows people to for example decorate their home world with private images. 
@@ -46,6 +60,7 @@ This is a simple way to add an VRChat Image Downloader to your world!
    - This only happens the first time they join.
    - It will overwrite images that other people may have loaded before they 
      joined.
+   - Is also available as the Tablet Downloader
 
 ## Which one should I use?
 This highly depends on what you want to use them for, but here are a few examples:
@@ -62,13 +77,13 @@ You can mix an match them as much as you want though. So you could have a Manage
 
 ### Here is my VRChat World showcasing them:
 https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
-### Here is a video showcasing it: (this one is a bit outdated and doesn't showcase persistence)
+### Here is a video showcasing it: (outdated)
 https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
 
 ## Setup:
 Take a look at the example scene! You can find it at the top of the Unity Window under `Tools > Picture Loader`.
 
-It showcases how all 4 ways can / need to be setup and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
+It showcases how all 4 ways can / need to be setup, as well as the Tablet Downloader and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
 
 1. Manager Setup
 - Add the Picture Loader Prefab to your World (Choose between Light & Dark Mode)
@@ -100,3 +115,4 @@ It showcases how all 4 ways can / need to be setup and makes it quite easy to un
 
 **This Asset was made by DrBlackRat**
 https://drblackrat.xyz
+

@@ -927,19 +927,34 @@ MonoBehaviour:
     ID: 56
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
+  - gameObject: {fileID: 1657237694}
     ID: 57
     SerializedTypeNames:
     - VRC.SDK3.Components.VRCPickup
     - VRC.SDK3.Components.VRCObjectSync
     - VRC.Udon.UdonBehaviour
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
+  - gameObject: {fileID: 534711090}
     ID: 58
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
+  - gameObject: {fileID: 1147016585}
     ID: 59
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 1812465748}
+    ID: 60
+    SerializedTypeNames:
+    - VRC.SDK3.Components.VRCPickup
+    - VRC.SDK3.Components.VRCObjectSync
+    - VRC.Udon.UdonBehaviour
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 1645947784}
+    ID: 61
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 90044374}
+    ID: 62
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
@@ -970,6 +985,12 @@ Transform:
   - {fileID: 658787013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &90044374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8879618555457280147, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326405747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100836197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8821433050575843704, guid: 50974b7e2b9c419498bcec54a9a23134,
@@ -3622,6 +3643,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50974b7e2b9c419498bcec54a9a23134, type: 3}
+--- !u!1 &534711090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136810647909680154, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667929168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &556502744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6488,6 +6515,12 @@ Transform:
   - {fileID: 878914096}
   m_Father: {fileID: 1504784977}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1147016585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8879618555457280147, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667929168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1165840467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9486,6 +9519,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1392762024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1645947784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136810647909680154, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326405747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1657237694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8408187262044684605, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667929168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1665787112
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,6 +10496,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812242057}
   m_CullTransparentMesh: 0
+--- !u!1 &1812465748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8408187262044684605, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326405747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1836614752
 GameObject:
   m_ObjectHideFlags: 0
