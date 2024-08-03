@@ -159,7 +159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: acfd13cbd6e5dbc4f9d84fac134dcd87, type: 3}
+  m_Texture: {fileID: 2800000, guid: d930bad13d657f5419846f4f7102a072, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 3
-  m_AspectRatio: 1.3027467
+  m_AspectRatio: 1.7777777
 --- !u!1 &493233189632495054
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 48
+  m_PixelsPerUnitMultiplier: 70
 --- !u!114 &3058403654736850260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,7 +1586,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 48
+  m_PixelsPerUnitMultiplier: 70
 --- !u!114 &2093934035733950191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,7 +1837,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 559771223907342516}
@@ -2104,7 +2104,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  movementDuration: 0.75
+  movementDuration: 0.5
 --- !u!114 &6111068594968680562
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -94,7 +94,7 @@ namespace DrBlackRat.VRC.PictureLoader
             if (timesRun >= 1) oldPictureDL = pictureDL;
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
-            pictureDL.DownloadImage(url, null, gameObject.GetComponent<UdonBehaviour>(), textureInfo);
+            pictureDL.DownloadImage(url, null, GetComponent<UdonBehaviour>(), textureInfo);
         }
         private void ApplyTexture(Texture2D newTexture)
         {

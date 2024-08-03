@@ -927,6 +927,21 @@ MonoBehaviour:
     ID: 56
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 0}
+    ID: 57
+    SerializedTypeNames:
+    - VRC.SDK3.Components.VRCPickup
+    - VRC.SDK3.Components.VRCObjectSync
+    - VRC.Udon.UdonBehaviour
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 0}
+    ID: 58
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 0}
+    ID: 59
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
@@ -948,9 +963,10 @@ Transform:
   - {fileID: 754890305}
   - {fileID: 1314617414}
   - {fileID: 1425608132}
-  - {fileID: 866532321}
   - {fileID: 199215782}
   - {fileID: 350259020}
+  - {fileID: 722533762}
+  - {fileID: 866532321}
   - {fileID: 658787013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1201,12 +1217,12 @@ PrefabInstance:
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Size
-      value: 0.516129
+      value: 0.7111112
       objectReference: {fileID: 0}
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Value
-      value: 1.0000008
+      value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2365,12 +2381,12 @@ PrefabInstance:
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Size
-      value: 0.51612896
+      value: 0.61538464
       objectReference: {fileID: 0}
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Value
-      value: 1.0000006
+      value: 1.0000015
       objectReference: {fileID: 0}
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2664,6 +2680,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_Size
+      value: 0.48482046
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_Value
+      value: 1.0000002
+      objectReference: {fileID: 0}
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
@@ -2678,12 +2704,14 @@ PrefabInstance:
         Apply the Texture to UI Raw Images\n   - Automatically Adjust the Aspect
         Ratio of UI Raw Images using an Aspect Ratio Filter \n- Set a texture that
         should be used while loading the image\n- Set a texture that should be used
-        if an Error occurs while trying to load the image\n\nThere are 4 ways you
-        can use the Picture Downloader, all of them support the core features, but
-        also add new ones:\n1. Using the Manager\n2. Using the Lite Downloader\n3.
-        Using the URL Input with a Lite Downloader\n4. Using Persistence with URL
-        Inputs\nAll of these are showcased in the World!\n\nWhere can I get this?\nYou
-        can find it on my GitHub! It's called the VRC Picture Loader.\n"
+        if an Error occurs while trying to load the image\n\nTablet Downloader\r\nWith
+        this Package I also include a Tablet Downloader, it essentially uses a Lite
+        Downloader with a URL Input but on a Tablet that you can carry around!\r\n\nThere
+        are 4 ways you can use the Picture Downloader, all of them support the core
+        features, but also add new ones:\n1. Using the Manager\n2. Using the Lite
+        Downloader\n3. Using the URL Input with a Lite Downloader\n4. Using Persistence
+        with URL Inputs\nAll of these are showcased in the World!\n\nWhere can I
+        get this?\nYou can find it on my GitHub! It's called the VRC Picture Loader.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2788,12 +2816,12 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00093302806
+      value: -0.00003362904
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3207,12 +3235,12 @@ PrefabInstance:
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Size
-      value: 0.516129
+      value: 0.84209096
       objectReference: {fileID: 0}
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Value
-      value: 1.0000008
+      value: 1.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -3221,12 +3249,13 @@ PrefabInstance:
         on it's own and doesn't require a Manager to work.\n- You can have as many
         Lite Downloaders in your World as you want.\n- Simpler to setup as no Manager
         is required.\n- Still supports all the core features.\n- Can be paried up
-        with an URL Input.\n- Can be paired up with Persistence.\n\nWhen should I
-        use this?\n- If you only want to load a single picture or don't need the
-        Manager you can \n  just use the Lite Downloader.\n\nSetup:\n- Add the Lite
-        Picture Donwloader script to all the Meshes or Raw Images you \n  want to
-        download pictures for \n- Provide a download URL for the Lite Picture Downloaders\n-
-        Adjust the Settings depending on what you need"
+        with an URL Input.\n- Can be paired up with Persistence.\n- Is also available
+        as the Tablet Downloader.\n\nWhen should I use this?\n- If you only want
+        to load a single picture or don't need the Manager you can \n  just use the
+        Lite Downloader.\n\nSetup:\n- Add the Lite Picture Donwloader script to all
+        the Meshes or Raw Images you \n  want to download pictures for \n- Provide
+        a download URL for the Lite Picture Downloaders\n- Adjust the Settings depending
+        on what you need"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -3351,7 +3380,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076080337
+      value: -0.000012702776
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4598,6 +4627,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713789978}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &722533761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722533762}
+  m_Layer: 0
+  m_Name: Tablet Downloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &722533762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722533761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1435449595}
+  - {fileID: 1582559251}
+  - {fileID: 1932240837}
+  - {fileID: 1779600997}
+  - {fileID: 1165840468}
+  m_Father: {fileID: 85230279}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &744182505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6255,6 +6320,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043828138}
   m_CullTransparentMesh: 0
+--- !u!1 &1056351286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056351287}
+  m_Layer: 0
+  m_Name: Tablet Downloader Setup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056351287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056351286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1667929169}
+  - {fileID: 1326405748}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105848067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6390,6 +6488,204 @@ Transform:
   - {fileID: 878914096}
   m_Father: {fileID: 1504784977}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &1165840467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 722533762}
+    m_Modifications:
+    - target: {fileID: 217527479705844692, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_Name
+      value: Info
+      objectReference: {fileID: 0}
+    - target: {fileID: 639642349176990764, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_text
+      value: Tablet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759786615234383468, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759786615234383468, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759786615234383468, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498045079710074039, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498045079710074039, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498045079710074039, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_text
+      value: "This area showcases the Tablet Downloader, it uses a URL Input with
+        a Lite Downloader in a nice and compact Tablet form factor.\n\nIt makes it
+        easy to showcase images to others in your instance!\n- Supports all URL Input
+        + Lite Downloader \n  Features\r\n- Supports Persistence\r\n- Supports Auto
+        Rotate so your images are\n  always the right way around\r\n\r\nYou can add
+        it to your Scene by going to the top of the Unity Window under Tools > Picture
+        Loader.\n- There is no limit to how many of these you can have in your World.\r\n\r\nTo
+        add it to Persistence, just follow the Persistence Setup guide and add the
+        URL Input field to it. \n- The URL Input is in Tablet Downloader > Canvas
+        > Mask > UI > Menu > URL Input."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.5741569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00026316597
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1ca6bc168e50264eaa86701d6f1c58d, type: 3}
+--- !u!224 &1165840468 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1165840467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173463375
 GameObject:
   m_ObjectHideFlags: 0
@@ -7242,6 +7538,119 @@ Transform:
   m_Children: []
   m_Father: {fileID: 85230279}
   m_LocalEulerAnglesHint: {x: 51.89, y: 120, z: 0}
+--- !u!1001 &1326405747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1056351287}
+    m_Modifications:
+    - target: {fileID: 1461764336030864566, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 1461764336030864566, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 8408187262044684605, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_Name
+      value: Tablet Downloader 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827943887091673003, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8827943887091673003, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10b789bd11303c94fb27d7b18e80d8c8, type: 3}
+--- !u!4 &1326405748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326405747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1335957268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,6 +7995,111 @@ Transform:
   - {fileID: 1180259796}
   m_Father: {fileID: 85230279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1435449594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435449595}
+  - component: {fileID: 1435449598}
+  - component: {fileID: 1435449597}
+  - component: {fileID: 1435449596}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1435449595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435449594}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -4.75, y: -0.05, z: -8.25}
+  m_LocalScale: {x: 1.5, y: 0.099999994, z: 5.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722533762}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1435449596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435449594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1435449597
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435449594}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1435449598
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435449594}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1442767478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7650,6 +8164,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2343959827652228422, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328807488298438328, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7848697006210560234, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: m_ShowMaskGraphic
@@ -7680,6 +8204,11 @@ PrefabInstance:
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
@@ -8846,6 +9375,111 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1568489703}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1582559250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582559251}
+  - component: {fileID: 1582559254}
+  - component: {fileID: 1582559253}
+  - component: {fileID: 1582559252}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582559251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582559250}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.5, y: 0.5, z: -8.25}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722533762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1582559252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582559250}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1582559253
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582559250}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1582559254
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582559250}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1587390422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2370866205916545412, guid: 6daf0b0444a97b844b6763631e5c45c2,
@@ -8958,6 +9592,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1001 &1667929168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1056351287}
+    m_Modifications:
+    - target: {fileID: 1461764336030864566, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 1461764336030864566, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 8408187262044684605, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_Name
+      value: Tablet Downloader 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827943887091673003, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8827943887091673003, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10b789bd11303c94fb27d7b18e80d8c8, type: 3}
+--- !u!4 &1667929169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2074144132852325763, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1667929168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1692093843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4009722569239277549, guid: 50974b7e2b9c419498bcec54a9a23134,
@@ -9417,6 +10164,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753524853}
   m_CullTransparentMesh: 1
+--- !u!1 &1779600996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779600997}
+  - component: {fileID: 1779601000}
+  - component: {fileID: 1779600999}
+  - component: {fileID: 1779600998}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779600997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779600996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.25, y: 1.4, z: -7.45}
+  m_LocalScale: {x: 2, y: 3, z: 0.10000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722533762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1779600998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779600996}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1779600999
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779600996}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1779601000
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779600996}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1808493349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10239,12 +11091,12 @@ PrefabInstance:
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Size
-      value: 0.516129
+      value: 0.6153729
       objectReference: {fileID: 0}
     - target: {fileID: 7138772735556111247, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_Value
-      value: 1.0000008
+      value: 1.0000024
       objectReference: {fileID: 0}
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -10255,15 +11107,16 @@ PrefabInstance:
         you can \n  have as many pairs as you want though.\n- Still supports all
         core features.\n  - having a default URL to Load On Start still works.\n 
         - *disables Auto Reload on the attached Lite Downloader.\n- Can be paired
-        up with Persistence.\n\nWhen should I use this?\n- If you want to be able
-        to enter a new URL while being in the World you can \n  use the Picture Loader
-        URL Input as it provides you an Input Field and is \n  network synced.\n\nSetup:\n-
-        Setup a Lite Picture Downloader\n  - You don't need to provide a URL but
-        you can if you want an image to be \n    downloaded by default\n  - Auto
-        Reload wont work / will be disabled when using the URL Input\n- Add the Picture
-        Loader URL Input Prefab to your World (Choose between \n  Light & Dark Mode)\n 
-        - you can find these at the top of the Unity Window under Tools > Picture
-        \n    Loader\n- Assign the Lite Downloader that you want to use for it"
+        up with Persistence.\n- Is also available as the Tablet Downloader.\n\nWhen
+        should I use this?\n- If you want to be able to enter a new URL while being
+        in the World you can \n  use the Picture Loader URL Input as it provides
+        you an Input Field and is \n  network synced.\n\nSetup:\n- Setup a Lite Picture
+        Downloader\n  - You don't need to provide a URL but you can if you want an
+        image to be \n    downloaded by default\n  - Auto Reload wont work / will
+        be disabled when using the URL Input\n- Add the Picture Loader URL Input
+        Prefab to your World (Choose between \n  Light & Dark Mode)\n  - you can
+        find these at the top of the Unity Window under Tools > Picture \n    Loader\n-
+        Assign the Lite Downloader that you want to use for it"
       objectReference: {fileID: 0}
     - target: {fileID: 8530956362610141147, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -10388,7 +11241,7 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00004656276
+      value: -0.00023446574
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10659,6 +11512,111 @@ MonoBehaviour:
     MaterialProperty: _MainTex
     GenerateMipMaps: 0
   urlInput: {fileID: 0}
+--- !u!1 &1932240836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932240837}
+  - component: {fileID: 1932240840}
+  - component: {fileID: 1932240839}
+  - component: {fileID: 1932240838}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932240837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932240836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0.5, z: -8.25}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 722533762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1932240838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932240836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1932240839
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932240836}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1932240840
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932240836}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1938535644
 GameObject:
   m_ObjectHideFlags: 0
@@ -12153,6 +13111,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9139252385511562865, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -12544,5 +13507,6 @@ SceneRoots:
   - {fileID: 28583661}
   - {fileID: 1276478498}
   - {fileID: 1504784977}
+  - {fileID: 1056351287}
   - {fileID: 606415331}
   - {fileID: 1877823270}

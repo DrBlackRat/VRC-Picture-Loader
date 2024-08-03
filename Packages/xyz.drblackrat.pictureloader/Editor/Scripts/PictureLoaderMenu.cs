@@ -20,31 +20,37 @@ namespace DrBlackRat.VRC.PictureLoader
         [MenuItem("Tools/Picture Loader/ Add Manager Prefab to Scene", false, 2)]
         public static void AddManagerPrefab()
         {
-            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Picture Loader.prefab");
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/Picture Loader.prefab");
             PrefabUtility.InstantiatePrefab(prefab);
         }        
         [MenuItem("Tools/Picture Loader/ Add (Dark) Manager Prefab to Scene", false, 3)]
         public static void AddDarkManagerPrefab()
         {
-            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/(Dark) Picture Loader.prefab");
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/(Dark) Picture Loader.prefab");
             PrefabUtility.InstantiatePrefab(prefab);
         }
         [MenuItem("Tools/Picture Loader/ Add Url Input Prefab to Scene", false, 4)]
         public static void AddUrlPrefab()
         {
-            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Picture Loader URL Input.prefab");
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/Picture Loader URL Input.prefab");
             PrefabUtility.InstantiatePrefab(prefab);
         }        
         [MenuItem("Tools/Picture Loader/ Add (Dark) Url Input Prefab to Scene", false, 5)]
         public static void AddDarkUrlPrefab()
         {
-            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/(Dark) Picture Loader URL Input.prefab");
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/(Dark) Picture Loader URL Input.prefab");
             PrefabUtility.InstantiatePrefab(prefab);
         }
         [MenuItem("Tools/Picture Loader/ Add Persistence Prefab to Scene", false, 6)]
         public static void AddPersistencePrefab()
         {
-            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Picture Loader Persistence.prefab");
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/Picture Loader Persistence.prefab");
+            PrefabUtility.InstantiatePrefab(prefab);
+        }
+        [MenuItem("Tools/Picture Loader/ Add Tablet Downloader Prefab to Scene", false, 6)]
+        public static void AddTabletPrefab()
+        {
+            GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/xyz.drblackrat.pictureloader/Runtime/Prefabs/Tablet Downloader.prefab");
             PrefabUtility.InstantiatePrefab(prefab);
         }
     }
