@@ -2062,6 +2062,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 6111068594968680562}
+  autoRotation: 1
   canvasTransform: {fileID: 5787795852610278549}
   tabletTransform: {fileID: 2074144132852325763}
   tolerance: 45

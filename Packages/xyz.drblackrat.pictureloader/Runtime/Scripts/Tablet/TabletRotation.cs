@@ -10,6 +10,8 @@ namespace DrBlackRat.VRC.PictureLoader
     public class TabletRotation : UdonSharpBehaviour
     {
         [Header("Settings")] 
+        [Tooltip("Turns Auto Rotation On / Off. Disable this in case you don't need it to rotate to save on performance.")]
+        [SerializeField] private bool autoRotation = true;
         [SerializeField] private RectTransform canvasTransform;
         [SerializeField] private Transform tabletTransform;
         [Space(10)]
@@ -42,6 +44,7 @@ namespace DrBlackRat.VRC.PictureLoader
 
         private void Start()
         {
+            if (!autoRotation) return;
             _CheckRotation();
         }
 
@@ -54,7 +57,6 @@ namespace DrBlackRat.VRC.PictureLoader
         {
             Vector3 tabletUp = tabletTransform.up;
             Vector3 tabletRight = tabletTransform.right;
-            
             if (Vector3.Angle(tabletUp, Vector3.up) <= tolerance)
             {
                 oldRotationState = newRotationState;
