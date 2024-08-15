@@ -1,5 +1,4 @@
-﻿using System;
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -12,12 +11,14 @@ namespace DrBlackRat.VRC.PictureLoader
         [Header("Settings")] 
         [Tooltip("Turns Auto Rotation On / Off. Disable this in case you don't need it to rotate to save on performance.")]
         [SerializeField] private bool autoRotation = true;
-        [SerializeField] private RectTransform canvasTransform;
-        [SerializeField] private Transform tabletTransform;
-        [Space(10)]
+        [Tooltip("Time between each rotation check in seconds. High values may result in auto rotation feeling unresponsive.")]
+        [SerializeField] private float updateInterval = 0.5f;
         [Tooltip("The angle at which the Tablet will switch to a different screen rotation.")]
         [Range(0f, 45f)]
-        [SerializeField] private float tolerance;
+        [SerializeField] private float tolerance = 45f;
+        [Space(10)]
+        [SerializeField] private RectTransform canvasTransform;
+        [SerializeField] private Transform tabletTransform;
         
         [Header("Animation")]
         [SerializeField] private Vector2 horizontalSize;
@@ -45,7 +46,8 @@ namespace DrBlackRat.VRC.PictureLoader
         private void Start()
         {
             if (!autoRotation) return;
-            _CheckRotation();
+            // Random Start Delay
+            SendCustomEventDelayedSeconds("_CheckRotation", Random.Range(0f, updateInterval));
         }
 
         private void Update()
@@ -78,9 +80,13 @@ namespace DrBlackRat.VRC.PictureLoader
                 newRotationState = TabletRotationState.VerticalDown;
             }
             // Slow Update Loop
-            SendCustomEventDelayedSeconds("_CheckRotation", 0.5f);
+            SendCustomEventDelayedSeconds("_CheckRotation", updateInterval);
             // Change UI Rotation
-            if (newRotationState == oldRotationState) return;
+            if (newRotationState != oldRotationState) UpdateRotation();
+        }
+
+        private void UpdateRotation()
+        {
             animate = true;
             elapsedTime = 0f;
             oldSize = canvasTransform.sizeDelta;

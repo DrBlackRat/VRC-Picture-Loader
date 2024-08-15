@@ -2063,9 +2063,10 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 6111068594968680562}
   autoRotation: 1
+  updateInterval: 0.5
+  tolerance: 45
   canvasTransform: {fileID: 5787795852610278549}
   tabletTransform: {fileID: 2074144132852325763}
-  tolerance: 45
   horizontalSize: {x: 174.1942, y: 133.713}
   verticalSize: {x: 133.713, y: 174.1942}
   horizontalUpRotation: {x: 0, y: 0, z: 0}
