@@ -83,7 +83,7 @@ namespace DrBlackRat.VRC.PictureLoader
             if (urls == null || urlInputs.Length != urls.Length) ResetUrls();
             urls[id] = url;
             RequestSerialization();
-            PLDebug.PersistenceLog("Saved Url");
+            PLDebug.PersistenceLog("Saved URL");
         }
     }
 }

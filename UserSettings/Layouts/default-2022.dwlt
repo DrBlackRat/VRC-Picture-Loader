@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: VRChat SDK
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -499,7 +499,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9099ffffee99ffff3ca8ffffd4faffff5c650000d6650000
+      m_ExpandedIDs: 48d3ffffa6d3fffff4e1ffffd4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.0074946415, y: 0.041951396, z: -0.00030859458, w: -0.9991141}
     speed: 2
-    m_Value: {x: -0.0074944724, y: 0.04195045, z: -0.00030858762, w: -0.99909157}
+    m_Value: {x: -0.0074946415, y: 0.041951396, z: -0.00030859458, w: -0.99911416}
   m_Size:
     m_Target: 14.080507
     speed: 2
@@ -1252,7 +1252,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 0a600000
     m_LastClickedID: 24586
-    m_ExpandedIDs: 000000000a6000004c6c00004e6c0000506c0000526c0000546c0000566c0000586c00005a6c00005c6c00005e6c000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000000a600000426c0000446c0000466c0000486c00004a6c00004c6c00004e6c0000506c0000526c0000546c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1280,7 +1280,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a6000004c6c00004e6c0000506c0000526c0000546c0000566c0000586c00005a6c00005c6c00005e6c0000
+    m_ExpandedIDs: 000000000a600000426c0000446c0000466c0000486c00004a6c00004c6c00004e6c0000506c0000526c0000546c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

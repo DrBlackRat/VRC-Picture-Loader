@@ -1888,8 +1888,8 @@ MonoBehaviour:
   ExactGun: {fileID: 0}
   ExactGrip: {fileID: 0}
   allowManipulationWhenEquipped: 0
-  orientation: 0
-  AutoHold: 0
+  orientation: 1
+  AutoHold: 2
   InteractionText: 
   UseText: Use
   useEventBroadcastType: 0
