@@ -5,6 +5,7 @@ using VRC.SDKBase;
 namespace DrBlackRat.VRC.PictureLoader
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
+    [DefaultExecutionOrder(200)]
     public class PictureLoaderPersistence : UdonSharpBehaviour
     {
         [Header("Settings")]
