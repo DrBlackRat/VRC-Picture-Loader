@@ -84,8 +84,8 @@ You can mix an match them as much as you want though. So you could have a Manage
 
 ### Here is my VRChat World showcasing them:
 https://vrchat.com/home/world/wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
-### Here is a video showcasing it: (outdated)
-https://youtu.be/UT2UuZSvE_4?si=PazJlEoGPF_c3gKy
+### Here is a video showcasing the 3.0 update:
+https://www.youtube.com/watch?v=2j-NbM8QwFM
 
 ## Setup:
 Take a look at the example scene! You can find it at the top of the Unity Window under `Tools > Picture Loader`.
