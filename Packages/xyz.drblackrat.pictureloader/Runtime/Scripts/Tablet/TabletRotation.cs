@@ -37,8 +37,8 @@ namespace DrBlackRat.VRC.PictureLoader
 
         private Vector2 newSize;
         private Vector2 oldSize;
-        private Vector3 newRotation;
-        private Vector3 oldRotation;
+        private Quaternion newRotation;
+        private Quaternion oldRotation;
 
         private TabletRotationState newRotationState = TabletRotationState.HorizontalUp;
         private TabletRotationState oldRotationState = TabletRotationState.HorizontalUp;
@@ -90,24 +90,24 @@ namespace DrBlackRat.VRC.PictureLoader
             animate = true;
             elapsedTime = 0f;
             oldSize = canvasTransform.sizeDelta;
-            oldRotation = canvasTransform.localEulerAngles;
+            oldRotation = canvasTransform.localRotation;
             switch (newRotationState)
             {
                 case TabletRotationState.HorizontalUp:
                     newSize = horizontalSize;
-                    newRotation = horizontalUpRotation;
+                    newRotation = Quaternion.Euler(horizontalUpRotation);
                     break;
                 case TabletRotationState.HorizontalDown:
                     newSize = horizontalSize;
-                    newRotation = horizontalDownRotation;
+                    newRotation = Quaternion.Euler(horizontalDownRotation);
                     break;
                 case TabletRotationState.VerticalUp:
                     newSize = verticalSize;
-                    newRotation = verticalUpRotation;
+                    newRotation = Quaternion.Euler(verticalUpRotation);
                     break;
                 case TabletRotationState.VerticalDown:
                     newSize = verticalSize;
-                    newRotation = verticalDownRotation;
+                    newRotation = Quaternion.Euler(verticalDownRotation);
                     break;
             }
         }
@@ -127,7 +127,7 @@ namespace DrBlackRat.VRC.PictureLoader
         private void RotateUI(float transition)
         {
             canvasTransform.sizeDelta = Vector3.Lerp(oldSize, newSize, transition);
-            canvasTransform.localRotation = Quaternion.Lerp(Quaternion.Euler(oldRotation), Quaternion.Euler(newRotation), transition);
+            canvasTransform.localRotation = Quaternion.Lerp(oldRotation, newRotation, transition);
         }
     }
 }

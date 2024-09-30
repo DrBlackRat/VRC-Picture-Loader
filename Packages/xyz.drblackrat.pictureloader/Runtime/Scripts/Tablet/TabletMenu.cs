@@ -63,6 +63,7 @@ namespace DrBlackRat.VRC.PictureLoader
         public void _HiddeUI()
         {
             if (!hideUiOnFinish) return;
+            if (!menuShown) return;
             menuShown = false;
             ToggleUI();
         }
