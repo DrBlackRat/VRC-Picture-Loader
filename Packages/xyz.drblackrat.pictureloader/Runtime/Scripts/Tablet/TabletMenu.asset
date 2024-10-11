@@ -315,10 +315,10 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 7
-      Data: 22|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
-    - Name: height
-      Entry: 4
-      Data: 10
+      Data: 22|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Internals
     - Name: 
       Entry: 8
       Data: 

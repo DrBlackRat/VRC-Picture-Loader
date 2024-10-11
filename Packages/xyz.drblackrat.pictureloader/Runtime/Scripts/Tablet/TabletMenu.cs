@@ -18,7 +18,7 @@ namespace DrBlackRat.VRC.PictureLoader
         [SerializeField] private PictureLoaderURLInput urlInput;
         [Tooltip("Hides the Menu once the Picture has finished loading.")]
         [SerializeField] private bool hideUiOnFinish = true;
-        [Space(10)]
+        [Header("Internals")]
         [SerializeField] private RectTransform inputTransform;
         [SerializeField] private RectTransform bgTransform;
         [Header("Animation")]

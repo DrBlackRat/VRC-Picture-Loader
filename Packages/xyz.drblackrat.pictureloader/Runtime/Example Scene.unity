@@ -683,7 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: wrld_f7fbac8c-3141-4e4b-9707-1c36a840514d
+  blueprintId: wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
   contentType: 1
   assetBundleUnityVersion: 
   fallbackStatus: 0
@@ -729,8 +729,8 @@ MonoBehaviour:
   DynamicMaterials:
   - {fileID: 2100000, guid: 1e860f838e288f24e9f9eb7666d47025, type: 2}
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
-  - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
+  - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   - {fileID: 2100000, guid: 9805a8da7ec9c8c4190f3d7767186aa0, type: 2}
   - {fileID: 2100000, guid: 588d23517a8b36c4daeaf4ce2c8505e7, type: 2}
   - {fileID: 2100000, guid: bd5e801bd287a7a408ffb86b6b7061db, type: 2}
@@ -12073,7 +12073,7 @@ PrefabInstance:
     - target: {fileID: 8865408222396200884, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

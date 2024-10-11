@@ -16,7 +16,7 @@ namespace DrBlackRat.VRC.PictureLoader
         [Tooltip("The angle at which the Tablet will switch to a different screen rotation.")]
         [Range(0f, 45f)]
         [SerializeField] private float tolerance = 45f;
-        [Space(10)]
+        [Header("Internals")] 
         [SerializeField] private RectTransform canvasTransform;
         [SerializeField] private Transform tabletTransform;
         

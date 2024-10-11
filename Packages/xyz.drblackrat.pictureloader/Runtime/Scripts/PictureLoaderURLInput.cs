@@ -187,7 +187,7 @@ namespace DrBlackRat.VRC.PictureLoader
         {
             if (state == PLState.Loading)
             {
-                PLDebug.UrlLog("An Image is currently being loaded, will try again in 5s");
+                PLDebug.UrlLog("An Image is currently being loaded, will try again in 5s.");
                 SendCustomEventDelayedSeconds("_TryLoadingImage", 5f);
             }
             else
