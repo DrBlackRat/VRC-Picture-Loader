@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     public static class PLDebug
     {
         private const string logPrefix = "[<color=#8063cf>Picture Loader</color>]";
         private const string liteLogPrefix = "[<color=#637ecf>Picture Loader Lite</color>]";
-        private const string urlLogPrefix = "[<color=#49509c>Picture Loader URL Input</color>]";
+        private const string urlLogPrefix = "[<color=#63bfcf>Picture Loader URL Input</color>]";
+        private const string persistenceLogPrefix = "[<color=#63cf9d>Picture Loader Persistence</color>]";
 
         // Normal
         public static void Log(object message)
@@ -47,6 +48,19 @@ namespace DrBlackRat
         {
             Debug.LogError($"{urlLogPrefix} {message}");
         }
+        // Persistence
+        public static void PersistenceLog(object message)
+        {
+            Debug.Log($"{persistenceLogPrefix} {message}");
+        }
+        public static void PersistenceLogWarning(object message)
+        {
+            Debug.LogWarning($"{persistenceLogPrefix} {message}");
+        }
+        public static void PersistenceLogError(object message)
+        {
+            Debug.LogError($"{persistenceLogPrefix} {message}");
+        }
     }
     // Enums
     public enum PLState
@@ -54,6 +68,14 @@ namespace DrBlackRat
         Waiting,
         Loading,
         Finished,
-        Error,
+        Error
+    }
+
+    public enum TabletRotationState
+    {
+        HorizontalUp,
+        HorizontalDown,
+        VerticalUp,
+        VerticalDown
     }
 }

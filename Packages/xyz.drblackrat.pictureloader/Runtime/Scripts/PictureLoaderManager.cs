@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-namespace DrBlackRat
+namespace DrBlackRat.VRC.PictureLoader
 {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     [DefaultExecutionOrder(100)]
@@ -65,8 +65,8 @@ namespace DrBlackRat
             // Picture Loading
             if (picturesToLoad == 0)
             {
-                status.text = "Error, no Pictures found";
-                PLDebug.LogError($"Error, no Picture Downloaders found");
+                status.text = "Error: No Pictures";
+                PLDebug.LogError($"No Picture Downloaders found!");
                 loadButton.interactable = false;
             }
             else if (loadOnStart)
@@ -156,7 +156,7 @@ namespace DrBlackRat
                 indicator.text = $"{picturesLoaded} / {picturesToLoad} | Errors: {errors}";
             }
 
-            // What do do once it's done
+            // What to do once it's done
             if (picturesLoaded == picturesToLoad)
             { 
                 FinishedLoading();
@@ -171,7 +171,7 @@ namespace DrBlackRat
             errors++;
             indicator.text = $"{picturesLoaded} / {picturesToLoad} | Errors: {errors}";
 
-            // What do do once it's done
+            // What to do once it's done
             if (picturesLoaded == picturesToLoad)
             {
                 FinishedLoading();
