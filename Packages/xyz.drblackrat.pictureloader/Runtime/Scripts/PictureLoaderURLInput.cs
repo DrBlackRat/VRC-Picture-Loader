@@ -38,6 +38,7 @@ namespace DrBlackRat.VRC.PictureLoader
         private int persistenceID;
         private bool newImageSaved;
         [UdonSynced] private bool savedImageLoaded;
+        private VRCUrl persistenceUrl = VRCUrl.Empty;
 
         [HideInInspector] public TabletMenu tabletMenu;
         private void Start()
@@ -104,12 +105,12 @@ namespace DrBlackRat.VRC.PictureLoader
                     break;
             }
             // Update Persistence Info
-            if (isOwner && persistence != null && savedImageLoaded && !newImageSaved)
+            if (isOwner && persistence != null && url.Equals(persistenceUrl) && savedImageLoaded && !newImageSaved)
             {
                 persistenceInfo.SetActive(true);
                 persistenceText.text = "Saved URL Loaded";
             }
-            else if(isOwner && persistence != null && newImageSaved)
+            else if(isOwner && persistence != null && url.Equals(persistenceUrl) && newImageSaved)
             {
                 persistenceInfo.SetActive(true);
                 persistenceText.text = "New URL Saved";
@@ -117,7 +118,7 @@ namespace DrBlackRat.VRC.PictureLoader
             else
             {
                 persistenceInfo.SetActive(false);
-                persistenceText.text = "Persistence Error";
+                persistenceText.text = "If you see this something exploded";
             }
         }
         // Check if you can enter a URL
@@ -157,7 +158,7 @@ namespace DrBlackRat.VRC.PictureLoader
             persistence = persistenceRef;
             PLDebug.UrlLog($"Connected to Picture Loader Persistence with ID {id}");
         }
-        public void _LoadSavedImage(VRCUrl persistenceUrl)
+        public void _LoadSavedImage(VRCUrl savedUrl)
         {
             if (downloader == null) return;
             if (savedImageLoaded)
@@ -167,8 +168,9 @@ namespace DrBlackRat.VRC.PictureLoader
             }
             PLDebug.PersistenceLog("Loading saved URL");
             savedImageLoaded = true;
-            url = persistenceUrl;
-            netUrl = persistenceUrl;
+            url = savedUrl;
+            netUrl = savedUrl;
+            persistenceUrl = savedUrl;
             _TryLoadingImage();
             // Networking
             if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
@@ -178,6 +180,7 @@ namespace DrBlackRat.VRC.PictureLoader
         {
             if (persistence == null) return;
             newImageSaved = true;
+            persistenceUrl = newUrl;
             persistence._SaveUrl(persistenceID, newUrl);
         }
     
