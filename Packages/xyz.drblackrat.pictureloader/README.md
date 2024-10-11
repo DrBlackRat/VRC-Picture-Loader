@@ -1,6 +1,6 @@
 # xyz.drblackrat.pictureloader by DrBlackRat
 
-VRC Picture Loader V3.0.0
+VRC Picture Loader V3.0.1
 
 This is a simple way to add an VRChat Image Downloader to your world!
 
