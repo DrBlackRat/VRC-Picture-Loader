@@ -90,6 +90,8 @@ https://www.youtube.com/watch?v=2j-NbM8QwFM
 ## Setup:
 Take a look at the example scene! You can find it at the top of the Unity Window under `Tools > Picture Loader`.
 
+<img src="https://github.com/user-attachments/assets/822a8107-94b0-4346-af91-2ba5ba5a3088" width="500">
+
 It showcases how all 4 ways can / need to be setup, as well as the Tablet Downloader and makes it quite easy to understand. If you don't know what a setting does / needs just hover over it's name and a tooltip should appear.
 
 1. Manager Setup
