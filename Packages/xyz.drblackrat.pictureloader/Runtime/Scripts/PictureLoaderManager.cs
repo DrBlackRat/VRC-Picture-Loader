@@ -3,6 +3,7 @@ using UdonSharp;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using VRC.SDKBase;
 
 namespace DrBlackRat.VRC.PictureLoader
 {

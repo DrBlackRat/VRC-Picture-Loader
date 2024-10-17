@@ -196,9 +196,9 @@ MonoBehaviour:
   generateMipMaps: 1
   anisoLevel: 9
   filterMode: 1
-  wrapModeU: 0
-  wrapModeV: 0
-  wrapModeW: 0
+  wrapModeU: 1
+  wrapModeV: 1
+  wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
   uiRawImages: []
