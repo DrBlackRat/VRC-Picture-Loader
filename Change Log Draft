@@ -5,3 +5,4 @@ This release is available via the [Creator Companion](https://vcc.docs.vrchat.co
 
 # Changes:
 - changed Wrap Mode to Clamp for UI Raw Images in Example Scene
+- fixed UI sprite compression artefacts on Android & iOS
