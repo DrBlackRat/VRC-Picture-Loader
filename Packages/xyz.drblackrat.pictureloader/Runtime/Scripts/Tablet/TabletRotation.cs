@@ -80,6 +80,7 @@ namespace DrBlackRat.VRC.PictureLoader
                 newRotationState = TabletRotationState.VerticalDown;
             }
             // Slow Update Loop
+            if (!autoRotation) return;
             SendCustomEventDelayedSeconds("_CheckRotation", updateInterval);
             // Change UI Rotation
             if (newRotationState != oldRotationState) UpdateRotation();
