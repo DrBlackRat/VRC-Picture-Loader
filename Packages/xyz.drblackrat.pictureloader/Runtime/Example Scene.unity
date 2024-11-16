@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0.2660809, g: 0.23150672, b: 0.24945194, a: 1}
+  m_IndirectSpecularColor: {r: 0.25330302, g: 0.21698889, b: 0.23319246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -728,10 +728,10 @@ MonoBehaviour:
   DynamicPrefabs: []
   DynamicMaterials:
   - {fileID: 2100000, guid: 8617690e28d052046a00dd01ab3939de, type: 2}
+  - {fileID: 2100000, guid: 1e860f838e288f24e9f9eb7666d47025, type: 2}
   - {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   - {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   - {fileID: 2100000, guid: 9805a8da7ec9c8c4190f3d7767186aa0, type: 2}
-  - {fileID: 2100000, guid: 1e860f838e288f24e9f9eb7666d47025, type: 2}
   - {fileID: 2100000, guid: 588d23517a8b36c4daeaf4ce2c8505e7, type: 2}
   - {fileID: 2100000, guid: bd5e801bd287a7a408ffb86b6b7061db, type: 2}
   LightMapsNear: []
@@ -2567,7 +2567,7 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "Version 3.0.2\n\nThis world showcases my VRChat Picture Loader which
+      value: "Version 3.0.3\n\nThis world showcases my VRChat Picture Loader which
         provides Prefabs to easily download images using VRChat's Image Downloader
         with a lot of addtional features!\n\nHere are the core features:\n- Download
         Images from the Web\n- Provides a UI for VRChat's Image Downloader\n  - Light
