@@ -4,5 +4,7 @@ This release is available via the [Creator Companion](https://vcc.docs.vrchat.co
 ###  [⬇️ My VPM / Creator Companion Listing](https://vpm.drblackrat.xyz)
 
 # Changes:
-- changed Wrap Mode to Clamp for UI Raw Images in Example Scene
-- fixed UI sprite compression artefacts on Android & iOS
+- disabled MipMaps for UI Sprites to prevent masking errors
+- switched to VRChat's Supersampled UI Shader
+- adjusted smoothing curve for Tablet Rotation
+- fixed auto rotaion toggle not working
