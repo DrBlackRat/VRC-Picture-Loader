@@ -2196,7 +2196,7 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 3732907648562419396}
   downloader: {fileID: 9139252385511562865}
-  locked: 1
+  locked: 0
   inputField: {fileID: 2093934035733950191}
   bgText: {fileID: 3523236267303458798}
   lockButton: {fileID: 3058403654736850260}
