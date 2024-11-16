@@ -950,21 +950,6 @@ MonoBehaviour:
     ID: 62
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
-    ID: 63
-    SerializedTypeNames:
-    - VRC.SDK3.Components.VRCPickup
-    - VRC.SDK3.Components.VRCObjectSync
-    - VRC.Udon.UdonBehaviour
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
-    ID: 64
-    SerializedTypeNames:
-    - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
-    ID: 65
-    SerializedTypeNames:
-    - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
@@ -8573,6 +8558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
@@ -13919,6 +13909,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 35630e38b4e5ffb40b44ec5348b4333f, type: 2}
+    - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7852593769602294369, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: serializationData.Prefab
