@@ -25,15 +25,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.cinemachine": {
-      "version": "2.9.7",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.1.31"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collab-proxy": {
       "version": "2.3.1",
       "depth": 0,
@@ -82,15 +73,6 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.inputsystem": {
-      "version": "1.7.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0"
-      },
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
@@ -216,18 +198,6 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.0.2"
-      }
-    },
-    "com.vrchat.worlds": {
-      "version": "file:com.vrchat.worlds",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.cinemachine": "2.9.7",
-        "com.unity.textmeshpro": "3.0.6",
-        "com.unity.inputsystem": "1.2.0",
-        "com.unity.ai.navigation": "1.1.5",
-        "com.unity.ugui": "1.0.0"
       }
     },
     "xyz.drblackrat.pictureloader": {
