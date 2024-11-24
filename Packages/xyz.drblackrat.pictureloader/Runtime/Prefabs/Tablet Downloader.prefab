@@ -201,7 +201,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 5806512941799921629}
   aspectRatioFilters:
   - {fileID: 6548021904836104006}
   useLoadingTexture: 1
@@ -257,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 3
-  m_AspectRatio: 1.7777777
+  m_AspectRatio: 1
 --- !u!1 &493233189632495054
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,6 +56,7 @@ namespace DrBlackRat.VRC.PictureLoader
         public TextureInfo textureInfo;
         private Texture2D picture;
         private int timesRun;
+        private bool errorShown;
 
         [HideInInspector]
         public PictureLoaderManager manager;
@@ -84,13 +85,19 @@ namespace DrBlackRat.VRC.PictureLoader
         }
         private void OnDestroy()
         {
+#if UNITY_EDITOR
+            // Fixes weird issue where images will be stuck in materials once you exit play mode
+            ApplyTexture(null);
+#endif
             if (pictureDL != null) pictureDL.Dispose();
             if (oldPictureDL != null) oldPictureDL.Dispose();
         }
         public void _DownloadPicture()
         {
-            // Sets Loading Texture
-            if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload) ApplyTexture(loadingTexture);
+            // Sets Loading Texture & Removes Error Texture
+            if (useLoadingTexture && timesRun == 0 || useLoadingTexture && timesRun >= 1 && !skipLoadingTextureOnReload || useLoadingTexture && errorShown) ApplyTexture(loadingTexture);
+            errorShown = false;
+            // Remove Old Loader
             if (timesRun >= 1) oldPictureDL = pictureDL;
             // Loads new Picture
             pictureDL = new VRCImageDownloader();
@@ -115,7 +122,7 @@ namespace DrBlackRat.VRC.PictureLoader
                 }
             }
             // Change Aspect Ratio for Raw Images
-            if (aspectRatioFilters == null || aspectRatioFilters.Length == 0) return;
+            if (aspectRatioFilters == null || aspectRatioFilters.Length == 0 || newTexture == null) return;
             var aspectRatio = newTexture.width / (float)newTexture.height;
             foreach (var aspectRatioFilter in aspectRatioFilters)
             {
@@ -140,6 +147,7 @@ namespace DrBlackRat.VRC.PictureLoader
             PLDebug.LogError($"Could not Load Picture from [{url}] because: {result.Error}");
             // Sets Error Texture
             if (useErrorTexture) ApplyTexture(errorTexture);
+            errorShown = useErrorTexture;
             // Dispose Loaders
             if (timesRun >= 1) oldPictureDL.Dispose();
             pictureDL.Dispose();

@@ -1109,7 +1109,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 111698524}
   aspectRatioFilters:
   - {fileID: 1881148790}
   useLoadingTexture: 1
@@ -1524,7 +1525,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 171045646}
   aspectRatioFilters:
   - {fileID: 1908214052}
   useLoadingTexture: 1
@@ -1697,7 +1699,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 189151950}
   aspectRatioFilters:
   - {fileID: 1562576380}
   useLoadingTexture: 1
@@ -4513,7 +4516,8 @@ MonoBehaviour:
   material: {fileID: 0}
   materialProperties:
   - _MainTex
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 670486020}
   aspectRatioFilters:
   - {fileID: 1285525470}
   useLoadingTexture: 1
@@ -5051,7 +5055,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 797720768}
   aspectRatioFilters:
   - {fileID: 908430143}
   useLoadingTexture: 1
@@ -6135,7 +6140,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 922244373}
   aspectRatioFilters:
   - {fileID: 1879163467}
   useLoadingTexture: 1
@@ -6389,7 +6395,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 969616532}
   aspectRatioFilters:
   - {fileID: 1335957273}
   useLoadingTexture: 1
@@ -7113,7 +7120,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 1195206093}
   aspectRatioFilters:
   - {fileID: 1702932561}
   useLoadingTexture: 1
@@ -7299,7 +7307,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 1285494191}
   aspectRatioFilters:
   - {fileID: 1445887725}
   useLoadingTexture: 1
@@ -7889,6 +7898,11 @@ PrefabInstance:
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
@@ -8595,6 +8609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -9235,7 +9254,7 @@ MonoBehaviour:
   wrapModeU: 0
   wrapModeV: 0
   wrapModeW: 0
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 9be898ab2f6bbff4eafb793858aeb9db, type: 2}
   materialProperties:
   - _MainTex
   - _EmissionMap
@@ -10069,6 +10088,11 @@ PrefabInstance:
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
@@ -12229,7 +12253,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 1913474741}
   aspectRatioFilters:
   - {fileID: 882397329}
   useLoadingTexture: 1
@@ -12954,7 +12979,8 @@ MonoBehaviour:
   wrapModeW: 1
   material: {fileID: 0}
   materialProperties: []
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 2029821699}
   aspectRatioFilters:
   - {fileID: 1665787114}
   useLoadingTexture: 1
@@ -13503,7 +13529,8 @@ MonoBehaviour:
   material: {fileID: 0}
   materialProperties:
   - _MainTex
-  uiRawImages: []
+  uiRawImages:
+  - {fileID: 2114682449}
   aspectRatioFilters:
   - {fileID: 665058407}
   useLoadingTexture: 1
@@ -13948,6 +13975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857764865282183113, guid: 10b789bd11303c94fb27d7b18e80d8c8,
+        type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -14055,7 +14087,7 @@ MonoBehaviour:
   wrapModeU: 0
   wrapModeV: 0
   wrapModeW: 0
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 4dc98a390a2bea5418c05a7776a9e1d5, type: 2}
   materialProperties:
   - _MainTex
   - _EmissionMap
