@@ -1,13 +1,13 @@
 {
   "name": "xyz.drblackrat.pictureloader",
   "displayName": "Picture Loader",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "unity" : "2022.3",
   "description": "Tools & Prefabs to easily download images using VRChat's Image Downloader",
   "dependencies": {},
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.worlds": ">3.7.3 <4.0.0"
+    "com.vrchat.worlds": ">=3.7.4 <4.0.0"
   },
   "author": {
     "name": "DrBlackRat",
