@@ -4,13 +4,7 @@ This release is available via the [Creator Companion](https://vcc.docs.vrchat.co
 ###  [⬇️ My VPM / Creator Companion Listing](https://vpm.drblackrat.xyz)
 
 # Changes:
-- added reference to each UI Raw Image / Material in Example Scene to make it easier to understand
-- adjusted Example Assets Error & Loading Texture
-  - fixed file size issues
-  - adjusted look to be in line with Tablet Downloader
-- adjusted Tablet Downloader Error & Loading Texture
-  - fixed file size issues
-  -  adjusted look by adding a back drop and updating the font to Noto Sans Bold
-- fixed Texture getting stuck on materials when existing play mode
-  - this issue only showed up when you manually set a Material Reference 
-- fixed Udon Behavior crash when trying to apply null as a texture (you can probably guess how I found that out lol)
+- removed setting images to null after leaving play mode (caused more problems than it resolved)
+- added error info to the UI
+  - nothing major, just the [default errors VRChat provides](https://creators.vrchat.com/worlds/udon/image-loading/)
+- minor Example World Changes
