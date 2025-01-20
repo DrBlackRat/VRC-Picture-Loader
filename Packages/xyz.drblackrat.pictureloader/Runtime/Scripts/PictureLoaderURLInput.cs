@@ -33,6 +33,8 @@ namespace DrBlackRat.VRC.PictureLoader
 
         private VRCUrl url = VRCUrl.Empty;
         [UdonSynced] private VRCUrl netUrl = VRCUrl.Empty;
+
+        private string lastError;
     
         private PictureLoaderPersistence persistence;
         private int persistenceID;
@@ -101,7 +103,7 @@ namespace DrBlackRat.VRC.PictureLoader
                     bgText.text = allowInput ? "Finished! Enter New URL" : "Finished! Input Locked";
                     break;
                 case PLState.Error:
-                    bgText.text = allowInput ? "Error! Enter New URL" : "Error! Input Locked";
+                    bgText.text = allowInput ? $"{lastError}! Enter New URL" : "Error! Input Locked";
                     break;
             }
             // Update Persistence Info
@@ -216,9 +218,10 @@ namespace DrBlackRat.VRC.PictureLoader
             if(tabletMenu != null) tabletMenu._HiddeUI();
             UpdateUI();
         }
-        public void _Error()
+        public void _Error(string errorMessage)
         {
             state = PLState.Error;
+            lastError = errorMessage;
             UpdateUI();
         }
         #endregion

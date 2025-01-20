@@ -181,7 +181,7 @@ namespace DrBlackRat.VRC.PictureLoader
             timesRun++;
             AutoReload();
             // Talk to URL Input if available
-            if (urlInput != null) urlInput._Error();
+            if (urlInput != null) urlInput._Error(result.Error.ToString());
         }
     }
 }
