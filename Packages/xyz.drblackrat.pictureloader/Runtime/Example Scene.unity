@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0.25330302, g: 0.21698889, b: 0.23319246, a: 1}
+  m_IndirectSpecularColor: {r: 0.2660809, g: 0.23150672, b: 0.24945194, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2569,7 +2569,7 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "Version 3.0.4\n\nThis world showcases my VRChat Picture Loader which
+      value: "Version 3.0.5\n\nThis world showcases my VRChat Picture Loader which
         provides Prefabs to easily download images using VRChat's Image Downloader
         with a lot of addtional features!\n\nHere are the core features:\n- Download
         Images from the Web\n- Provides a UI for VRChat's Image Downloader\n  - Light
