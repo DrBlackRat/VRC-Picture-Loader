@@ -95,10 +95,6 @@ namespace DrBlackRat.VRC.PictureLoader
         }
         private void OnDestroy()
         {
-#if UNITY_EDITOR
-            // Fixes weird issue where images will be stuck in materials once you exit play mode
-            ApplyTexture(null);
-#endif
             if (pictureDL != null) pictureDL.Dispose();
             if (oldPictureDL != null) oldPictureDL.Dispose();
         }
