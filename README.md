@@ -1,4 +1,4 @@
-![PictureLoaderBanner](https://github.com/user-attachments/assets/04264a5f-28cd-4f4d-8b85-4cb2e3b135df)
+![PictureLoaderBanner](https://github.com/user-attachments/assets/315ee239-99bb-4409-925c-179cdad79066)
 
 
 ## Download
@@ -41,18 +41,18 @@ You can add it to your Scene by going to the top of the Unity Window under `Tool
 To add it to Persistence, just follow the Persistence Setup guide and add the URL Input field to it. You can find it on the Prefab under `Tablet Downloader > Canvas > Mask > UI > Menu > URL Input`.
 
 ## There are 4 ways you can use the Picture Downloader, all of them support the core features, but also add new ones
-1. Using the Manager:
+### 1. Using the Manager:
 - You can have as many Picture Downloaders as you want and use the Manager to well... manage them :D
   - gives you a UI that shows how many Pictures have already been downloaded, how many are still left to download etc.
   - allows to re download all pictures with a button press
   - manager takes control of when to download and to re download them
 
-2. Using the Lite Downloader:
+### 2. Using the Lite Downloader:
 - The Lite Downloader works on it's own and doesn't require a Manager to work, you can still have as many of them as you want though.
   - simpler to setup as no Manager is required
   - still supports all the core Features
 
-3. Using the Picture Loader URL Input + Lite Downloader:
+### 3. Using the Picture Loader URL Input + Lite Downloader:
 - If you want to be able to enter a URL to load while being in the instance you can use the Picture Loader URL Input. It provides you with an Input field to enter the URL and then just uses the normal Lite Downloader to load the picture.
   - Load URLs from within VRChat
   - Still supports all core features
@@ -60,14 +60,29 @@ To add it to Persistence, just follow the Persistence Setup guide and add the UR
     - *disables Auto Reload on the attached Lite Downloader though
   - Is also available as the Tablet Downloader
 
-4. Using Persistence with the Picture Loader URL Input
+### 4. Using Persistence with the Picture Loader URL Input
 - Allows you to save the URLs you entered using the Picture Loader URL Input. This allows people to for example decorate their home world with private images. 
-  - Any URL the Instance Owner enters will be saved to their Player Object.
+- Is also available for the Tablet Downloader
+#### There are two modes to how this can operate:
+  1. Instance Owner Mode
+  - This is the default behavior
+  - Any URL the Instance Owner enters will be saved to their Player Object, even if they rejoin.
   - Once the Instance Owner joins, their images will start to load.
-   - This only happens the first time they join.
-   - It will overwrite images that other people may have loaded before they 
-     joined.
-   - Is also available as the Tablet Downloader
+    - This only happens the first time they join.
+    - It will overwrite images that other people may have loaded before they joined.
+
+  2. Network Master Mode
+  - Can be turned on by checking "Use Net Master" on the Persistence Script.
+  - Any URL the current Master enters will be saved to their Player Object.
+    - If "Allow New Master To Save" is enabled and the Master changes the new Master will now be able to Save URLs.
+    - If "Allow New Master To Save" is disabled and the Master changes no one will be able to save URLs in this instance anymore, even if the original Master rejoins.
+  - Once the first Master joins, their images will start to load.
+    - This only happens once.
+
+#### Which mode should I use?
+If you want the Instance Owner to always be the one who can save images you should use Instance Owner Mode. This mode how ever only works in Invite, Invite+, Friends and Friends+ Instances, as Group and Public instances have no owner according to Udon.
+If you instead want Persistence to always just load the images of first person who joins and wish for it to also work in Group and Public Instances you should use Network Master Mode.
+
 
 ## Which one should I use?
 This highly depends on what you want to use them for, but here are a few examples:
@@ -119,6 +134,7 @@ It showcases how all 4 ways can / need to be setup, as well as the Tablet Downlo
 - Add the Persistence Prefab to your Scene
   - you can find it at the top of the Unity Window under `Tools > Picture Loader` 
 - Add the URL Inputs you want to be saved to the Url Inputs list on the Picture Loader Persistence Prefab
+- Decide on which of Mode you want to use
 
 **Tip: If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.**
 
