@@ -11,7 +11,7 @@ namespace DrBlackRat.VRC.PictureLoader
         [Header("Settings")]
         [Tooltip("Use Networking Master instead of Instance Owner. Instance Owner only works in Invite, Invite+, Friends and Friends+, but has some usage benefits.")]
         [SerializeField] private bool useNetMaster;
-        [Tooltip("If the Master changes the new Master will now be able to save URL's to their Player Object. (Only for Net Master Mode)")]
+        [Tooltip("If the Master changes the new Master will be able to save URL's to their Player Object. (Only for Net Master Mode)")]
         [SerializeField] private bool allowNewMasterToSave;
         [Space(10)]
         [Tooltip("List of Picture Loader URL Inputs that you want to use Persistence for")]
@@ -69,6 +69,8 @@ namespace DrBlackRat.VRC.PictureLoader
         public override void OnPlayerLeft(VRCPlayerApi player)
         {
             if (!useNetMaster || !allowNewMasterToSave) return;
+            if (player.isLocal) return;
+            
             var owner = Networking.GetOwner(gameObject);
             if (!owner.isMaster) return;
             isLocalOwner = owner.isLocal;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0.25330302, g: 0.21698889, b: 0.23319246, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchedFromSDKPipeline: 0
   completedSDKPipeline: 0
-  blueprintId: wrld_f7fbac8c-3141-4e4b-9707-1c36a840514d
+  blueprintId: wrld_65b1db37-cce6-48d8-b57e-58c3f31b2c93
   contentType: 1
   assetBundleUnityVersion: 
   fallbackStatus: 0
@@ -12722,6 +12722,11 @@ PrefabInstance:
     - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
         type: 3}
       propertyPath: useNetMaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: allowNewMasterToSave
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,

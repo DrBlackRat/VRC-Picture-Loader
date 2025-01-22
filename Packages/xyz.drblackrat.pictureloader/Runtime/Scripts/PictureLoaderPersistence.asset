@@ -165,8 +165,8 @@ MonoBehaviour:
       Data: 10|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
     - Name: tooltip
       Entry: 1
-      Data: If the Master changes the new Master will now be able to save URL's to
-        their Player Object. (Only for Net Master Mode)
+      Data: If the Master changes the new Master will be able to save URL's to their
+        Player Object. (Only for Net Master Mode)
     - Name: 
       Entry: 8
       Data: 
