@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0.2660809, g: 0.23150672, b: 0.24945194, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2316,26 +2316,42 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "This area showcases Persistence in combination with URL Inputs!\n\nPersistence
+      value: "This area showcases Persistence in combination with URL Inputs!\r\n\r\nPersistence
         works as an addition to a URL Input and allows you to save and load URLs
-        in client. \nMy idea behind adding Persistence was to basically allow people
+        in client. \r\nMy idea behind adding Persistence was to basically allow people
         to set images to be used in their home world, which would be loaded again
-        once they return.\n- You have one Picture Loader Persistence Prefab in your
-        scene in which you add every URL Input that you want to use Persistence for.\n-
-        Any URL the Instance Owner enters will be saved to their Player Object.\n-
-        Once the Instance Owner joins, their images will start to load.\n   - This
-        only happens the first time they join.\n   - It will overwrite images that
-        other people may have loaded before they \n     joined.\n- Can be used with
-        the Tablet Downloader.\n\nWhen should I use this?\nIf you want to be able
-        to save & load pictures in something like a home world, you can use the Picture
-        Loader Persistence as it easily allows you to save & load URLs entered through
-        an Picture Loader URL Input.\r\n  - You can only have one Picture Loader
-        Persistence Prefab per scene, but \n     you can add as many URL Inputs to
-        be saved as you want to.\n\nSetup:\n- Setup at least one URL Input\n- Add
-        the Persistence Prefab to your Scene\r\n  - you can find it at the top of
-        the Unity Window under Tools > Picture Loader\n- Add the URL Inputs you want
-        to be saved to the Url Inputs list on the Picture \n  Loader Persistence
-        Prefab"
+        once they return.\r\n- You have one Picture Loader Persistence Prefab in
+        your scene in which you \n  add every URL Input that you want to use Persistence
+        for.\r\n- Can be used with the Tablet Downloader.\r\n\r\nThere are two modes
+        to how this can operate:\r\n1. Instance Owner Mode\r\n- This is the default
+        behavior\r\n- Any URL the Instance Owner enters will be saved to their Player
+        Object, even if they rejoin.\r\n- Once the Instance Owner joins, their images
+        will start to load.\r\n   - This only happens the first time they join.\r\n  
+        - It will overwrite images that other people may have loaded before they
+        \n     joined.\r\n\r\n2. Network Master Mode\r\n- Can be turned on by checking
+        \"Use Net Master\" on the Persistence Script.\r\n- Any URL the current Master
+        enters will be saved to their Player Object.\r\n   - If \"Allow New Master
+        To Save\" is enabled and the Master changes the new \n     Master will now
+        be able to Save URLs.\r\n   - If \"Allow New Master To Save\" is disabled
+        and the Master changes no one \n     will be able to save URLs in this instance
+        anymore, even if the original \n     Master rejoins.\r\n- Once the first
+        Master joins, their images will start to load.\r\n   - This only happens
+        once.\r\n\r\nWhich mode should I use?\r\nIf you want the Instance Owner to
+        always be the one who can save images you should use Instance Owner Mode.
+        This mode how ever only works in Invite, Invite+, Friends and Friends+ Instances,
+        as Group and Public instances have no owner according to Udon.\r\nIf you
+        instead want Persistence to always just load the images of first person who
+        joins and wish for it to also work in Group and Public Instances you should
+        use Network Master Mode.\r\n\r\nWhen should I use this?\r\nIf you want to
+        be able to save & load pictures in something like a home world, you can use
+        the Picture Loader Persistence as it easily allows you to save & load URLs
+        entered through an Picture Loader URL Input.\r\n  - You can only have one
+        Picture Loader Persistence Prefab per scene, but \n    you can add as many
+        URL Inputs to be saved as you want to.\r\n\r\nSetup:\r\n- Setup at least
+        one URL Input\r\n- Add the Persistence Prefab to your Scene\r\n  - you can
+        find it at the top of the Unity Window under Tools > Picture Loader\r\n-
+        Add the URL Inputs you want to be saved to the URL Inputs list on the Picture
+        Loader Persistence Prefab\r\n- Decide on which mode you want to use"
       objectReference: {fileID: 0}
     - target: {fileID: 8408471452457519009, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
@@ -2460,12 +2476,12 @@ PrefabInstance:
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 270
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 8917488744078308093, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0001335485
+      value: -0.00002986443
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2569,7 +2585,7 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "Version 3.0.5\n\nThis world showcases my VRChat Picture Loader which
+      value: "Version 3.1.0\n\nThis world showcases my VRChat Picture Loader which
         provides Prefabs to easily download images using VRChat's Image Downloader
         with a lot of addtional features!\n\nHere are the core features:\n- Download
         Images from the Web\n- Provides a UI for VRChat's Image Downloader\n  - Light
@@ -12705,6 +12721,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
         type: 3}
+      propertyPath: useNetMaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
+      propertyPath: allowNewMasterToSave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897240262468823198, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
+        type: 3}
       propertyPath: urlInputs.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -12757,7 +12783,7 @@ PrefabInstance:
     - target: {fileID: 8865408222396200884, guid: 22ea8d6e549af4d419aefe1a6c061d6b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
