@@ -24,4 +24,8 @@ This release is available via the [Creator Companion](https://vcc.docs.vrchat.co
     - If "Allow New Master To Save" is disabled and the Master changes no one will be able to save URLs in this instance anymore, even if the original Master rejoins.
   - Once the first Master joins, their images will start to load.
     - This only happens once.
-        
+
+#### Which mode should I use?
+If you want the Instance Owner to always be the one who can save images you should use Instance Owner Mode. This mode how ever only works in Invite, Invite+, Friends and Friends+ Instances, as Group and Public instances have no owner according to Udon.
+
+If you instead want Persistence to always just load the images of first person who joins and wish for it to also work in Group and Public Instances you should use Network Master Mode.
