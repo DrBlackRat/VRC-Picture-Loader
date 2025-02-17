@@ -1,7 +1,7 @@
 ![PictureLoaderBanner](https://github.com/user-attachments/assets/315ee239-99bb-4409-925c-179cdad79066)
 
 
-## Download
+# Download
 The VRC Picture Loader is available via the [Creator Companion](https://vcc.docs.vrchat.com/) as a VPM package!
 ###  [⬇️ My VPM / Creator Companion Listing](https://vpm.drblackrat.xyz)
 
@@ -138,6 +138,10 @@ It showcases how all 4 ways can / need to be setup, as well as the Tablet Downlo
 
 **Tip: If you want the image to look perfect without lighting having any effect on it, I recommend using `VRChat/Sprites/Default` for the Shader.**
 
-**This Asset was made by DrBlackRat**
+## Credits:
+#### This Asset was made by DrBlackRat:
 https://drblackrat.xyz
+
+#### If you like this, feel free to support me on Ko-fi!
+https://ko-fi.com/drblackrat
 
