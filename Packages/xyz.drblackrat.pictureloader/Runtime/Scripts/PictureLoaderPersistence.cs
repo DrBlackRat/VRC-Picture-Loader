@@ -72,7 +72,7 @@ namespace DrBlackRat.VRC.PictureLoader
             if (player.isLocal) return;
             
             var owner = Networking.GetOwner(gameObject);
-            if (!owner.isMaster) return;
+            if (owner == null || !owner.isMaster) return;
             isLocalOwner = owner.isLocal;
             PLDebug.PersistenceLog($"{owner.displayName} is now Master. They can now save URLs.");
             

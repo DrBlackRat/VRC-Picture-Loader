@@ -1,7 +1,7 @@
 {
   "name": "xyz.drblackrat.pictureloader",
   "displayName": "Picture Loader",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "unity" : "2022.3",
   "description": "Tools & Prefabs to easily download images using VRChat's Image Downloader",
   "dependencies": {},
@@ -11,7 +11,7 @@
   },
   "author": {
     "name": "DrBlackRat",
-    "email": "drblackrat@gmail.com",
+    "email": "contact@drblackrat.xyz",
     "url": "https://drblackrat.xyz"
   },
   "legacyFolders": {
