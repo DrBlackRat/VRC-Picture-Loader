@@ -71,7 +71,14 @@ namespace DrBlackRat.VRC.PictureLoader
         }
         public void _UrlEntered()
         {
-            if (!AllowInput()) return;
+            if (!AllowInput())
+            {
+                // This should only occour if a user is using client modifcations
+                PLDebug.UrlLogError($"You are not permitted to change the URL!");
+                bgText.text = "Error! Not Permitted!";
+                inputField.SetUrl(VRCUrl.Empty);
+                return;
+            }
             var newUrl = inputField.GetUrl();
             url = newUrl;
             netUrl = newUrl;
@@ -79,7 +86,7 @@ namespace DrBlackRat.VRC.PictureLoader
             inputField.SetUrl(VRCUrl.Empty);
             _TryLoadingImage();
             // Networking
-            if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+            if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, gameObject);
             RequestSerialization();
         }
         private void UpdateUI()
@@ -103,7 +110,7 @@ namespace DrBlackRat.VRC.PictureLoader
                     bgText.text = allowInput ? "Finished! Enter New URL" : "Finished! Input Locked";
                     break;
                 case PLState.Error:
-                    bgText.text = allowInput ? $"{lastError}! Enter New URL" : "Error! Input Locked";
+                    bgText.text = allowInput ? $"{lastError}! Enter New URL" : $"{lastError}! Input Locked";
                     break;
             }
             // Update Persistence Info
@@ -138,6 +145,20 @@ namespace DrBlackRat.VRC.PictureLoader
         {
             CheckOwner();
         }
+
+        public override bool OnOwnershipRequest(VRCPlayerApi requester, VRCPlayerApi newOwner)
+        {
+            if (!locked || isOwner || newOwner.isInstanceOwner || newOwner.isMaster)
+            {
+                PLDebug.UrlLog($"{requester.displayName} has made {newOwner.displayName} the new Network Owner.");
+                return true;
+            }
+            else
+            {
+                PLDebug.UrlLogError($"{requester.displayName} has tried to make {newOwner.displayName} the Network Owner, but isn't allowed to!");
+                return false;
+            }
+        }
         public override void OnDeserialization()
         {
             UpdateUI();
@@ -149,7 +170,7 @@ namespace DrBlackRat.VRC.PictureLoader
         }
         private void CheckOwner()
         {
-            isOwner = Networking.LocalPlayer == Networking.GetOwner(this.gameObject);
+            isOwner = Networking.LocalPlayer == Networking.GetOwner(gameObject);
             UpdateUI();
         }
         #endregion
@@ -175,7 +196,7 @@ namespace DrBlackRat.VRC.PictureLoader
             persistenceUrl = savedUrl;
             _TryLoadingImage();
             // Networking
-            if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+            if (!isOwner) Networking.SetOwner(Networking.LocalPlayer, gameObject);
             RequestSerialization();
         }
         private void SavePersistenceUrl(VRCUrl newUrl)

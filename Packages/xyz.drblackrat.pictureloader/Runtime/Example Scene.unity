@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.25330302, g: 0.21698889, b: 0.23319246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -948,6 +948,10 @@ MonoBehaviour:
     - VRC.Udon.UdonBehaviour
   - gameObject: {fileID: 90044374}
     ID: 62
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 0}
+    ID: 63
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
@@ -2585,7 +2589,7 @@ PrefabInstance:
     - target: {fileID: 8324527553694952999, guid: b1ca6bc168e50264eaa86701d6f1c58d,
         type: 3}
       propertyPath: m_text
-      value: "Version 3.1.0\n\nThis world showcases my VRChat Picture Loader which
+      value: "Version 3.1.1\n\nThis world showcases my VRChat Picture Loader which
         provides Prefabs to easily download images using VRChat's Image Downloader
         with a lot of addtional features!\n\nHere are the core features:\n- Download
         Images from the Web\n- Provides a UI for VRChat's Image Downloader\n  - Light
