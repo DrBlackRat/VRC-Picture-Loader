@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 706241212, guid: 4e3d68749ed34978b027c380dd051f97, type: 3}
+  m_Name: "Tip \u2044 Donation"
+  m_EditorClassIdentifier: 
+  _ID: prod_3e0b89de-bb10-4035-8027-c4b7dacf7558
+  _Name: "Tip \u2044 Donation"
+  _Description: "Leave a tip \u2044 donation to support me and my content\u01C3"
+  _Image: {fileID: 0}
