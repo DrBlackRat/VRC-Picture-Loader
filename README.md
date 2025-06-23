@@ -7,6 +7,11 @@ The VRC Picture Loader is available via the [Creator Companion](https://vcc.docs
 
 For Standalone Unity I still provide a Unity Package with every release.
 
+# Support
+If you have questions / need help feel free to join the support Discord!
+
+#### [DrBlackRat Creations Discord](https://discord.drblackrat.xyz)
+
 ## Here are the core features:
 - Download Images from the Web
 - Provides a UI for VRChat's Image Downloader
