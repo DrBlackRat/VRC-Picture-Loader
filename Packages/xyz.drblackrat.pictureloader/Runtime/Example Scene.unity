@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1314617413}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.25330302, g: 0.21698889, b: 0.23319246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -701,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawns:
   - {fileID: 85230279}
+  spawnRadius: 0
   spawnOrder: 2
   spawnOrientation: 0
   ReferenceCamera: {fileID: 754890302}
@@ -955,6 +956,14 @@ MonoBehaviour:
     ID: 63
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 860005866}
+    ID: 64
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 838507649}
+    ID: 65
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   PlayerPersistence:
@@ -1118,6 +1127,8 @@ MonoBehaviour:
   - {fileID: 111698524}
   aspectRatioFilters:
   - {fileID: 1881148790}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -1534,6 +1545,8 @@ MonoBehaviour:
   - {fileID: 171045646}
   aspectRatioFilters:
   - {fileID: 1908214052}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -1708,6 +1721,8 @@ MonoBehaviour:
   - {fileID: 189151950}
   aspectRatioFilters:
   - {fileID: 1562576380}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -5154,6 +5169,8 @@ MonoBehaviour:
   - {fileID: 797720768}
   aspectRatioFilters:
   - {fileID: 908430143}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -5434,6 +5451,121 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818017304}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &838507649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838507652}
+  - component: {fileID: 838507651}
+  - component: {fileID: 838507650}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &838507650
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838507649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactTextPlacement: {fileID: 0}
+  interactText: Use
+  interactTextGO: {fileID: 0}
+  proximity: 2
+  SynchronizePosition: 0
+  AllowCollisionOwnershipTransfer: 0
+  Reliable: 0
+  _syncMethod: 1
+  serializedProgramAsset: {fileID: 11400000, guid: 3e4e6ddd374f6664abc135cefea14c54,
+    type: 2}
+  programSource: {fileID: 11400000, guid: b10eee57531e63c4a8d691d86dfcd9e0, type: 2}
+  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
+  publicVariablesUnityEngineObjects: []
+  publicVariablesSerializationDataFormat: 0
+--- !u!114 &838507651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838507649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c625783a842a6264b9d1ddc1728302c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _udonSharpBackingUdonBehaviour: {fileID: 838507650}
+  url:
+    url: https://cdn.discordapp.com/attachments/816617882099384371/1302731466471641110/VRChat_Sticker_Icon.png?ex=687762f9&is=68761179&hm=48d95aaa5adad3cd98f06d260ebccbd17054376865dd964f7c27825e70f0d68f&
+  loadOnStart: 1
+  autoReload: 0
+  autoReloadTime: 10
+  generateMipMaps: 1
+  anisoLevel: 9
+  filterMode: 1
+  wrapModeU: 0
+  wrapModeV: 0
+  wrapModeW: 0
+  material: {fileID: 0}
+  materialProperties:
+  - _MainTex
+  uiRawImages: []
+  aspectRatioFilters: []
+  renderers:
+  - {fileID: 860005870}
+  properties:
+  - _MainTex
+  useLoadingTexture: 1
+  skipLoadingTextureOnReload: 1
+  loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
+  useErrorTexture: 1
+  errorTexture: {fileID: 2800000, guid: 6a987974fc73bf54f8b0505c5ffbe7e5, type: 3}
+  textureInfo:
+    WrapModeU: 0
+    WrapModeV: 0
+    WrapModeW: 0
+    FilterMode: 2
+    AnisoLevel: 9
+    MaterialProperty: _MainTex
+    GenerateMipMaps: 0
+  urlInput: {fileID: 0}
+--- !u!4 &838507652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838507649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -65.074066, y: 7.202481, z: 210.02165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855747231
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,6 +5671,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855747231}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &860005866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860005872}
+  - component: {fileID: 860005871}
+  - component: {fileID: 860005870}
+  - component: {fileID: 860005869}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &860005869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860005866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &860005870
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860005866}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &860005871
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860005866}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &860005872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860005866}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.016494103, y: -0.007497061, z: -0.00012353975, w: 0.99983585}
+  m_LocalPosition: {x: -6.2327495, y: 1.458004, z: 5.343094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866532320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,6 +6382,8 @@ MonoBehaviour:
   - {fileID: 922244373}
   aspectRatioFilters:
   - {fileID: 1879163467}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -6400,6 +6639,8 @@ MonoBehaviour:
   - {fileID: 969616532}
   aspectRatioFilters:
   - {fileID: 1335957273}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -7125,6 +7366,8 @@ MonoBehaviour:
   - {fileID: 1195206093}
   aspectRatioFilters:
   - {fileID: 1702932561}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -7312,6 +7555,8 @@ MonoBehaviour:
   - {fileID: 1285494191}
   aspectRatioFilters:
   - {fileID: 1445887725}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -12268,6 +12513,8 @@ MonoBehaviour:
   - {fileID: 1913474741}
   aspectRatioFilters:
   - {fileID: 882397329}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -13004,6 +13251,8 @@ MonoBehaviour:
   - {fileID: 2029821699}
   aspectRatioFilters:
   - {fileID: 1665787114}
+  renderers: []
+  properties: []
   useLoadingTexture: 1
   skipLoadingTextureOnReload: 1
   loadingTexture: {fileID: 2800000, guid: 0972f4f9b4d71fa49b06ffe263908f44, type: 3}
@@ -14528,3 +14777,5 @@ SceneRoots:
   - {fileID: 606415331}
   - {fileID: 1877823270}
   - {fileID: 340853466}
+  - {fileID: 860005872}
+  - {fileID: 838507652}

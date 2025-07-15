@@ -46,6 +46,10 @@ namespace DrBlackRat.VRC.PictureLoader
         [Tooltip("List of Aspect Ratio Filters for UI Raw Images, can be used automatically adjust the aspect ratio. If left empty it tires to use the one it's attached to.")]
         [SerializeField] private AspectRatioFitter[] aspectRatioFilters;
 
+        [Header("Material Property Blocks")] 
+        [SerializeField] private Renderer[] renderers;
+        [SerializeField] private string[] properties;
+
         [Header("Loading & Error Texture")]
         [Tooltip("Use the Loading Texture while it waits for the Picture to Load.")]
         [SerializeField] private bool useLoadingTexture = true;
@@ -67,12 +71,21 @@ namespace DrBlackRat.VRC.PictureLoader
         private int timesRun;
         private bool loading;
         private bool errorShown;
+
+        private int[] propertyIDs;
         
         
         [HideInInspector] 
         public PictureLoaderURLInput urlInput;
         private void Start()
         {
+            propertyIDs = new int[properties.Length];
+
+            for (int i = 0; i < properties.Length; i++)
+            {
+                propertyIDs[i] = VRCShader.PropertyToID(properties[i]);
+            }
+            
             // Sets Material
             var renderer = GetComponent<Renderer>();
             if (material == null && renderer != null) material = renderer.material;
@@ -139,12 +152,26 @@ namespace DrBlackRat.VRC.PictureLoader
                 }
             }
             // Change Aspect Ratio for Raw Images
-            if (aspectRatioFilters == null || aspectRatioFilters.Length == 0 || newTexture == null) return;
-            var aspectRatio = newTexture.width / (float)newTexture.height;
-            foreach (var aspectRatioFilter in aspectRatioFilters)
+            if (aspectRatioFilters != null && aspectRatioFilters.Length != 0 && newTexture != null)
             {
-                if (aspectRatioFilter == null) continue;
-                aspectRatioFilter.aspectRatio = aspectRatio;
+                var aspectRatio = newTexture.width / (float)newTexture.height;
+                foreach (var aspectRatioFilter in aspectRatioFilters)
+                {
+                    if (aspectRatioFilter == null) continue;
+                    aspectRatioFilter.aspectRatio = aspectRatio;
+                }
+            }
+            
+            // Material Properties
+            var propertyBlock = new MaterialPropertyBlock();
+            foreach (var propertyID in propertyIDs)
+            {
+                propertyBlock.SetTexture(propertyID, newTexture);
+            }
+            
+            foreach (var materialRenderer in renderers)
+            {
+                materialRenderer.SetPropertyBlock(propertyBlock);
             }
         }
         
